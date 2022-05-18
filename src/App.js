@@ -13,7 +13,9 @@ import localizacao from './images/localizacao.png';
 import insta from './images/insta';
 import twitter from './images/twitter';
 import facebook from './images/facebook';
+import { Link } from 'react-router-dom';
 function App() {
+
 
   return (
     <div>
@@ -21,9 +23,12 @@ function App() {
         <button class="c-botao1">FLUX</button>
         <a href="#saibamais" class= "c-botao2">Saiba mais</a>
         <a href="#formulario" class= "c-botao2">Contato</a>
-        <button class="c-botao3">FAÇA SEU LOGIN</button>
+        
+        <Link to="/login" className="c-botao3">FAÇA SEU LOGIN</Link>
+        
+        
     </header>
-    <body>
+    <body>  
 
       
     <section class="primeiro-container">
@@ -37,6 +42,9 @@ function App() {
                         Venda e compre móveis, periféricos, utensílios de cozinha e tudo o que quiser, você acha com facilidade pessoas tanto vendendo quanto comprando produtos do seu interesse.
                     </p>
                     <button class="c-botao3">COMEÇAR AGORA</button>
+
+                    
+                    <Link to="/login" className="roxa-bt1">COMEÇAR AGORA</Link>
                 </div>
                 <div>
                     <img src={maonopc} className='c1-imagem'></img>
