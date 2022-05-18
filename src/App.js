@@ -13,10 +13,9 @@ import localizacao from './images/localizacao.png';
 import insta from './images/insta';
 import twitter from './images/twitter';
 import facebook from './images/facebook';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 function App() {
-
-
+    let navigate = useNavigate();
   return (
     <div>
       <header class="cabeçalho">
@@ -41,7 +40,7 @@ function App() {
                     <p class="texto-1">
                         Venda e compre móveis, periféricos, utensílios de cozinha e tudo o que quiser, você acha com facilidade pessoas tanto vendendo quanto comprando produtos do seu interesse.
                     </p>
-                    <button class="c-botao3">COMEÇAR AGORA</button>
+                    <button onclick={() => {navigate("/login");}} class="c-botao3">COMEÇAR AGORA</button>
 
                     
                     <Link to="/login" className="roxa-bt1">COMEÇAR AGORA</Link>
