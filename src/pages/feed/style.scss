@@ -1,0 +1,260 @@
+:root {
+  --primaria: #694df9;
+}
+
+header{
+  display: flex;
+  height: 18vh;
+  flex-direction: column;
+  width: 98.9vw;
+  background-color: var(--primaria);
+}
+
+.cima{
+  display: flex;
+  padding: 20px 30px 0px 30px;  
+  height: 9vh;
+  justify-content: space-between;
+  
+}
+
+.logo {
+  display: flex;
+  height: min-content;
+}
+
+.logo-flux {
+  font-family: 'inter-bold';
+  font-size: 24px;
+  color: white;
+}
+
+.busca {
+  display: flex;
+  height: 85%;
+  width: 70%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.pesquisa {
+  width: 95%;
+  height: 100%;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  background-color: transparent;
+  outline: none;
+}
+
+.busca img{
+  cursor: pointer;
+}
+
+.conta{
+  display: flex;
+  width: 5%;
+  height: min-content;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.content{
+  display: flex;
+  width: 75%;
+  margin-right: 10em;
+  justify-content: space-around;
+  height: 50%;
+}
+
+.baixo{
+  display: flex;
+  height: 9vh;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+.categorias{
+  border: none;
+  outline: none;
+  width: min-content;
+  background-color: transparent;
+  font-family: 'inter-regular';
+  font-size: 15px;
+  width: auto;
+  color: white;
+}
+.categorias:hover{
+  color: #000;
+}
+
+.anun{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-family: 'inter-regular';
+  padding: 1.3em;
+  width: 90px;
+  border: 1px solid #694DF9;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.6em;
+  background: #694DF9;
+  margin-left: 90vw; 
+  margin-top: 3vh;
+  position: relative;
+  border: 1px solid #694df9;
+  transition: .5s;
+  cursor: pointer;
+ }
+.primeiro-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 120px;
+  width: 95vh;
+  margin-bottom: 50px;
+  margin: 30px 10vw;
+ 
+}
+.kit{
+  font-family: 'inter-thin';
+  font-size: 20px;
+}
+
+
+.primeiro {
+  display: flex;
+  border: px solid #7700ff;
+  width: 100vw;
+  justify-content: space-between;
+  padding: 38px;
+  margin: 4px 4px;
+}
+.co-1{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+}
+.text-decoration{
+  text-decoration: none;
+  color: #000;
+}
+#cozinha {
+  transition: 1s;
+  width: 13vw;
+  height: 30vh;
+  background-color: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-left: 15px;
+  align-items:center;
+  border-radius: 4px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+ }
+#cozinha:hover{
+  background-color: #694df9;
+  color: #fff;
+  transform: translateY(-10px);
+}
+.co-1:hover button{
+  background-color: #6045e7;
+  color: #fff;
+  border: #fff 1px solid;
+}
+.img{
+
+  width: 137px;
+  height: 133px;
+  left: 2820px;
+  top: 1589px;
+  border-radius: 5px;
+  margin: 2px 4px;
+ }
+.botao{
+  transition: 1s;
+  font-family: 'inter-medium';
+  height: 3vh;
+  width: auto;
+  border: 1px solid #694DF9;
+  border-radius: 90px;
+  color: #694DF9;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  flex: none;
+  margin: 4px 8px;
+  padding: 2px 8px;
+  background: #F7F5FF;
+  margin-right: 7em;
+
+}
+
+.dinheiro{
+  font-family: 'inter-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 5px 5px;
+  margin-right: 5em;
+
+  letter-spacing: -0.02em;
+}
+
+.segundo{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.botao1{
+  border: none;
+  outline: none;
+  width: min-content;
+  background-color: transparent;
+  font-family: 'inter-regular';
+  font-size: 15px;
+  width: auto;
+  color: white;
+  text-decoration: none;
+}
+.propraganda{
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  justify-content: center;
+  height: 30vh;
+}
+.roxo{
+  color: #694df9;
+  font-family: 'inter-bold';
+}
+.titulo{
+  margin-left: 10vw;
+  width: 20vw;
+  line-height: 5vh;
+  color: #000;
+  font-family: 'inter-bold';
+}
+.imagempropa{
+  width: 10vh;
+}
+.anun:hover{
+  cursor: pointer;
+}
+.botaofeed{
+  border: none;
+  outline: none;
+  width: min-content;
+  background-color: transparent;
+  font-family: 'inter-regular';
+  font-size: 15px;
+  width: auto;
+  color: white;
+  text-decoration: underline;
+  cursor:default;
+}
