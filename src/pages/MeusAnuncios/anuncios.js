@@ -13,6 +13,7 @@ import Buscar from "../../images/buscar.svg";
 import sitee from "../../images/sitee.jfif";
 import trash from "../../images/Trash.svg";
 import pencil from "../../images/Pencil.svg";
+import { Link } from "react-router-dom";
 
 export default function anuncios() {
   return (
@@ -79,7 +80,7 @@ export default function anuncios() {
             </div>
           </div>
           <div className="nav-btn">
-            <button className="c-botao3">ANUNCIAR</button>
+            <Link className="c-botao3" to='/Anunciar' >ANUNCIAR</Link>
           </div>
         </nav>
         <div className="anun-div-cards">
