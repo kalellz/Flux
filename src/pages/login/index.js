@@ -65,7 +65,7 @@ export default function Index() {
                       placeholder="Senha"
                     ></input>
                   </div>
-                  <button class="branca-btn">entrar</button>
+                  <Link class="branca-btn" to={'/Feed'}>entrar</Link>
                 </div>
               </div>
             </div>

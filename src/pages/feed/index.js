@@ -30,7 +30,7 @@ export default function Index() {
             <img src={Buscar} width="20em"></img>
           </div>
           <div class="conta">
-            <a href="" class="botao1">
+            <a href="/Login" class="botao1">
               Sair
             </a>
             <img src={Vector} width="32px"></img>

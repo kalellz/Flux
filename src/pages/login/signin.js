@@ -71,7 +71,7 @@ export default function Index() {
                       placeholder="Senha"
                     ></input>
                   </div>
-                  <button class="branca-btn">cadastrar</button>
+                  <Link class="branca-btn" to={'/Login'}>cadastrar</Link>
                 </div>
               </div>
             </div>
