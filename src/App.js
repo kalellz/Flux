@@ -20,16 +20,16 @@ function App() {
     <div>
       <header class="landing-header">
         <section className="btn-content">
-        <p className="title">FLUX</p>
-        <a href="#saibamais" class="c-botao2">
-          Saiba mais
-        </a>
-        <a href="#formulario-app" class="c-botao2">
-          Contato
-        </a>
-        <Link to="/login" className="c-botao3">
-          FAÇA SEU LOGIN
-        </Link>
+          <p className="title">FLUX</p>
+          <a href="#saibamais" class="c-botao2">
+            Saiba mais
+          </a>
+          <a href="#formulario-app" class="c-botao2">
+            Contato
+          </a>
+          <Link to="/login" className="c-botao3">
+            FAÇA SEU LOGIN
+          </Link>
         </section>
       </header>
       <body>
@@ -42,8 +42,8 @@ function App() {
               comprando produtos do seu interesse.
             </p>
             <Link to="/login" className="c-botao3">
-          COMEÇAR AGORA
-        </Link>
+              COMEÇAR AGORA
+            </Link>
           </div>
           <div>
             <img src={maonopc} className="c1-imagem"></img>
@@ -105,7 +105,9 @@ function App() {
               local, venha dar uma olhada no que estão<br></br>
               vendendo no momento!
             </p>
-            <Link class="c-botao3" to='/feed'>ME LEVE AO FEED</Link>
+            <Link class="c-botao3" to="/feed">
+              ME LEVE AO FEED
+            </Link>
           </div>
         </section>
 
@@ -127,18 +129,18 @@ function App() {
             </div>
           </div>
           <div id="formulario-app">
-
             <div class="ultimocontainer">
-            <h1 class="ultimotitulo">Formulário para contato</h1>
+              <h1 class="ultimotitulo">Formulário para contato</h1>
               <p class="ultimostext">Nome</p>
               <input type="text" class="form-input-app"></input>
               <p class="ultimostext">E-mail</p>
               <input type="text" class="form-input-app"></input>
               <p class="ultimostext">Mensagem</p>
-              <textarea class="messageinput" rows={10} cols={70} ></textarea>
-              
+              <textarea class="messageinput" rows={10} cols={70}></textarea>
             </div>
-            <div className="btn-form-div"><button className="c-botao3-form">ENVIAR</button></div>
+            <div className="btn-form-div">
+              <button className="c-botao3-form">ENVIAR</button>
+            </div>
           </div>
         </section>
 
