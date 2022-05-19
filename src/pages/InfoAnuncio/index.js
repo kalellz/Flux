@@ -17,14 +17,6 @@ export default function Index(){
 
   return(
     <div class="bodyinfoanuncio">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/common/common.css" />
-    <title>Anuncio</title>
-  </head>
   <body class="bodyinfoanuncio">
     <header className='header-info'>
       <div class="cima">
@@ -34,7 +26,7 @@ export default function Index(){
         <div class="busca">
           <input
             type="text"
-            placeholder="  Pesquise por qualquer coisa que quiser!"
+            placeholder="Pesquise por qualquer coisa que quiser!"
             class="pesquisa"
           ></input>
           <img src={buscar} width="24px"></img>

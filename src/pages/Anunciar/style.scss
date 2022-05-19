@@ -31,7 +31,7 @@
 
 .busca {
   display: flex;
-  height: 55%;
+  height: 2.5em;
   width: 40%;
   background-color: white;
   border-radius: 5px;
@@ -40,6 +40,7 @@
 .pesquisa {
   width: 95%;
   height: 100%;
+  padding: 10px;
   border: none;
   border-radius: 5px 0px 0px 5px;
   background-color: transparent;

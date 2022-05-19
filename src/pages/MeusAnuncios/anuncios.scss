@@ -2,234 +2,138 @@
   --primaria: #694df9;
 }
 
-.header-anuncios {
+.main-content{
   display: flex;
-  height: 18vh;
+  height: 82vh;
+  align-items: center;
   flex-direction: column;
-  width: 100vw;
-  background-color: var(--primaria);  
-}
-.botaoanuncio{
-  border: none;
-  outline: none;
-  width: min-content;
-  background-color: transparent;
-  font-family: 'inter-regular';
-  font-size: 15px;
-  width: auto;
-  color: white;
-  text-decoration: underline;
-  cursor:default;
-}
+  
 
-.cima{
-  display: flex;
-  padding: 20px 30px 0px 30px;
-  width: 100%;  
-  height: 9vh;
-  justify-content: space-between;
-}
+  .navbar{
+    display: flex;
+    width: 80%;
+    height: 10%;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.logo {
-  display: flex;
-  height: min-content;
-}
+  .busca{
+    border: 1px solid black;
+    margin-left: 1em;
+    width: 65%;
+  }
 
-.logo-flux {
-  font-family: "inter-bold";
-  font-size: 24px;
-  color: white;
-}
-.busca {
-  display: flex;
-  height: 55%;
-  width: 40%;
-  background-color: white;
-  border-radius: 5px;
-}
+  .nav-img{
+    display: flex;
+    width: 5%;
+    justify-content: center;
+  }
 
-.pesquisa {
-  width: 95%;
-  height: 100%;
-  border: none;
-  border-radius: 5px 0px 0px 5px;
-  background-color: transparent;
-  outline: none;
-}
-.pesquisa2 {
-  width: 100%;
-  height: 5vh;
-  border: 1px solid black;
-  border-right: none;
-  border-radius: 5px 0px 0px 5px;
-  outline: none;
-}
+  .nav-btn{
+    display: flex;
+    width: 10%; 
+    justify-content: flex-end;
+  }
+  .filters{
+    display: flex;
+    width: 20em;
+    justify-content: space-between;
 
-.busca img{
-  cursor: pointer;
-}
-
-.conta{
-  display: flex;
-  width: 5%;
-  height: min-content;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
+    p{
+      font-family: 'inter-semibold';
+      font-size: 1.1em;
+    }
+    
+  }
+  .anun-div-cards{
+    display: flex;
+    height: 90%;
+    width: 80%;
+    flex-direction: column;
 
 
-.content{
-  display: flex;
-  width: 75%;
-  margin-right: 10em;
-  justify-content: space-around;
-  height: 50%;
-}
+    .card-desc{
+      display: flex;
+      flex-direction: column;
 
-.baixo{
-  display: flex;
-  height: 9vh;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-}
+      width: 13em;
+      height: 60%;
+      justify-content: space-between;
+      margin-left: 4em;
 
-.categorias{
-  border: none;
-  outline: none;
-  width: min-content;
-  background-color: transparent;
-  font-family: 'inter-regular';
-  font-size: 15px;
-  width: auto;
-  color: white;
-}
+      span{
+        color: #6a4df99d;
+      }
+
+    }
+
+    .anun-card{
+      display: flex;
+      width: 100%;
+      margin-bottom: 4em;
+      transition: all 0.4s;
+      background-color: #fff;
+      padding: 0 5em;
+      height: 22%;
+      align-items: center;
+      border-radius: 16px;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+
+      .card-img{
+        display: flex;
+        height: 80%;
+        width: 12%;
+      }
+      p{
+        font-size: 1em;
+        font-family: 'inter-regular';
+      }
 
 
+      .card-info{
+        display: flex;
+        font-size: 1.5em;
+        width: 70%;
+        justify-content: space-around;
+      }
 
-.categorias option{
-  font-family: 'inter-regular';
-  font-size: 16px;
-  padding: 5px 0;
-  height: 200px;
-  color: black !important;
-}
+      
+    }
+    .anun-card:hover span{
+        color: #D9DBDD;   
+    }
 
-.faixa-variavel{
-  display: flex;
-  flex-direction: row;  
-  justify-content: space-evenly;
-  align-items: center;
-  /*border: 1px solid red;*/
-  margin-top: 1vh;
-}
+    .anun-card:hover p{
+      color: white;
+    }
 
-.a-fx1{
-  color: black;
-  font-family: 'inter-medium';
-  font-size: 16px;
-  text-decoration: none;
-}
-.a-fx12{
-  color: black;
-  font-family: 'inter-medium';
-  font-size: 16px;
-  text-decoration: underline 3px;
-  text-decoration-color: #694df9;
-}
-.sub-fx{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 20%; 
-}
+    .anun-card:hover{
+      background-color: #694df9;
+      transition: all 0.4s;
 
-.botao-fx-var{
-  border: 15px solid #694df9;
-  background-color: #694df9;
-  color: white;
-  font-size: 11px;
-  font-family: 'inter-medium';
-  font-weight: 300;
-  border-radius: 25px;
-  text-decoration: none;
-}
+      .svg{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(106%) contrast(101%);
+      }
+    }
 
-.botao-fx-var :hover{
-  cursor: pointer;
-}
+    .card-icons{
+      display: flex;
+      width: 3.5em;
+      justify-content: space-between;
 
-.lupinha-buscar{
-  border: 1px solid black;
-  width: 1.6vw;
-  border-radius: 0px 6px 6px 0px;
-  border-left: none;
-  padding-right: 1vh;
-}
 
-.fx-2{
-  display: flex;
-  justify-content: center;
-  margin-top: 2vh;
-}
+      img{
+        cursor: pointer;
+      }
+      .svg{
+        filter: brightness(0) saturate(100%) invert(29%) sepia(89%) saturate(2969%) hue-rotate(240deg) brightness(98%) contrast(100%);
+      }
 
-.cartao-anuncio{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 80%;
-  height: 20vh;
-  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.29);
-  transition: 1s;
-}
-.cartao-anuncio:hover{
-  transform: translateY(-5px);
-  background-color: #694df9;
-  color: white;
-  border-radius: 1em;
-}
+      
 
-.img-anuncio{
-  animation: none;
-}
-
-.desc-anuncio{
-  font-family: 'inter-regular';
-  font-size: 16px;
-  width: 16%;
-}
-
-.desc-anuncio-p1{
-  color: #D9DBDD;
-}
-
-.info-anuncio{
-  font-family: 'inter-medium';
-  font-size: 16px;
-  letter-spacing: -0.02em;
-}
-
-.edit{
-  align-self: flex-end;
-  margin-bottom: 2vh;
-}
-
-.botao1{
-  border: none;
-  outline: none;
-  width: min-content;
-  background-color: transparent;
-  font-family: 'inter-regular';
-  font-size: 15px;
-  width: auto;
-  color: white;
-  text-decoration: none;
-}
-.edit path{
-  transition: 1s;
-}
-.cartao-anuncio:hover path{
-  fill: #D9DBDD;
+      
+    }
+  }
+  
+  
 }

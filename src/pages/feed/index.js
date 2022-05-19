@@ -23,7 +23,7 @@ export default function Index(){
         <h3 class="logo-flux">FLUX</h3>
       </div>
       <div class="busca">
-        <input type="text" placeholder="  Pesquise por qualquer coisa que quiser!" class="pesquisa" ></input>
+        <input type="text" placeholder="Pesquise por qualquer coisa que quiser!" class="pesquisa" ></input>
         <img src={Buscar} width="20em"></img>
       </div>
       <div class="conta">

@@ -24,8 +24,7 @@ export default function Index(){
         <div className='busca'>
           <input
             type="text"
-            className='pesquisa'
-          >Pesquise por qualquer coisa que quiser!</input>
+            className='pesquisa'>Pesquise por qualquer coisa que quiser!</input>
           <img src={buscar} width="24px"></img>
         </div>
         <div className="conta">
