@@ -57,7 +57,7 @@ export default function Index(){
     <section class="primeiro-1">
 
       <div class="primeiro">
-        <a class="text-decoration" href="../InfoAnuncio/index.html">
+        <a class="text-decoration" href="../InfoAnuncio/">
         <div class="co-1" id="cozinha">
           <img class="img" src={sitee}></img>
           <h2 class="kit">Kit de cozinha </h2>
@@ -65,7 +65,7 @@ export default function Index(){
           <button className='botao'> Tecnologia</button>
         </div>
       </a>
-      <a class="text-decoration" href="../InfoAnuncio/index.html">
+      <a class="text-decoration" href="../InfoAnuncio/">
         <div class="co-1" id="cozinha">
           <img class="img" src={sitee}></img>
           <h2 class="kit">Kit de cozinha </h2>
@@ -73,7 +73,7 @@ export default function Index(){
           <button className='botao'> Móveis </button>
         </div>
       </a>
-      <a class="text-decoration" href="../InfoAnuncio/index.html">
+      <a class="text-decoration" href="../InfoAnuncio/">
         <div class="co-1" id="cozinha">
         <img class="img" src={sitee}></img>
           <h2 class="kit">Kit de cozinha </h2>
@@ -81,7 +81,7 @@ export default function Index(){
           <button class="botao"> Cozinha </button>
         </div>
       </a>
-      <a class="text-decoration" href="../InfoAnuncio/index.html">
+      <a class="text-decoration" href="../InfoAnuncio/">
         <div class="co-1" id="cozinha">
         <img class="img" src={sitee}></img>
           <h2 class="kit">Kit de cozinha </h2>
@@ -89,7 +89,7 @@ export default function Index(){
           <button class="botao"> Roupas </button>
         </div>
       </a>
-      <a class="text-decoration" href="../InfoAnuncio/index.html">
+      <a class="text-decoration" href="../InfoAnuncio/">
       <div class="co-1" id="cozinha">
         <img class="img" src={sitee}></img>
           <h2 class="kit">Kit de cozinha </h2>
