@@ -4,6 +4,9 @@
 O Projeto integrador de software consiste em criar uma empresa de um determinado tema, e criar um website totalemente
 funcional e operante na internet.
 
+## Empresa
+Flux company.
+
 ## Tema
 Rede social de anúncios de vendas.
 
