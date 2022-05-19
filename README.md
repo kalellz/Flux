@@ -15,6 +15,6 @@ Victor Santos <br/>
 Kalel Rodrigues <br/>
 Iago Viana <br/>
 Pedro Horvath <br/>
-Raniele Evellyn
+Ranielly Evellyn
 
 # Obrigado!
