@@ -53,7 +53,7 @@ export default function Index() {
               </a>
             </div>
             <div>
-              <a class="botaofeed">Feed</a>
+              <a class="botao1">Feed</a>
             </div>
           </div>
         </div>
