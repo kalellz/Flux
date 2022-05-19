@@ -7,18 +7,17 @@
   flex-direction: column;
   width: 100vw;
   background-color: var(--primaria);
-  
 }
-.parte1{
+.parte1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 }
-.cima{
+.cima {
   display: flex;
   padding: 20px 30px 0px 30px;
-  width: 100%;  
+  width: 100%;
   height: 9vh;
   justify-content: space-between;
 }
@@ -52,10 +51,10 @@
   outline: none;
 }
 
-.busca img{
+.busca img {
   cursor: pointer;
 }
-.conta{
+.conta {
   display: flex;
   width: 5%;
   height: min-content;
@@ -64,8 +63,7 @@
   flex-direction: row;
 }
 
-
-.content{
+.content {
   display: flex;
   width: 75%;
   margin-right: 10em;
@@ -73,7 +71,7 @@
   height: 50%;
 }
 
-.baixo{
+.baixo {
   display: flex;
   height: 9vh;
   justify-content: center;
@@ -81,49 +79,46 @@
   padding: 1em;
 }
 
-.categorias{
+.categorias {
   border: none;
   outline: none;
   width: min-content;
   background-color: transparent;
-  font-family: 'inter-regular';
+  font-family: "inter-regular";
   font-size: 15px;
   width: auto;
   color: white;
 }
 
-
-
-.categorias option{
-  font-family: 'inter-regular';
+.categorias option {
+  font-family: "inter-regular";
   font-size: 16px;
   padding: 5px 0;
   height: 200px;
   color: black !important;
-
 }
-.pagetoda{
+.pagetoda {
   display: flex;
   flex-direction: row;
-  background-color: #D9DBDD;
+  background-color: #d9dbdd;
   height: 82vh;
 }
-.page{
+.page {
   height: 70vh;
   padding: 4vh;
 }
 
-.tituloinfo{
+.tituloinfo {
   font-family: "inter-bold";
   margin-bottom: 5px;
 }
-.desc{
+.desc {
   width: 400px;
 }
-.descprod{
-  font-family: 'inter-regular';
+.descprod {
+  font-family: "inter-regular";
 }
-.informa{
+.informa {
   margin-top: 30px;
   height: 70vh;
   padding: 4vh;
@@ -131,21 +126,20 @@
   flex-direction: column;
   width: 140px;
 }
-.aaaa{
+.aaaa {
   height: 70vh;
 }
-.minititulo{
+.minititulo {
   margin-top: 10px;
   font-family: "inter-semibold";
 }
-.nm{
-  font-family: 'inter-regular';
+.nm {
+  font-family: "inter-regular";
 }
-.div1{
+.div1 {
   width: 300px;
-
 }
-.page2{
+.page2 {
   margin-top: 30px;
   height: 70vh;
   padding: 4vh;
@@ -153,12 +147,12 @@
   flex-direction: column;
   margin-left: 70px;
 }
-.botao1{
+.botao1 {
   border: none;
   outline: none;
   width: min-content;
   background-color: transparent;
-  font-family: 'inter-regular';
+  font-family: "inter-regular";
   font-size: 15px;
   width: auto;
   color: white;

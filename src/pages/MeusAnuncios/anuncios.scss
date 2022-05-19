@@ -2,14 +2,13 @@
   --primaria: #694df9;
 }
 
-.main-content{
+.main-content {
   display: flex;
   height: 82vh;
   align-items: center;
   flex-direction: column;
-  
 
-  .navbar{
+  .navbar {
     display: flex;
     width: 80%;
     height: 10%;
@@ -17,42 +16,40 @@
     justify-content: space-between;
   }
 
-  .busca{
+  .busca {
     border: 1px solid black;
     margin-left: 1em;
     width: 65%;
   }
 
-  .nav-img{
+  .nav-img {
     display: flex;
     width: 5%;
     justify-content: center;
   }
 
-  .nav-btn{
+  .nav-btn {
     display: flex;
-    width: 10%; 
+    width: 10%;
     justify-content: flex-end;
   }
-  .filters{
+  .filters {
     display: flex;
     width: 20em;
     justify-content: space-between;
 
-    p{
-      font-family: 'inter-semibold';
+    p {
+      font-family: "inter-semibold";
       font-size: 1.1em;
     }
-    
   }
-  .anun-div-cards{
+  .anun-div-cards {
     display: flex;
     height: 90%;
     width: 80%;
     flex-direction: column;
 
-
-    .card-desc{
+    .card-desc {
       display: flex;
       flex-direction: column;
 
@@ -61,13 +58,12 @@
       justify-content: space-between;
       margin-left: 4em;
 
-      span{
+      span {
         color: #6a4df99d;
       }
-
     }
 
-    .anun-card{
+    .anun-card {
       display: flex;
       width: 100%;
       margin-bottom: 4em;
@@ -79,61 +75,53 @@
       border-radius: 16px;
       box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
 
-      .card-img{
+      .card-img {
         display: flex;
         height: 80%;
         width: 12%;
       }
-      p{
+      p {
         font-size: 1em;
-        font-family: 'inter-regular';
+        font-family: "inter-regular";
       }
 
-
-      .card-info{
+      .card-info {
         display: flex;
         font-size: 1.5em;
         width: 70%;
         justify-content: space-around;
       }
-
-      
     }
-    .anun-card:hover span{
-        color: #D9DBDD;   
+    .anun-card:hover span {
+      color: #d9dbdd;
     }
 
-    .anun-card:hover p{
+    .anun-card:hover p {
       color: white;
     }
 
-    .anun-card:hover{
+    .anun-card:hover {
       background-color: #694df9;
       transition: all 0.4s;
 
-      .svg{
-        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(106%) contrast(101%);
+      .svg {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+          saturate(0%) hue-rotate(21deg) brightness(106%) contrast(101%);
       }
     }
 
-    .card-icons{
+    .card-icons {
       display: flex;
       width: 3.5em;
       justify-content: space-between;
 
-
-      img{
+      img {
         cursor: pointer;
       }
-      .svg{
-        filter: brightness(0) saturate(100%) invert(29%) sepia(89%) saturate(2969%) hue-rotate(240deg) brightness(98%) contrast(100%);
+      .svg {
+        filter: brightness(0) saturate(100%) invert(29%) sepia(89%)
+          saturate(2969%) hue-rotate(240deg) brightness(98%) contrast(100%);
       }
-
-      
-
-      
     }
   }
-  
-  
 }

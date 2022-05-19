@@ -10,9 +10,9 @@ import "../../fonts/Inter/Inter-Thin.ttf";
 import "./anuncios.scss";
 import Vector from "../../images/Vector.svg";
 import Buscar from "../../images/buscar.svg";
-import sitee from '../../images/sitee.jfif';
-import trash from '../../images/Trash.svg'
-import pencil from '../../images/Pencil.svg'
+import sitee from "../../images/sitee.jfif";
+import trash from "../../images/Trash.svg";
+import pencil from "../../images/Pencil.svg";
 
 export default function anuncios() {
   return (
@@ -63,79 +63,84 @@ export default function anuncios() {
       </header>
       <div className="main-content">
         <nav className="navbar">
-        <div className="filters">
-          <p>Geral</p>
-          <p>Recentes</p>
-          <p>Mais visitados</p>
-        </div>
+          <div className="filters">
+            <p>Geral</p>
+            <p>Recentes</p>
+            <p>Mais visitados</p>
+          </div>
           <div class="busca">
             <input
               type="text"
               placeholder="Encontre seu anúncio"
               class="pesquisa"
-            >
-            </input>
-            <div className="nav-img"><img src={Buscar} width="20em"></img></div>
+            ></input>
+            <div className="nav-img">
+              <img src={Buscar} width="20em"></img>
+            </div>
           </div>
-          <div className="nav-btn"><button className="c-botao3">ANUNCIAR</button></div>
+          <div className="nav-btn">
+            <button className="c-botao3">ANUNCIAR</button>
+          </div>
         </nav>
         <div className="anun-div-cards">
-        <div className="anun-card">
-          <div className="card-img">
-          <img src={sitee} alt="" />
+          <div className="anun-card">
+            <div className="card-img">
+              <img src={sitee} alt="" />
+            </div>
+            <div className="card-desc">
+              <p>
+                <span>#1234567891011</span>{" "}
+              </p>
+              <p>Kit de cozinha básicão para cozinhas cozinhadas</p>
+            </div>
+            <div className="card-info">
+              <p>R$300</p>
+              <p>8 mil visitas</p>
+            </div>
+            <div className="card-icons">
+              <img src={trash} alt="" />
+              <img src={pencil} className="svg" />
+            </div>
           </div>
-          <div className="card-desc">
-            <p><span>#1234567891011</span> </p>
-            <p>Kit de cozinha básicão para cozinhas cozinhadas</p>
+          <div className="anun-card">
+            <div className="card-img">
+              <img src={sitee} alt="" />
+            </div>
+            <div className="card-desc">
+              <p>
+                <span>#1234567891011</span>{" "}
+              </p>
+              <p>Kit de cozinha básicão para cozinhas cozinhadas</p>
+            </div>
+            <div className="card-info">
+              <p>R$300</p>
+              <p>5 mil visitas</p>
+            </div>
+            <div className="card-icons">
+              <img src={trash} alt="" />
+              <img src={pencil} className="svg" />
+            </div>
           </div>
-          <div className="card-info">
-            <p>R$300</p>
-            <p>8 mil visitas</p>
+          <div className="anun-card">
+            <div className="card-img">
+              <img src={sitee} alt="" />
+            </div>
+            <div className="card-desc">
+              <p>
+                <span>#1234567891011</span>{" "}
+              </p>
+              <p>Kit de cozinha básicão para cozinhas cozinhadas</p>
+            </div>
+            <div className="card-info">
+              <p>R$300</p>
+              <p>3 mil visitas</p>
+            </div>
+            <div className="card-icons">
+              <img src={trash} alt="" />
+              <img src={pencil} className="svg" />
+            </div>
           </div>
-          <div className="card-icons">
-
-        <img src={trash} alt="" />
-          <img src={pencil} className="svg" />
         </div>
-        </div>
-        <div className="anun-card">
-          <div className="card-img">
-          <img src={sitee} alt="" />
-          </div>
-          <div className="card-desc">
-            <p><span>#1234567891011</span> </p>
-            <p>Kit de cozinha básicão para cozinhas cozinhadas</p>
-          </div>
-          <div className="card-info">
-            <p>R$300</p>
-            <p>5 mil visitas</p>
-          </div>
-          <div className="card-icons">
-
-        <img src={trash} alt="" />
-          <img src={pencil} className="svg" />
-        </div>
-        </div>
-        <div className="anun-card">
-          <div className="card-img">
-          <img src={sitee} alt="" />
-          </div>
-          <div className="card-desc">
-            <p><span>#1234567891011</span> </p>
-            <p>Kit de cozinha básicão para cozinhas cozinhadas</p>
-          </div>
-          <div className="card-info">
-            <p>R$300</p>
-            <p>3 mil visitas</p>
-          </div>
-          <div className="card-icons">
-
-        <img src={trash} alt="" />
-          <img src={pencil} className="svg" />
-        </div>
-        </div>
-        </div>
-        
       </div>
     </div>
   );

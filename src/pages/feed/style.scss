@@ -2,7 +2,7 @@
   --primaria: #694df9;
 }
 
-.header-feed{
+.header-feed {
   display: flex;
   height: 18vh;
   flex-direction: column;
@@ -10,12 +10,11 @@
   background-color: var(--primaria);
 }
 
-.cima{
+.cima {
   display: flex;
-  padding: 20px 30px 0px 30px;  
+  padding: 20px 30px 0px 30px;
   height: 9vh;
   justify-content: space-between;
-  
 }
 
 .logo {
@@ -24,7 +23,7 @@
 }
 
 .logo-flux {
-  font-family: 'inter-bold';
+  font-family: "inter-bold";
   font-size: 24px;
   color: white;
 }
@@ -47,11 +46,11 @@
   outline: none;
 }
 
-.busca img{
+.busca img {
   cursor: pointer;
 }
 
-.conta{
+.conta {
   display: flex;
   width: 5%;
   height: min-content;
@@ -60,8 +59,7 @@
   flex-direction: row;
 }
 
-
-.content{
+.content {
   display: flex;
   width: 75%;
   margin-right: 10em;
@@ -69,41 +67,41 @@
   height: 50%;
 }
 
-.baixo{
+.baixo {
   display: flex;
   height: 9vh;
   justify-content: center;
   align-items: center;
   padding: 1em;
 }
-.categorias{
+.categorias {
   border: none;
   outline: none;
   width: min-content;
   background-color: transparent;
-  font-family: 'inter-regular';
+  font-family: "inter-regular";
   font-size: 15px;
   width: auto;
   color: white;
 }
-.anun{
+.anun {
   text-decoration: none;
   display: flex;
   justify-content: center;
   margin: 0;
-  font-family: 'inter-regular';
+  font-family: "inter-regular";
   padding: 1.3em;
   width: 90px;
-  border: 1px solid #694DF9;
+  border: 1px solid #694df9;
   border-radius: 20px;
   color: #fff;
   font-size: 0.6em;
-  background: #694DF9;
-  margin-left: 90vw; 
+  background: #694df9;
+  margin-left: 90vw;
   margin-top: 3vh;
   position: relative;
   border: 1px solid #694df9;
-  transition: .5s;
+  transition: 0.5s;
   cursor: pointer;
 }
 .primeiro-1 {
@@ -114,13 +112,11 @@
   width: 95vh;
   margin-bottom: 50px;
   margin: 30px 10vw;
- 
 }
-.kit{
-  font-family: 'inter-thin';
+.kit {
+  font-family: "inter-thin";
   font-size: 20px;
 }
-
 
 .primeiro {
   display: flex;
@@ -130,13 +126,13 @@
   padding: 38px;
   margin: 4px 4px;
 }
-.co-1{
+.co-1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 24px;
 }
-.text-decoration{
+.text-decoration {
   text-decoration: none;
   color: #000;
 }
@@ -149,50 +145,48 @@
   cursor: pointer;
   margin-right: 15px;
   margin-left: 15px;
-  align-items:center;
+  align-items: center;
   border-radius: 4px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
- }
-#cozinha:hover{
+}
+#cozinha:hover {
   background-color: #694df9;
   color: #fff;
   transform: translateY(-10px);
 }
-.co-1:hover button{
+.co-1:hover button {
   background-color: #6045e7;
   color: #fff;
   border: #fff 1px solid;
 }
-.img{
-
+.img {
   width: 137px;
   height: 133px;
   left: 2820px;
   top: 1589px;
   border-radius: 5px;
   margin: 2px 4px;
- }
-.botao{
+}
+.botao {
   transition: 1s;
-  font-family: 'inter-medium';
+  font-family: "inter-medium";
   height: 3vh;
   width: auto;
-  border: 1px solid #694DF9;
+  border: 1px solid #694df9;
   border-radius: 90px;
-  color: #694DF9;
+  color: #694df9;
   font-weight: 500;
   font-size: 10px;
   line-height: 16px;
   flex: none;
   margin: 4px 8px;
   padding: 2px 8px;
-  background: #F7F5FF;
+  background: #f7f5ff;
   margin-right: 7em;
-
 }
 
-.dinheiro{
-  font-family: 'inter-regular';
+.dinheiro {
+  font-family: "inter-regular";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -203,56 +197,56 @@
   letter-spacing: -0.02em;
 }
 
-.segundo{
+.segundo {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
 }
 
-.botao1{
+.botao1 {
   border: none;
   outline: none;
   width: min-content;
   background-color: transparent;
-  font-family: 'inter-regular';
+  font-family: "inter-regular";
   font-size: 15px;
   width: auto;
   color: white;
   text-decoration: none;
 }
-.propraganda{
+.propraganda {
   display: flex;
   flex-direction: row;
   width: 90vw;
   justify-content: center;
   height: 30vh;
 }
-.roxo{
+.roxo {
   color: #694df9;
-  font-family: 'inter-bold';
+  font-family: "inter-bold";
 }
-.titulo{
+.titulo {
   margin-left: 10vw;
   width: 20vw;
   line-height: 5vh;
   color: #000;
-  font-family: 'inter-bold';
+  font-family: "inter-bold";
 }
-.imagempropa{
+.imagempropa {
   width: 10vh;
 }
-.anun:hover{
+.anun:hover {
   cursor: pointer;
 }
-.botaofeed{
+.botaofeed {
   border: none;
   outline: none;
   width: min-content;
   background-color: transparent;
-  font-family: 'inter-regular';
+  font-family: "inter-regular";
   font-size: 15px;
   width: auto;
   color: white;
   text-decoration: underline;
-  cursor:default;
+  cursor: default;
 }
