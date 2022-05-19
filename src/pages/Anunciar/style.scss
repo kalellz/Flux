@@ -2,13 +2,12 @@
   --primaria: #694df9;
 }
 
-header {
+.header-anun {
   display: flex;
   height: 18vh;
   flex-direction: column;
   width: 100vw;
   background-color: var(--primaria);
-  
 }
 
 .cima{
@@ -106,29 +105,31 @@ header {
   flex-direction: column;
 }
 
-p{
+.anun-p{
   margin-top: 1.2em;
   font-size: 18px;
   font-family: 'inter-regular';
 }
 
 .form-input{
-  
+
   font-family: 'inter-regular';
   border: 1px solid #E2DCFF !important;
   border-radius: 6px !important;
   width: 40em;
+  padding: 0.8em;
   height: 2.5em;
   
 }
 
 .form-input:focus{
   border: 1px solid #B1A3F3 !important;
+  outline: none;
 }
 
 textarea{
   font-family: 'inter-regular';
-  padding: 10px;
+  padding: 0.8em;
   outline: none;
   border: 1px solid #E2DCFF !important;
   border-radius: 6px !important;

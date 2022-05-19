@@ -27,7 +27,7 @@ export default function Index(){
     </title>
   </head>
   <body>
-    <header>
+    <header className='header-info'>
       <div class="cima">
         <div class="logo">
           <h3 class="logo-flux">FLUX</h3>

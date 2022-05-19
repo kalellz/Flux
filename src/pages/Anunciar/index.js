@@ -16,7 +16,7 @@ export default function Index(){
 
   return(
     <main>
-    <header>
+    <header className='header-anun'>
       <div className='cima'>
         <div className='logo'>
           <h3 className='logo-flux'>FLUX</h3>
@@ -54,15 +54,15 @@ export default function Index(){
     <section className='formulario'>
         <h1 className='titulo'>Dados do produto</h1>
         <div className='inputs'>
-            <p>Título</p>
+            <p className='anun-p'>Título</p>
             <input type="text" className='form-input'>Dê um título ao seu produto.</input>
         </div>
         <div>
-            <p>Descrição</p>
+            <p className='anun-p'>Descrição</p>
             <textarea name="" id="" cols="69" rows="10"></textarea>
         </div>
         <div className="inputs">
-            <p>Preço</p>
+            <p className='anun-p'>Preço</p>
             <input type="text" className='form-input' >Coloque um preço no seu produto.</input>
         </div>
         <div className="field">
@@ -76,32 +76,32 @@ export default function Index(){
         </div>
         <h1  className='titulo'>Contato</h1>
         <div className='inputs'>
-            <p>Telefone</p>
+            <p className='anun-p'>Telefone</p>
             <input type="text" className='form-input'>Bote seu número de telefone.</input>
         </div>
         <div className="inputs">
-            <p>E-mail</p>
+            <p className='anun-p'>E-mail</p>
             <input type="text" className='form-input'>Coloque aqui o seu melhor e-mail.</input>
         </div>
         <div className='inputs'>
-            <p>Instagram</p>
+            <p className='anun-p'>Instagram</p>
             <input type="text" className='form-input'>Digite o seu perfil do instagram.</input>
         </div>
         <div className='inputs'>
-            <p>Whatsapp</p>
+            <p className='anun-p'>Whatsapp</p>
             <input type="text" className='form-input'>este número irá se transformar em um botão para seu número.</input>
         </div>
         <div className="inputs">
-            <p>Facebook</p>
+            <p className='anun-p'>Facebook</p>
             <input type="text" className='form-input'>Digite o seu perfil do Facebook.</input>
         </div>
         <div className="inputs">
-            <p>Twitter</p>
+            <p className='anun-p'>Twitter</p>
             <input type="text" className='form-input'>Digite o seu perfil do Twitter.</input>
         </div>
         <h1 className='titulo'>Localização</h1>
         <div className='inputs'>
-            <p>CEP</p>
+            <p className='anun-p'>CEP</p>
             <input type="text" className='form-input' >Coloque aqui o seu CEP.</input>
         </div>
         <h1 className='titulo'>Fotos do produto</h1>

@@ -35,7 +35,7 @@
   src: url(./fonts/Inter/Inter-Thin.ttf);
 }
 *{
-  margin: 0px 0px;
+  margin: 0;
   box-sizing: border-box;
 }
 ::-webkit-scrollbar{
@@ -50,70 +50,72 @@ html {
   scroll-behavior: smooth;
 }
 /* CABEÇALHO */
-.cabeçalho{
+.landing-header{
   display: flex;
-  background-color: #fff;
   height: 20vh;
+  padding-top: 2em;
   width: 100%;    
-  flex-direction: row;
   justify-content: space-around;
 }
-.c-botao1{
-  background-color: #fff;
-  height: 40px;
-  width: 70px;
-  font-family:'inter-medium';
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  border: none;
-  margin-top: 30px;
+
+
+
+.btn-content{
+  display: flex;
+  height: max-content;
+  justify-content: space-between;
+  width: 80%;
 }
+
+.title{
+  font-size: 1.5em;
+  height: max-content;
+  width: max-content;
+  font-family: 'inter-semibold';
+}
+
 .c-botao2{
   text-decoration: none;
   font-family: 'inter-extrabold';
   color: #8E8E8E;
   height: 40px;
   width: 100px;
-  margin-top: 30px;
+  cursor:pointer;
   border: none;
-  background-color: #fff;
 }
 .c-botao4:hover{
   color: black;
   transition: 780ms;
-  cursor:pointer;
 }
+
 .c-botao2:hover{
   color: black;
   transition: 780ms;
-  cursor:pointer;
-}
-.c-botao1:hover{
-  cursor:pointer;
-  
-}
-.c-botao3{
-  cursor:pointer;
-  font-family:'inter-regular';
-  font-weight: 600px;
-  font-size: 10px;
-  color: #fff;
-  background-color: #694DF9;
-  border: #694DF9;
-  width: 158px;
-  height: 39px;
-  border-radius: 20px;
-  margin-top: 30px;
-  margin-left: 100px;
-  line-height: 12.19px;
 }
 
+.c-botao3{
+  cursor:pointer;
+  border: none;
+  font-family:'inter-regular';
+  font-weight: 600px;
+  text-decoration: none;
+  font-size: 0.7em;
+  color: #fff;
+  background-color: #694DF9;
+  width: max-content;
+  height: max-content;
+  padding: 15px 30px;
+  border-radius: 999px;
+}
 
 
 /* primeiro container  */
+
+.primeiro-container{ /* altera somente o botão dentro de primeiro-container */
+  .c-botao3{
+    margin-top: 1em;
+  }
+}
 
 .primeiro-container{
   display: flex;
@@ -283,6 +285,10 @@ html {
   flex-direction: column;
   margin-top: 10vh;
   margin-left: 50vh;
+
+  .c-botao3{
+        margin-top: 1.3em;
+      }
 }
 .titulolocalizacao{
   font-size: 3em;
@@ -338,27 +344,32 @@ html {
   font-family: 'inter-regular';
 }
 
-#formulario{
+#formulario-app{
   width: 50%;
+  align-items: center;
+  background-color: #F4F4F4;
   height: 80vh;
   display: flex;
+  padding-right: 10em;
   flex-direction: column;
 }
-.ultimobotao{
-  margin-left: 19vh;
-  cursor:pointer;
-  font-family:'inter-regular';
-  font-weight: 600px;
-  font-size: 10px;
-  color: #fff;
-  background-color: #694DF9;
-  border: #694DF9;
-  width: 90px;
-  height: 30px;
-  border-radius: 20px;
-  margin-top: 80px;
-  line-height: 12.19px;
+
+.form-input-app{
+
+  font-family: 'inter-regular';
+  border: 1px solid #E2DCFF !important;
+  border-radius: 6px !important;
+  width: 35em;
+  padding: 0 0.8em;
+  height: 3em;
+  
 }
+
+.form-input-app:focus{
+  border: 1px solid #B1A3F3 !important;
+  outline: none;
+}
+
 .ultimostext{
   color: #202020;
   font-size: 14px;
@@ -369,6 +380,7 @@ html {
 .ultimotitulo{
   margin-top: 7vh;
   font-size: 1.6em;
+
   color: #202020;
   font-family: 'inter-bold';
 }
@@ -381,16 +393,15 @@ html {
 
 .messageinput{
   height: 10vh;
-  width: 30vw;
+  max-width: 35em;
+  max-height: 25em;
 }
-.ultimocontainer{
-  margin-top: 7vh;
-  margin-left: 19vh;
+
+.btn-form-div{
+  display: flex;
+  width: 30em;
 }
-.ultimocontainer2{
-  margin-left: 19vh;
-  margin-top: 7vh;
-}
+
 
 /*rodape*/
 
@@ -417,6 +428,20 @@ html {
 .imagensrodape{
   width: 5vh;
 }
+
+.c-botao3-form{
+  cursor:pointer;
+  border: none;
+  font-family:'inter-regular';
+  text-decoration: none;
+  font-size: 0.8em;
+  color: #fff;
+  background-color: #694DF9;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.9em 2.2em;
+  border-radius: 30px;
+}
 .direitosautorais{
   margin-top: 0.5vh;
   display: flex;
@@ -427,6 +452,30 @@ html {
   font-family: 'inter-medium';
   line-height: 22px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 720 */
@@ -481,6 +530,7 @@ html {
 
 /*LOCALIZAÇÃO*/
 
+
 .localizacao{
   display: flex;
   height: 70vh;
@@ -510,6 +560,8 @@ html {
       flex-direction: column;
       margin-top: 4vh;
       margin-left: 20%;
+
+      
   }
   .titulolocalizacao{
       font-size: 2em;
@@ -534,29 +586,24 @@ html {
   .ultimos-titulos{
       margin-top: 7vh;
   }
-  #formulario{
+  #formulario-app{
       width: 100%;
       height: 50%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      
   }
   
-  .tipotexto{
-      height: 3vh;
-      width: 30vw;
-      border: solid 1px black;
-  }
   
   .messageinput{
       height: 10vh;
       width: 30vw;
       border: solid 1px black;
   }
-  .ultimobotao{
-      margin-top: 0vh;
-      margin-left: 1vw;
-  }
+  
+
+
   .ultimocontainer{
       margin-top: 5vh;
       margin-left: 1vw;

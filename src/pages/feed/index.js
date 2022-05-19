@@ -15,7 +15,7 @@ export default function Index(){
 
   return(
     <main>
-  <header>
+  <header className='header-feed'>
     <div class="cima">
       <div class="logo">
         <h3 class="logo-flux">FLUX</h3>

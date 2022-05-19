@@ -29,7 +29,7 @@ export default function Index(){
 </head>
 
 <body>
-  <header>
+  <header className='header-anuncios'>
     <div class="cima">
       <div class="logo">
         <h3 class="logo-flux">FLUX</h3>
