@@ -8,10 +8,10 @@ funcional e operante na internet.
 Rede social de anúncios de vendas.
 
 ## Integrantes
-Victor Santos
-Kalel Rodrigues
-Iago Viana
-Pedro Horvath
+Victor Santos <br/>
+Kalel Rodrigues <br/>
+Iago Viana <br/>
+Pedro Horvath <br/>
 Raniele Evellyn
 
 # Obrigado!
