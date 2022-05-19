@@ -15,6 +15,7 @@ import sitee from "../../images/sitee.jfif";
 export default function Index() {
   return (
     <div>
+      
       <header className="header-feed">
         <div class="cima">
           <div class="logo">
@@ -60,11 +61,7 @@ export default function Index() {
         </div>
       </header>
 
-      <div>
-        <a class="anun" href="/Anunciar">
-          ANUNCIAR
-        </a>
-      </div>
+      <div className="feed-content">
       <section class="primeiro-1">
         <div class="primeiro">
           <a class="text-decoration" href="../InfoAnuncio/">
@@ -112,19 +109,20 @@ export default function Index() {
 
       <section class="propraganda">
         <h1 class="titulo">
-          Novos anúncios <br></br>
-          na área de <span class="roxo">limpeza</span>
+          Novos anúncios 
+          na categoria de <span class="roxo">limpeza</span>
         </h1>
-        <div>
+        <div className="propaganda-imgs">
           <img class="imagempropa" src={veja}></img>
           <img class="imagempropa" src={veja}></img>
           <img class="imagempropa" src={veja}></img>
         </div>
         <h1 class="titulo">
-          Venha <br></br>
+          Venha 
           conferir!
         </h1>
       </section>
+      </div>
     </div>
   );
 }

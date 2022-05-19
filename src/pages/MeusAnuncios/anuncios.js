@@ -80,7 +80,7 @@ export default function anuncios() {
             </div>
           </div>
           <div className="nav-btn">
-            <Link className="c-botao3" to='/Anunciar' >ANUNCIAR</Link>
+            <Link className="c-botao3" to='/Anunciar'>ANUNCIAR</Link>
           </div>
         </nav>
         <div className="anun-div-cards">

@@ -108,10 +108,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 120px;
-  width: 95vh;
-  margin-bottom: 50px;
-  margin: 30px 10vw;
+  padding: 0px 6em;
+  width: 100vw;
 }
 .kit {
   font-family: "inter-thin";
@@ -120,11 +118,9 @@
 
 .primeiro {
   display: flex;
-  border: px solid #7700ff;
   width: 100vw;
   justify-content: space-between;
-  padding: 38px;
-  margin: 4px 4px;
+  padding: 1em 0em;
 }
 .co-1 {
   display: flex;
@@ -143,8 +139,6 @@
   background-color: #ffffff;
   border-radius: 12px;
   cursor: pointer;
-  margin-right: 15px;
-  margin-left: 15px;
   align-items: center;
   border-radius: 4px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
@@ -160,10 +154,9 @@
   border: #fff 1px solid;
 }
 .img {
-  width: 137px;
-  height: 133px;
-  left: 2820px;
-  top: 1589px;
+  width: 11em;
+  height: 11em;
+
   border-radius: 5px;
   margin: 2px 4px;
 }
@@ -214,12 +207,31 @@
   color: white;
   text-decoration: none;
 }
+
+.feed-content {
+  display: flex;
+  width: 100vw;
+  height: 82vh;
+  flex-direction: column;
+  align-items: center;
+}
+
 .propraganda {
   display: flex;
   flex-direction: row;
   width: 90vw;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
   justify-content: center;
+  align-items: center;
   height: 30vh;
+  font-size: 2em;
+
+  h1 {
+    width: 15em;
+  }
+  .propaganda-imgs {
+    display: flex;
+  }
 }
 .roxo {
   color: #694df9;
