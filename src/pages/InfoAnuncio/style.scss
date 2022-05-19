@@ -1,7 +1,6 @@
 :root {
   --primaria: #694df9;
 }
-
 .header-info {
   display: flex;
   height: 18vh;
@@ -55,7 +54,6 @@
 .busca img{
   cursor: pointer;
 }
-
 .conta{
   display: flex;
   width: 5%;
@@ -107,13 +105,14 @@
   display: flex;
   flex-direction: row;
   background-color: #D9DBDD;
+  height: 82vh;
 }
 .page{
-  height: 90vh;
+  height: 70vh;
   padding: 4vh;
 }
 
-.titulo{
+.tituloinfo{
   font-family: "inter-bold";
   margin-bottom: 5px;
 }
@@ -125,13 +124,14 @@
 }
 .informa{
   margin-top: 30px;
-  height: 90vh;
+  height: 70vh;
   padding: 4vh;
   display: flex;
   flex-direction: column;
   width: 140px;
-
-
+}
+.aaaa{
+  height: 70vh;
 }
 .minititulo{
   margin-top: 10px;
@@ -146,7 +146,7 @@
 }
 .page2{
   margin-top: 30px;
-  height: 90vh;
+  height: 70vh;
   padding: 4vh;
   display: flex;
   flex-direction: column;

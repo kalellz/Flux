@@ -36,7 +36,7 @@ export default function Index(){
             <p class="p-roxa">
               Crie sua conta na flux agora, dura menos de 5 minutos!
             </p>
-            <button class="roxa-btn" onclick="location.href = 'signin.html';">cadastrar-se</button>
+            <a class="roxa-btn" href ="/Cadastro">cadastrar-se</a>
           </div>
         </div>
         <div class="branca">

@@ -85,11 +85,8 @@
   width: auto;
   color: white;
 }
-.categorias:hover{
-  color: #000;
-}
-
 .anun{
+  text-decoration: none;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -107,7 +104,7 @@
   border: 1px solid #694df9;
   transition: .5s;
   cursor: pointer;
- }
+}
 .primeiro-1 {
   display: flex;
   justify-content: space-between;

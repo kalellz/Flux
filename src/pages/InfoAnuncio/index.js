@@ -16,17 +16,16 @@ import { Link } from 'react-router-dom';
 export default function Index(){
 
   return(
-    <main>
+    <div class="bodyinfoanuncio">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="/common/common.css" />
-    <title>Anuncio
-    </title>
+    <title>Anuncio</title>
   </head>
-  <body>
+  <body class="bodyinfoanuncio">
     <header className='header-info'>
       <div class="cima">
         <div class="logo">
@@ -57,26 +56,26 @@ export default function Index(){
                 </select>
                 
             </div>
-            <div><a class="botao1" href="">Anúncios</a></div>
-            <div><a class="botao1" href="">Feed</a></div>
+            <div><a class="botao1" href="/MeusAnuncios">Anúncios</a></div>
+            <div><a class="botao1" href="/feed">Feed</a></div>
           </div>
       </div>
     </header>
-    <main class="pagetoda">
+    <div class="pagetoda">
     <section class="page">
       <div class="parte1">
-        <h1 class="titulo">Kit de Cozinha</h1>
+        <h1 class="tituloinfo">Kit de Cozinha</h1>
         <img src={img1} />
 
-        <h1 class="titulo">Descrição do produto</h1>
+        <h1 class="tituloinfo">Descrição do produto</h1>
       <div class="desc">
         <p class="descprod">Kit contém: 20 facas;<br></br> 20 colheres;<br></br> Sem marcas de uso e nenhuma <mancha class="br"></mancha> Entrego em qualquer lugar. <br></br>Combinamos via whatsapp.</p>
         </div>
       </div>
     </section>
-    <section>
+    <section class="aaaa">
       <div class="informa">
-        <h1 class="titulo">Informações gerais</h1>
+        <h1 class="tituloinfo">Informações gerais</h1>
 
         <div class="div1">
         <h4 class="minititulo">
@@ -103,7 +102,7 @@ export default function Index(){
 
     <section class="page2">
       <div class="contato">
-        <h1 class="titulo">
+        <h1 class="tituloinfo">
           Contato:
 
         </h1>
@@ -139,8 +138,8 @@ export default function Index(){
         </div>
       </div>
     </section>
-  </main>
+  </div>
   </body>
-  </main>
+  </div>
 )
 }

@@ -37,7 +37,7 @@ export default function Index(){
             <p class="p-roxa">
                 Para se reconectar conosco, por favor coloque suas informações de login!
             </p>
-            <button class="roxa-btn" onclick="location.href = 'index.html';">entrar</button>
+            <a class="roxa-btn" href ="/Login">entrar</a>
           </div>
         </div>
         <div class="branca">

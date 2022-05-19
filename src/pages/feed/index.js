@@ -9,12 +9,14 @@ import '../../fonts/Inter/Inter-Regular.ttf';
 import '../../fonts/Inter/Inter-SemiBold.ttf';
 import '../../fonts/Inter/Inter-Thin.ttf';
 import './style.scss';
+import Buscar from '../../images/buscar.svg';
+import Vector from '../../images/Vector.svg';
 import veja from '../../images/veja';
 import sitee from '../../images/sitee.jfif';
 export default function Index(){
 
   return(
-    <main>
+    <div>
   <header className='header-feed'>
     <div class="cima">
       <div class="logo">
@@ -22,11 +24,11 @@ export default function Index(){
       </div>
       <div class="busca">
         <input type="text" placeholder="  Pesquise por qualquer coisa que quiser!" class="pesquisa" ></input>
-        <img src="buscar.svg" width="24px"></img>
+        <img src={Buscar} width="20em"></img>
       </div>
       <div class="conta">
         <a href="" class="botao1">Sair</a>
-        <img src="Vector.svg" width="32px"></img>
+        <img src={Vector} width="32px"></img>
       </div>
     </div>
     <div class="baixo">
@@ -41,7 +43,7 @@ export default function Index(){
           </select>
 
         </div>
-        <div><a class="botao1" href="../MeusAnuncios/anuncios.html">Anúncios</a></div>
+        <div><a class="botao1" href="/MeusAnuncios">Anúncios</a></div>
         <div><a class="botaofeed" >Feed</a></div>
       </div>
     </div>
@@ -50,7 +52,7 @@ export default function Index(){
   
 
     <div>
-      <button class="anun" onclick="location.href = '../Anunciar/';"><span class="teste">ANUNCIAR</span></button>
+      <a class="anun" href = "/Anunciar">ANUNCIAR</a>
     </div>
     <section class="primeiro-1">
 
@@ -88,11 +90,11 @@ export default function Index(){
         </div>
       </a>
       <a class="text-decoration" href="../InfoAnuncio/index.html">
-        <div class="co-1" id="cozinha">
-          <img class="img" src="../../assets/images/sitee.jfif"></img>
+      <div class="co-1" id="cozinha">
+        <img class="img" src={sitee}></img>
           <h2 class="kit">Kit de cozinha </h2>
           <p class="dinheiro">R$ 300</p>
-          <button class="botao"> Lazer </button>
+          <button class="botao"> Roupas </button>
         </div>
       </a>
         </div>
@@ -111,6 +113,6 @@ export default function Index(){
        <h1 class="titulo">Venha <br></br>
         conferir!</h1>
        </section>
-</main>
+</div>
 )
 }
