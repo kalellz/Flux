@@ -13,9 +13,8 @@ import localizacao from "./images/localizacao.png";
 import insta from "./images/insta";
 import twitter from "./images/twitter";
 import facebook from "./images/facebook";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 function App() {
-  let navigate = useNavigate();
   return (
     <div>
       <header class="landing-header">

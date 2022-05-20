@@ -115,7 +115,6 @@
   font-family: "inter-thin";
   font-size: 20px;
 }
-
 .primeiro {
   display: flex;
   width: 100vw;
@@ -142,6 +141,8 @@
   align-items: center;
   border-radius: 4px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 #cozinha:hover {
   background-color: #694df9;
