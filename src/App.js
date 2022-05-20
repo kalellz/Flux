@@ -60,32 +60,32 @@ function App() {
           <button class="quadrados">
             <h1 class="tituloquadrados">Anúncios</h1>
             <span class="textosquadrados">
-              Veja anúncios baseados em suas buscas,<br></br>
-              anúncios e também em sua localização,<br></br>
-              assim você encontra tudo aquilo que<br></br>
-              procura o mais perto de você.<br></br>
-              Desta forma você evita passar muito<br></br>
-              tempo rolando o feed até achar<br></br>
-              algo que o interesse.<br></br>
+              Veja anúncios baseados em suas buscas,
+              anúncios e também em sua localização,
+              assim você encontra tudo aquilo que
+              procura o mais perto de você.
+              Desta forma você evita passar muito
+              tempo rolando o feed até achar
+              algo que o interesse.
             </span>
           </button>
           <button class="quadrados">
             <h1 class="tituloquadrados">Segurança</h1>
             <span class="textosquadrados">
-              Cada vez que você avalia alguém ou deixa<br></br>
-              um comentário ruim o nosso sistema <br></br>
-              tenta não exibir anúncios desta pessoa,<br></br>
-              assim você tem menos chances de cair<br></br>
-              em um golpe ou coisa do tipo. <br></br>
+              Cada vez que você avalia alguém ou deixa
+              um comentário ruim o nosso sistema 
+              tenta não exibir anúncios desta pessoa,
+              assim você tem menos chances de cair
+              em um golpe ou coisa do tipo. 
             </span>
           </button>
           <button class="quadrados">
             <span class="tituloquadrados"> Vendas </span>
             <span class="textosquadrados">
-              Nós não interferirmos na sua venda,<br></br>
-              nós apenas somos a ponte entre o <br></br>
-              anunciante e o comprador, não nos<br></br>
-              responsabilizamos por golpes ou<br></br>
+              Nós não interferirmos na sua venda,
+              nós apenas somos a ponte entre o 
+              anunciante e o comprador, não nos
+              responsabilizamos por golpes ou
             </span>
           </button>
         </section>
@@ -96,12 +96,12 @@ function App() {
           </div>
           <div class="localizacaocontainer">
             <h1 class="titulolocalizacao">
-              Compre de qualquer<br></br>
+              Compre de qualquer
               lugar do Brasil
             </h1>
             <p class="textolocalizacao">
-              Faça sua primeira compra independente do seu<br></br>
-              local, venha dar uma olhada no que estão<br></br>
+              Faça sua primeira compra independente do seu
+              local, venha dar uma olhada no que estão
               vendendo no momento!
             </p>
             <Link class="c-botao3" to="/feed">
@@ -117,12 +117,12 @@ function App() {
               <p class="ultimos-textos">Rua Adele nº 95 apto: 234</p>
               <h1 class="ultimos-titulos">TELEFONES</h1>
               <p class="ultimos-textos">
-                5666-5557 <br></br>
+                5666-5557 
                 5777-6555
               </p>
               <h1 class="ultimos-titulos">HORÁRIOS DE ATENDIMENTO</h1>
               <p class="ultimos-textos">
-                Segunda à sexta: 9h às 18h. <br></br>
+                Segunda à sexta: 9h às 18h. 
                 Finais de semana e feriados: 9h às 12h.
               </p>
             </div>

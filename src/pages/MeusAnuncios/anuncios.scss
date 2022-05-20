@@ -13,7 +13,9 @@
     width: 80%;
     height: 10%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
   }
 
   .busca {
@@ -70,6 +72,7 @@
         width: 12%;
         transition: 1.5s;
       }
+      
       p {
         transition: 3s;
         font-size: 1em;
