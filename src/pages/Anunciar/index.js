@@ -83,7 +83,7 @@ export default function Index() {
         <h1  class="titulo">Contato</h1>
         <div class="inputs">
             <p>Telefone</p>
-            <input type="text" class="form-input" placeholder="Bote seu número de telefone."></input>
+            <input type="text" class="form-input" placeholder="Coloque seu número de telefone."></input>
         </div>
         <div class="inputs">
             <p>E-mail</p>
@@ -95,7 +95,7 @@ export default function Index() {
         </div>
         <div class="inputs">
             <p>Whatsapp</p>
-            <input type="text" class="form-input" placeholder="este número irá se transformar em um botão para seu número."></input>
+            <input type="text" class="form-input" placeholder="Este número irá se transformar em um botão para seu número."></input>
         </div>
         <div class="inputs">
             <p>Facebook</p>
