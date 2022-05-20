@@ -11,7 +11,6 @@ import "./style.scss";
 import img1 from "../../images/img1.svg";
 import buscar from "../../images/buscar.svg";
 import Vector from "../../images/Vector.svg";
-import { Link } from "react-router-dom";
 export default function Index() {
   return (
     <div class="bodyinfoanuncio">
