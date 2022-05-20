@@ -83,7 +83,7 @@ export default function Index() {
         <h1  class="titulo">Contato</h1>
         <div class="inputs">
             <p>Telefone</p>
-            <input type="text" class="form-input" placeholder="Coloque seu número de telefone."></input>
+            <input type="tel" class="form-input" placeholder="Coloque seu número de telefone."></input>
         </div>
         <div class="inputs">
             <p>E-mail</p>
