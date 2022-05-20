@@ -2,20 +2,18 @@
   --primaria: #694df9;
 }
 
-.header-anun {
+.header-anunciar {
   display: flex;
   height: 18vh;
   flex-direction: column;
-  width: 100vw;
+  width: 99vw;
   background-color: var(--primaria);
 }
 
-.cima {
-  display: flex;
-  padding: 20px 30px 0px 30px;
-  width: 100%;
-  height: 9vh;
-  justify-content: space-between;
+.messageinput2 {
+  height: 10vh;
+  max-width: 40em;
+  max-height: 10em;
 }
 
 .logo {
@@ -156,7 +154,7 @@ textarea:focus {
 
 .pp {
   margin: 0;
-  font-size: 13px;
+  font-size: 1em;
 }
 
 span {
@@ -201,4 +199,25 @@ span {
   width: auto;
   color: white;
   text-decoration: none;
+}
+input[type="file"]{
+  display: none;
+}
+label{
+  padding: 1em 2em;
+  width: 200px;
+  background-color: #694df9;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: .5s;
+  border: 2px solid #694df9;
+  border-radius: .5em;
+}
+label:hover{
+  color: #694df9;
+  background-color: #fff;
 }

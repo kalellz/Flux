@@ -64,11 +64,6 @@ export default function anuncios() {
       </header>
       <div className="main-content">
         <nav className="navbar">
-          <div className="filters">
-            <p>Geral</p>
-            <p>Recentes</p>
-            <p>Mais visitados</p>
-          </div>
           <div class="busca">
             <input
               type="text"
@@ -86,7 +81,7 @@ export default function anuncios() {
         <div className="anun-div-cards">
           <div className="anun-card">
             <div className="card-img">
-              <img src={sitee} alt="" />
+              <img src={sitee} className="imagemsitee" alt="" />
             </div>
             <div className="card-desc">
               <p>
@@ -105,7 +100,7 @@ export default function anuncios() {
           </div>
           <div className="anun-card">
             <div className="card-img">
-              <img src={sitee} alt="" />
+              <img src={sitee} className="imagemsitee" alt="" />
             </div>
             <div className="card-desc">
               <p>
@@ -124,7 +119,7 @@ export default function anuncios() {
           </div>
           <div className="anun-card">
             <div className="card-img">
-              <img src={sitee} alt="" />
+              <img src={sitee} className="imagemsitee" alt="" />
             </div>
             <div className="card-desc">
               <p>

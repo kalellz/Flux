@@ -13,7 +13,7 @@
     width: 80%;
     height: 10%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .busca {
@@ -33,16 +33,6 @@
     width: 10%;
     justify-content: flex-end;
   }
-  .filters {
-    display: flex;
-    width: 20em;
-    justify-content: space-between;
-
-    p {
-      font-family: "inter-semibold";
-      font-size: 1em;
-    }
-  }
   .anun-div-cards {
     display: flex;
     height: 90%;
@@ -59,10 +49,9 @@
       margin-left: 4em;
 
       span {
-        color: #6a4df99d;
+        color: rgba(255, 255, 255, 0.616);
       }
     }
-
     .anun-card {
       display: flex;
       width: 100%;
@@ -82,7 +71,7 @@
         transition: 1.5s;
       }
       p {
-        transition: 1s;
+        transition: 3s;
         font-size: 1em;
         font-family: "inter-regular";
       }
@@ -129,5 +118,13 @@
           saturate(2969%) hue-rotate(240deg) brightness(98%) contrast(100%);
       }
     }
+    .imagemsitee{
+      width: 10em; 
+      height: 6em;
+      border-radius: 10px;
+    }
+  }
+  .decorationtext{
+    text-decoration: underline;
   }
 }
