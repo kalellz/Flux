@@ -2,89 +2,7 @@
   --primaria: #694df9;
 }
 
-.header-feed {
-  display: flex;
-  height: 18vh;
-  flex-direction: column;
-  width: 100vw;
-  background-color: var(--primaria);
-}
 
-.cima {
-  display: flex;
-  padding: 20px 30px 0px 30px;
-  height: 9vh;
-  justify-content: space-between;
-}
-
-.logo {
-  display: flex;
-  height: min-content;
-}
-
-.logo-flux {
-  font-family: "inter-bold";
-  font-size: 24px;
-  color: white;
-}
-
-.busca {
-  display: flex;
-  height: 2.5em;
-  width: 70%;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.pesquisa {
-  width: 95%;
-  padding: 10px;
-  height: 100%;
-  border: none;
-  border-radius: 5px 0px 0px 5px;
-  background-color: transparent;
-  outline: none;
-}
-
-.busca img {
-  cursor: pointer;
-}
-
-
-.conta {
-  display: flex;
-  width: 5%;
-  height: min-content;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-
-.content {
-  display: flex;
-  width: 75%;
-  margin-right: 10em;
-  justify-content: space-around;
-  height: 50%;
-}
-
-.baixo {
-  display: flex;
-  height: 9vh;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-}
-.categorias {
-  border: none;
-  outline: none;
-  width: min-content;
-  background-color: transparent;
-  font-family: "inter-regular";
-  font-size: 15px;
-  width: auto;
-  color: white;
-}
 .anun {
   text-decoration: none;
   display: flex;
@@ -197,36 +115,7 @@
   margin-bottom: 50px;
 }
 
-.botao1 {
-  border: none;
-  outline: none;
-  width: min-content;
-  background-color: transparent;
-  font-family: "inter-regular";
-  font-size: 15px;
-  width: auto;
-  color: white;
-  text-decoration: none;
 
-  background-image: 
-  linear-gradient(
-      transparent 0%,
-      transparent 90%,
-      #fff 20%,
-      #fff 100%
-  );
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-position-x: center;
-
-  transition: background-size 700ms;
-}
-.botao1:hover{
-  color: #fff;
-        transition: 700ms;
-        background-size: 100% 100%;
-        background-position-x: center;
-}
 .feed-content {
   display: flex;
   width: 100vw;
@@ -268,16 +157,4 @@
 }
 .anun:hover {
   cursor: pointer;
-}
-.botaofeed {
-  border: none;
-  outline: none;
-  width: min-content;
-  background-color: transparent;
-  font-family: "inter-regular";
-  font-size: 15px;
-  width: auto;
-  color: white;
-  text-decoration: underline;
-  cursor: default;
 }
