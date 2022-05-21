@@ -53,7 +53,7 @@ export default function Index() {
                     <img src={mail} width="24px" class="input-img"></img>
                     <input
                       type="email"
-                      class="input"
+                      class="input-login"
                       placeholder="Login"
                     ></input>
                   </div>
@@ -61,7 +61,7 @@ export default function Index() {
                     <img src={lock} width="24px" class="input-img"></img>
                     <input
                       type="password"
-                      class="input"
+                      class="input-login"
                       placeholder="Senha"
                     ></input>
                   </div>

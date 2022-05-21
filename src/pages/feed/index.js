@@ -10,7 +10,6 @@ import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
 import Header from "../common/Header/header" 
 import veja from "../../images/veja";
-import sitee from "../../images/sitee.jfif";
 import Card from "../common/Card/card"
 export default function Index() {
   return (
@@ -40,6 +39,7 @@ export default function Index() {
           conferir!
         </h1>
       </section>
+
       </div>
     </div>
   );

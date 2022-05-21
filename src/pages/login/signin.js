@@ -18,14 +18,6 @@ import { Link } from "react-router-dom";
 export default function Index() {
   return (
     <main>
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="signin.css" />
-        <link rel="stylesheet" href="/common/common.css" />
-        <title>Cadastrar</title>
-      </head>
       <body>
         <main>
           <section class="login-container">
@@ -53,13 +45,13 @@ export default function Index() {
                 <div class="container-input">
                   <div class="email">
                     <img src={user} width="24px" class="input-img"></img>
-                    <input type="text" class="input" placeholder="Nome"></input>
+                    <input type="text" class="input-login" placeholder="Nome"></input>
                   </div>
                   <div class="email">
                     <img src={mail} width="24px" class="input-img"></img>
                     <input
                       type="email"
-                      class="input"
+                      class="input-login"
                       placeholder="E-mail"
                     ></input>
                   </div>
@@ -67,7 +59,7 @@ export default function Index() {
                     <img src={lock} width="24px" class="input-img"></img>
                     <input
                       type="password"
-                      class="input"
+                      class="input-login"
                       placeholder="Senha"
                     ></input>
                   </div>

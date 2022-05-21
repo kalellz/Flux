@@ -116,24 +116,3 @@ span {
   color: white;
   text-decoration: none;
 }
-input[type="file"]{
-  display: none;
-}
-label{
-  padding: 1em 2em;
-  width: 200px;
-  background-color: #694df9;
-  color: #FFF;
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: .5s;
-  border: 2px solid #694df9;
-  border-radius: .5em;
-}
-label:hover{
-  color: #694df9;
-  background-color: #fff;
-}
