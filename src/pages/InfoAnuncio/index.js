@@ -9,12 +9,12 @@ import "../../fonts/Inter/Inter-SemiBold.ttf";
 import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
 import img1 from "../../images/img1.svg";
-import Header from "../common/Header/header" 
+import Header from "../common/Header/header";
 export default function Index() {
   return (
     <div class="bodyinfoanuncio">
       <body class="bodyinfoanuncio">
-      <Header/>
+        <Header />
         <div class="pagetoda">
           <section class="page">
             <div class="parte1">

@@ -37,18 +37,32 @@ export default function Index() {
               <div class="branca-content">
                 <h1 class="h1-branca">Crie sua conta</h1>
                 <div class="social">
-                  <img src={twitter} width="42px" />
-                  <img src={facebook} width="42px" />
-                  <img src={linkedin} width="42px" />
+                  <img src={twitter} width="42px" alt="twitter" />
+                  <img src={facebook} width="42px" alt="facebook" />
+                  <img src={linkedin} width="42px" alt="linkedin" />
                 </div>
                 <p class="p-branca">Ou use seu e-mail para se cadastrar</p>
                 <div class="container-input">
                   <div class="email">
-                    <img src={user} width="24px" class="input-img"></img>
-                    <input type="text" class="input-login" placeholder="Nome"></input>
+                    <img
+                      src={user}
+                      width="24px"
+                      class="input-img"
+                      alt="user"
+                    ></img>
+                    <input
+                      type="text"
+                      class="input-login"
+                      placeholder="Nome"
+                    ></input>
                   </div>
                   <div class="email">
-                    <img src={mail} width="24px" class="input-img"></img>
+                    <img
+                      src={mail}
+                      width="24px"
+                      class="input-img"
+                      alt="mail"
+                    ></img>
                     <input
                       type="email"
                       class="input-login"
@@ -56,14 +70,21 @@ export default function Index() {
                     ></input>
                   </div>
                   <div class="email">
-                    <img src={lock} width="24px" class="input-img"></img>
+                    <img
+                      src={lock}
+                      width="24px"
+                      class="input-img"
+                      alt="lock"
+                    ></img>
                     <input
                       type="password"
                       class="input-login"
                       placeholder="Senha"
                     ></input>
                   </div>
-                  <Link class="branca-btn" to={'/Login'}>cadastrar</Link>
+                  <Link class="branca-btn" to={"/Login"}>
+                    cadastrar
+                  </Link>
                 </div>
               </div>
             </div>

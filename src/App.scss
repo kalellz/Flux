@@ -81,19 +81,17 @@ html {
   border: none;
   text-align: center;
 
-  background-image: 
-    linear-gradient(
-        transparent 0%,
-        transparent 90%,
-        #505050 20%,
-        #505050 100%
-    );
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    background-position-x: center;
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    #505050 20%,
+    #505050 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: center;
 
-    transition: background-size 800ms;
-  ;
+  transition: background-size 800ms;
 }
 .c-botao4:hover {
   color: black;
@@ -105,9 +103,9 @@ html {
   transition: 780ms;
 
   color: #505050;
-        transition: 500ms;
-        background-size: 100% 100%;
-        background-position-x: center;
+  transition: 500ms;
+  background-size: 100% 100%;
+  background-position-x: center;
 }
 
 .c-botao3 {
@@ -198,10 +196,10 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image:linear-gradient(180deg,#fff,#e2e0e0);
+  background-image: linear-gradient(180deg, #fff, #e2e0e0);
 }
 .titulosaibamais {
-  margin-top:5em;
+  margin-top: 5em;
   font-size: 2em;
   font-family: "inter-bold";
   color: #202020;
@@ -214,7 +212,7 @@ html {
 /* quadradaos  */
 
 .quadradaos {
-  background-image:linear-gradient(180deg,#e2e0e0,#fff);
+  background-image: linear-gradient(180deg, #e2e0e0, #fff);
   margin-top: 0px;
   display: flex;
   justify-content: center;
