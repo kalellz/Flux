@@ -9,7 +9,6 @@ import "../../fonts/Inter/Inter-SemiBold.ttf";
 import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
 import img1 from "../../images/img1.svg";
-import buscar from "../../images/buscar.svg";
 import Vector from "../../images/Vector.svg";
 export default function Index() {
   return (
