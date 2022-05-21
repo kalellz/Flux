@@ -2,95 +2,10 @@
   --primaria: #694df9;
 }
 
-.header-anunciar {
-  display: flex;
-  height: 18vh;
-  flex-direction: column;
-  width: 99vw;
-  background-color: var(--primaria);
-}
-
 .messageinput2 {
   height: 10vh;
   max-width: 40em;
   max-height: 10em;
-}
-
-.logo {
-  display: flex;
-  height: min-content;
-}
-
-.logo-flux {
-  font-family: "inter-bold";
-  font-size: 24px;
-  color: white;
-}
-
-.busca {
-  display: flex;
-  height: 2.5em;
-  width: 40%;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.pesquisa {
-  width: 95%;
-  height: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px 0px 0px 5px;
-  background-color: transparent;
-  outline: none;
-}
-
-.busca img {
-  cursor: pointer;
-}
-
-.conta {
-  display: flex;
-  width: 5%;
-  height: min-content;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-
-.content {
-  display: flex;
-  width: 75%;
-  margin-right: 10em;
-  justify-content: space-around;
-  height: 50%;
-}
-
-.baixo {
-  display: flex;
-  height: 9vh;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-}
-
-.categorias {
-  border: none;
-  outline: none;
-  width: min-content;
-  background-color: transparent;
-  font-family: "inter-regular";
-  font-size: 15px;
-  width: auto;
-  color: white;
-}
-
-.categorias option {
-  font-family: "inter-regular";
-  font-size: 16px;
-  padding: 5px 0;
-  height: 200px;
-  color: black !important;
 }
 
 .formulario {

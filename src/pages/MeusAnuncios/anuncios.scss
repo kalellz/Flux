@@ -13,15 +13,18 @@
     width: 80%;
     height: 10%;
     align-items: center;
-    justify-content: space-around;
     margin-bottom: 1.5em;
     margin-top: 1em;
   }
 
-  .busca {
-    border: 1px solid black;
-    margin-left: 1em;
-    width: 65%;
+  .anun-search {
+    display: flex;
+    width: 60%;
+    height: 100%;
+  }
+
+  .group {
+    width: 100%;
   }
 
   .nav-img {
@@ -32,7 +35,8 @@
 
   .nav-btn {
     display: flex;
-    width: 10%;
+    width: 40%;
+
     justify-content: flex-end;
   }
   .anun-div-cards {
@@ -41,10 +45,9 @@
     width: 80%;
     flex-direction: column;
 
-    .card-desc {
+    .anun-card-desc {
       display: flex;
       flex-direction: column;
-
       width: 13em;
       height: 60%;
       justify-content: space-between;
@@ -66,20 +69,20 @@
       align-items: center;
       border-radius: 16px;
       box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
-      .card-img {
+      .anun-card-img {
         display: flex;
         height: 80%;
         width: 12%;
         transition: 1.5s;
       }
-      
+
       p {
         transition: 3s;
         font-size: 1em;
         font-family: "inter-regular";
       }
 
-      .card-info {
+      .anun-card-info {
         display: flex;
         font-size: 1.5em;
         width: 70%;
@@ -107,7 +110,7 @@
       }
     }
 
-    .card-icons {
+    .anun-card-icons {
       display: flex;
       width: 3.5em;
       justify-content: space-between;
@@ -121,13 +124,13 @@
           saturate(2969%) hue-rotate(240deg) brightness(98%) contrast(100%);
       }
     }
-    .imagemsitee{
-      width: 10em; 
+    .imagemsitee {
+      width: 10em;
       height: 6em;
       border-radius: 10px;
     }
   }
-  .decorationtext{
+  .decorationtext {
     text-decoration: underline;
   }
 }

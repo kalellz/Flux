@@ -8,12 +8,11 @@ import "../../fonts/Inter/Inter-Regular.ttf";
 import "../../fonts/Inter/Inter-SemiBold.ttf";
 import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
-import buscar from "../../images/buscar.svg";
-import Vector from "../../images/Vector.svg";
+import Header from "../common/Header/header" 
 export default function Index() {
   return (
     <div>
-      
+      <Header/>
       <section class="formulario">
         <h1 class="titulo">Dados do produto</h1>
         <div class="inputs">

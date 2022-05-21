@@ -3,7 +3,7 @@ import "./header.scss"
 
 export default function Header() {
   return (
-    <div className="header-anunciar">
+    <div className="header-feed">
       <div class="cima">
         <div class="logo">
           <h3 class="logo-flux">FLUX</h3>
@@ -44,7 +44,7 @@ export default function Header() {
             </a>
           </div>
           <div>
-            <a class="botao1">Feed</a>
+            <a class="botao1" href="/feed">Feed</a>
           </div>
         </div>
       </div>
