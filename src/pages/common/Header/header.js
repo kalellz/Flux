@@ -44,7 +44,7 @@ export default function Header() {
           </div>
           <div>
             <a class="botao1" href="/MeusAnuncios">
-              Anúncios
+              Meus Anúncios
             </a>
           </div>
           <div>

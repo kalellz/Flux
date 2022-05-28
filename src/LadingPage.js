@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./LadingPage.scss";
 import "./fonts/Inter/Inter-Black.ttf";
 import "./fonts/Inter/Inter-Bold.ttf";
 import "./fonts/Inter/Inter-ExtraBold.ttf";
@@ -134,11 +134,6 @@ function App() {
 
         <section class="rodape">
           <p class="rodapebutton">FLUX</p>
-          <div class="redessociais">
-            <img className="imagensrodape" src={insta}></img>
-            <img className="imagensrodape" src={twitter}></img>
-            <img className="imagensrodape" src={facebook}></img>
-          </div>
           <div>
             <p class="direitosautorais">
               © 2022 The Flux Company, all rights reserved

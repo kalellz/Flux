@@ -196,7 +196,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(180deg, #fff, #e2e0e0);
+  background-image: linear-gradient(190deg, #fff, #cccccc);
 }
 .titulosaibamais {
   margin-top: 5em;
@@ -212,7 +212,7 @@ html {
 /* quadradaos  */
 
 .quadradaos {
-  background-image: linear-gradient(180deg, #e2e0e0, #fff);
+  background-image: linear-gradient(160deg, #cccccc, #fff);
   margin-top: 0px;
   display: flex;
   justify-content: center;
@@ -230,7 +230,7 @@ html {
   justify-content: space-evenly;
   width: 26vw;
   height: 40vh;
-  background-color: #ffffff;
+  background-color: #d6d6d6;
   border-radius: 1em;
   border: none;
 }
@@ -419,10 +419,7 @@ html {
   background-color: #202020;
   border: solid #202020;
 }
-.redessociais {
-  margin-left: 30px;
-  margin-top: 20px;
-}
+
 .rodapebutton {
   margin-top: 1em;
   display: flex;
@@ -434,9 +431,7 @@ html {
   margin-left: 40px;
   width: 70px;
 }
-.imagensrodape {
-  width: 5vh;
-}
+
 
 .c-botao3-form {
   cursor: pointer;
@@ -452,14 +447,16 @@ html {
   border-radius: 30px;
 }
 .direitosautorais {
-  margin-top: 0.5vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   color: #fff;
   font-size: 14px;
   font-weight: 400;
   font-family: "inter-medium";
   line-height: 22px;
+  height: 12vh;
 }
 
 /* 720 */

@@ -8,13 +8,13 @@
 
 .sec-cards {
   display: flex;
-  width: 90vw;
+  width: 92vw;
   justify-content: space-between;
+  margin-top: 3em;
   height: 40vh;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
-
 .propraganda {
   display: flex;
   flex-direction: row;
@@ -42,4 +42,29 @@
 }
 .imagempropa {
   width: 10vh;
+}
+.card-button{
+  height: 2em;
+}
+.c-botao5{
+  cursor: pointer;
+  border: none;
+  font-family: "inter-regular";
+  font-weight: 600px;
+  text-decoration: none;
+  font-size: 0.7em;
+  color: #fff;
+  background-color: #694df9;
+  width: max-content;
+  height: max-content;
+  padding: 15px 30px;
+  border-radius: 999px;
+}
+.nav-btn {
+  margin-top: 1em;
+  display: flex;
+  width: 98vw;
+  height: 3em;
+  justify-content: flex-end;
+  margin-right: 5em;
 }

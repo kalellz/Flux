@@ -11,11 +11,17 @@ import "./style.scss";
 import Header from "../common/Header/header";
 import veja from "../../images/veja";
 import Card from "../common/Card/card";
+import {Link} from 'react-router-dom'
 export default function Index() {
   return (
     <div>
       <Header />
       <div className="feed-content">
+      <div className="nav-btn">
+        <Link className="c-botao5" to="/Anunciar">
+              ANUNCIAR
+            </Link>
+          </div>
         <div className="sec-cards">
           <Card />
           <Card />

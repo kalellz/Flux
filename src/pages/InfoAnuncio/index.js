@@ -17,19 +17,19 @@ export default function Index() {
         <Header />
         <div class="pagetoda">
           <section class="page">
-            <div class="parte1">
               <h1 class="tituloinfo">Kit de Cozinha</h1>
               <img src={img1} />
 
               <h1 class="tituloinfo">Descrição do produto</h1>
               <div class="desc">
                 <p class="descprod">
-                  Kit contém: 20 facas;<br></br> 20 colheres;<br></br> Sem
-                  marcas de uso e nenhuma <mancha class="br"></mancha> Entrego
-                  em qualquer lugar. <br></br>Combinamos via whatsapp.
+                  Kit contém: 20 facas e  
+                  20 colheres<br/>
+                  Sem marcas de uso e
+                  entrego no lugar desejado.<br/>
+                  Combinamos via whatsapp.
                 </p>
               </div>
-            </div>
           </section>
           <section class="aaaa">
             <div class="informa">

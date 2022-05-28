@@ -1,14 +1,6 @@
 :root {
   --primaria: #694df9;
 }
-
-.parte1 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
 .pagetoda {
   display: flex;
   flex-direction: row;
@@ -17,7 +9,8 @@
 }
 .page {
   height: 70vh;
-  padding: 4vh;
+  width: 32vw;
+  margin: 5em 0px 0px 5em;
 }
 
 .tituloinfo {
@@ -31,7 +24,7 @@
   font-family: "inter-regular";
 }
 .informa {
-  margin-top: 30px;
+  margin-top: 10vh;
   height: 70vh;
   padding: 4vh;
   display: flex;
@@ -52,7 +45,7 @@
   width: 300px;
 }
 .page2 {
-  margin-top: 30px;
+  margin-top: 10vh;
   height: 70vh;
   padding: 4vh;
   display: flex;
