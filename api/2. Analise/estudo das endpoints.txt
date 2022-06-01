@@ -1,0 +1,117 @@
+cadastrar (1) Post      /usuario/cadastro
+
+request
+{
+    'nome' : "",
+    'email' : "",
+    'senha' : ""
+}
+response(204) -- sem conteúdo ou cadastrado com sucesso
+
+////////////////////////////////////////////////////////////////
+
+logar (2)  Post    /usuario/login
+
+request
+{
+    'email' : "",
+    'senha' : ""
+}
+response{
+    'id' : 0,
+    'nome' : "",
+    'email' : "",
+}
+
+////////////////////////////////////////////////////////////////
+
+postar produto (3) Post /produto
+
+request{
+    'usuario' : 0,
+    'categoria' : 0,
+    'imagem' :"",
+    'email' :"",
+    'nome' :"",
+    'descricao' :"",
+    'preco' :"",
+	'telefone' :"",
+	'cep' :"":
+}
+response{
+    'id' : 0,
+    'usuario' : 0,
+    'categoria' : 0,
+    'imagem' :"",
+    'email' :"",
+    'nome' :"",
+    'descricao' :"",
+    'preco' :"",
+	'telefone' :"",
+	'cep' :"":
+}
+
+////////////////////////////////////////////////////////////////
+
+alterar produto (4)  Put /produto/:id
+
+request{
+    'usuario' : 0,
+    'categoria' : 0,
+    'imagem' :"",
+    'email' :"",
+    'nome' :"",
+    'descricao' :"",
+    'preco' :"",
+	'telefone' :"",
+	'cep' :"":
+}
+response(204) -- sem conteúdo ou alterado com sucesso
+
+////////////////////////////////////////////////////////////////
+
+deletar produto (5) Delete /produto/:id
+
+response(204) -- sem conteúdo ou apagado com sucesso
+
+////////////////////////////////////////////////////////////////
+
+consultar todos os produtos (6) Get /produto
+
+response[
+    'nome' :"",
+    'descricao' :"",
+    'preco' :"",
+    'imagem' :""
+]
+
+////////////////////////////////////////////////////////////////
+
+consultar por nome (6) Get /produto/busca/?nome=xx
+
+response
+[
+    {
+        'nome' :"",
+        'descricao' :"",
+        'preco' :"",
+        'imagem' :""
+    }
+]
+
+////////////////////////////////////////////////////////////////
+
+consultar por id (7) Get /produto/:id
+
+response
+    {
+    'usuario' : 0,
+    'categoria' : 0,
+    'imagem' :"",
+    'email' :"",
+    'nome' :"",
+    'descricao' :"",
+    'preco' :"",
+	'telefone' :"",
+	'cep' :"":
+    }
