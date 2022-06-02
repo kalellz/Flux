@@ -8,7 +8,7 @@ select id_usuario 		id,
        ds_email		email
   from tb_usuario
 where ds_email 		= 'flux@flux.com'
-and ds_senha		= '1234';
+and ds_senha		     = '1234';
 
 -- CSU02: inserir anuncio
 INSERT INTO tb_anuncio (id_usuario, nm_produto, ds_produto,img_produto, dc_preco, ds_telefone, ds_email, ds_cep) VALUES (1, 'ps5', 'playstation 5 barato', 5200, '11 9293219','victorsantosmenzes@gmail', '77424-180')
