@@ -1,15 +1,18 @@
 create database Flux;
 use Flux;
+
 create table TB_usuario(
 	ID_usuario int Primary key auto_increment,
     NM_usuario varchar(200),
     DS_email varchar(200),
     DS_senha varchar(200)
 );
+
 create table TB_anuncio_categoria(
 	ID_categoria int Primary key auto_increment,
     NM_categoria varchar(200)
 );
+
 create table TB_anuncio(
 	ID_anuncio int Primary key auto_increment,
     ID_usuario int,
@@ -24,5 +27,3 @@ create table TB_anuncio(
 	foreign key (ID_categoria) references TB_anuncio_categoria (ID_categoria),
     foreign key (ID_usuario) references TB_usuario(ID_usuario)
 	);
-    
-
