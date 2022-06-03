@@ -39,3 +39,10 @@ export async function consultarProdutos() {
 	const [linhas] = await con.query(comando);
 	return linhas;
 }
+export async function deletarProduto(){
+	const comando = `
+	DELETE FROM tb_anuncio 
+      WHERE id_anuncio = ?`
+	const [linhas] = await con.query(comando)
+	return linhas;
+}

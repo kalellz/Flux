@@ -1,4 +1,4 @@
-import { alterarImagem, alterarProduto, consultarProdutos, inserirProduto } from '../repository/produtoRepository.js'
+import { alterarImagem, alterarProduto, consultarProdutos, deletarProduto, inserirProduto } from '../repository/produtoRepository.js'
 import multer from 'multer';
 import { Router } from 'express'
 
@@ -81,6 +81,18 @@ server.get('/produto', async (req,resp) => {
 	try{
 		const resposta = await consultarProdutos();
 		resp.send(resposta);
+	} catch(err){
+        resp.status(400).send({
+            erro: err.message
+        })
+	}
+})
+server.delete('/produto/:id', async (req,resp) => {
+	try{
+		const { id } = req.params;
+		const deletar = await deletarProduto(id)
+		if(deletar != 1) throw new Error('produto não pode ser removido')
+		resp.status(204).send()
 	} catch(err){
         resp.status(400).send({
             erro: err.message
