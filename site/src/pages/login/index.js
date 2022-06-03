@@ -32,7 +32,7 @@ export default function Index() {
         navigate('/feed')
 
 } catch(err){
-    if(err.response.status === 400){
+    if(err.response.status === 401){
       setErro(err.response.data.erro)
     }
 }
