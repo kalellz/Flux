@@ -28,15 +28,15 @@ response{
 postar produto (3) Post /produto
 
 request{
-    'usuario' : 0,
-    'categoria' : 0,
-    'imagem' :"",
-    'email' :"",
-    'nome' :"",
-    'descricao' :"",
-    'preco' :"",
-	'telefone' :"",
-	'cep' :"":
+    "usuario" : 0,
+    "categoria" : 0,
+    "imagem" :"",
+    "email" :"",
+    "nome" :"",
+    "descricao" :"",
+    "preco" :"",
+	"telefone" :"",
+	"cep" :""
 }
 response{
     'id' : 0,
