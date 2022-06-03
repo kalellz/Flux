@@ -13,8 +13,28 @@ import facebook from "../../images/facebook.svg";
 import linkedin from "../../images/linkedin.svg";
 import mail from "../../images/mail.svg";
 import lock from "../../images/lock.svg";
-import { Link } from "react-router-dom";
+import axios from 'axios'
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 export default function Index() {
+  const navigate = useNavigate()
+  const [email, setEmail] = useState();
+  const [senha, setSenha] = useState();
+  const [erro, setErro] = useState();
+
+  async function entrarClick() {
+    const r = await axios.get('http://localhost:5000/usuario/login', {
+      email: email,
+      senha: senha
+    })
+    if (r.status === 401) {
+      setErro(r.data.erro);
+    } else {
+      navigate('/feed')
+    }
+  }
+
   return (
     <main>
       <head>
@@ -27,57 +47,62 @@ export default function Index() {
       </head>
       <body>
         <main>
-          <section class="login-container">
-            <div class="roxa">
-              <div class="roxa-content">
-                <h1 class="h1-roxa">É novo aqui?</h1>
-                <p class="p-roxa">
+          <section className="login-container">
+            <div className="roxa">
+              <div className="roxa-content">
+                <h1 className="h1-roxa">É novo aqui?</h1>
+                <p className="p-roxa">
                   Crie sua conta na flux agora, dura menos de 5 minutos!
                 </p>
-                <Link class="roxa-btn" to="/Cadastro">
+                <Link className="roxa-btn" to="/Cadastro">
                   cadastrar-se
                 </Link>
               </div>
             </div>
-            <div class="branca">
-              <div class="branca-content">
-                <h1 class="h1-branca">Faça seu login</h1>
-                <div class="social">
+            <div className="branca">
+              <div className="branca-content">
+                <h1 className="h1-branca">Faça seu login</h1>
+                <div className="social">
                   <img src={twitter} width="42px" alt="twitter"></img>
                   <img src={facebook} width="42px" alt="facebook"></img>
                   <img src={linkedin} width="42px" alt="linkedin"></img>
                 </div>
-                <p class="p-branca">Ou use seu login para entrar</p>
-                <div class="container-input">
-                  <div class="email">
+                <p className="p-branca">Ou use seu login para entrar</p>
+                <div className="container-input">
+                  <div className="email">
                     <img
                       src={mail}
                       width="24px"
-                      class="input-img"
+                      className="input-img"
                       alt="mail"
                     ></img>
                     <input
-                      type="email"
-                      class="input-login"
+                      type="text"
+                      className="input-login"
                       placeholder="Login"
+                      value={email} onChange={e => setEmail(e.target.value)}
                     ></input>
                   </div>
-                  <div class="email">
+                  <div className="email">
                     <img
                       src={lock}
                       width="24px"
-                      class="input-img"
+                      className="input-img"
                       alt="lock"
                     ></img>
                     <input
                       type="password"
-                      class="input-login"
+                      className="input-login"
                       placeholder="Senha"
+                      value={senha} onChange={e => setSenha(e.target.value)}
                     ></input>
                   </div>
-                  <Link class="branca-btn" to="/Feed">
+                  <button className="branca-btn" onClick={entrarClick}>
                     entrar
-                  </Link>
+                  </button>
+                  <div className="errologin">
+                    {erro}
+                  </div>
                 </div>
               </div>
             </div>
