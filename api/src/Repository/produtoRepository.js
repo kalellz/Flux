@@ -46,3 +46,29 @@ export async function deletarProduto(){
 	const [linhas] = await con.query(comando)
 	return linhas;
 }
+export async function consultarProdutosID(id){
+	const comando = `
+	SELECT id_anuncio			  id,
+				nm_produto        nome,
+				ds_produto   	  descricao,
+				dc_preco      	  preco,
+				ds_telefone   	  telefone,
+				ds_email      	  email,
+				ds_cep        	  cep
+	FROM tb_anuncio
+	WHERE id_anuncio			= ?`
+	const [linhas] = await con.query(comando, id);
+	return linhas
+}
+export async function consultarProdutosNome(nome){
+	const comando = `
+	SELECT id_anuncio			id,
+		nm_produto            nome,
+		ds_produto       descricao,
+		dc_preco             preco,
+		img_produto          imagem
+  	FROM tb_anuncio
+ 	WHERE nm_produto		like ?`
+	const [linhas] = await con.query(comando,[`%${nome}%`]);
+	return linhas
+}
