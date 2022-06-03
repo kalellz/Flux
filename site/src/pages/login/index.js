@@ -22,8 +22,10 @@ export default function Index() {
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
   const [erro, setErro] = useState('');
+  const [carregando, setCarregando] = useState(false)
 
   async function entrarClick() {
+    setCarregando(true)
     try{
       const r = await axios.post('http://localhost:5000/usuario/login', {
         email: email,
@@ -100,7 +102,7 @@ export default function Index() {
                       value={senha} onChange={e => setSenha(e.target.value)}
                     ></input>
                   </div>
-                  <button className="branca-btn" onClick={entrarClick}>
+                  <button className="branca-btn" disabled={carregando} onClick={entrarClick}>
                     entrar
                   </button>
                   <div className="errologin">
