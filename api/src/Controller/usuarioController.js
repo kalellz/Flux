@@ -14,7 +14,7 @@ server.post("/usuario/cadastro", async (req, resp) => {
 		});
 	}
 });
-server.get("/usuario/login", async (req,resp) => {
+server.post("/usuario/login", async (req,resp) => {
 	try{
 		const {email,senha} = req.body;
 		const resposta = await login(email,senha);

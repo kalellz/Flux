@@ -24,7 +24,7 @@ export default function Index() {
   const [erro, setErro] = useState();
 
   async function entrarClick() {
-    const r = await axios.get('http://localhost:5000/usuario/login', {
+    const r = await axios.post('http://localhost:5000/usuario/login', {
       email: email,
       senha: senha
     })
