@@ -4,8 +4,9 @@ import storage from 'local-storage'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect,useState } from "react";
 
-export default function Header() {
+export default function Header(props) {
   const [usuario, setUsuario] = useState('-')
+  const [menuSelecionado, setMenuSelecionado] = useState(props.selecionado)
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,6 +17,11 @@ export default function Header() {
       setUsuario(usuarioLogado.nome)
     }
   }, [])
+  
+  function verificarMenuSelecionado(menu){
+    if(menu === menuSelecionado) return 'selecionado'
+   else return 'botao1'
+  }
 
   function sairClick() {
     storage.remove('usuario-logado')
@@ -65,12 +71,12 @@ export default function Header() {
             </select>
           </div>
           <div>
-            <Link className="botao1" to="/MeusAnuncios">
+            <Link className={verificarMenuSelecionado('meusanuncios')} to="/MeusAnuncios">
               Meus Anúncios
             </Link>
           </div>
           <div>
-            <Link className="botao1" to="/feed">
+            <Link className={verificarMenuSelecionado('feed')} to="/feed" >
               Feed
             </Link>
           </div>

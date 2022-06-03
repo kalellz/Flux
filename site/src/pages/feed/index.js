@@ -15,7 +15,7 @@ import {Link} from 'react-router-dom'
 export default function Index() {
   return (
     <div>
-      <Header />
+      <Header selecionado='feed' />
       <div className="feed-content">
       <div className="nav-btn">
         <Link className="c-botao5" to="/Anunciar">

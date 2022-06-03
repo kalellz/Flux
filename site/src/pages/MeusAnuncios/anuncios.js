@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 export default function anuncios() {
   return (
     <div className="body">
-      <Header />
+      <Header selecionado='meusanuncios' />
       <div className="main-content">
         <nav className="navbar">
           <div className="anun-search">
