@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useEffect,useState } from "react";
 
 export default function Header() {
-  const [usuario, setUsuario] = useState('')
+  const [usuario, setUsuario] = useState('-')
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -46,7 +46,9 @@ export default function Header() {
           <button onClick={sairClick} className="botao1">
             Sair
           </button>
-          <img src={Vector} width="32px"></img>
+          <div className="usuarioimage">
+            <span>{usuario[0].toUpperCase()}</span>
+          </div>
         </div>
       </div>
       <div className="baixo">
