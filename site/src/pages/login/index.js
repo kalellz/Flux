@@ -13,9 +13,11 @@ import facebook from "../../images/facebook.svg";
 import linkedin from "../../images/linkedin.svg";
 import mail from "../../images/mail.svg";
 import lock from "../../images/lock.svg";
-import axios from 'axios'
+import storage from 'local-storage'
+import { Login } from "../../api/usuarioApi";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Index() {
   const navigate = useNavigate()
@@ -24,13 +26,17 @@ export default function Index() {
   const [erro, setErro] = useState('');
   const [carregando, setCarregando] = useState(false)
 
+  useEffect(() => {
+    if (storage('usuario-logado')) {
+      navigate('/feed')
+    }
+  }, [])
+
   async function entrarClick() {
     setCarregando(true)
     try{
-      const r = await axios.post('http://localhost:5000/usuario/login', {
-        email: email,
-        senha: senha
-      });
+      const r = await Login(email,senha); 
+      storage('usuario-logado', r)
         navigate('/feed')
 
 } catch(err){
