@@ -1,5 +1,6 @@
 import Vector from "../../../images/Vector.svg";
 import "./header.scss";
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -23,9 +24,9 @@ export default function Header() {
         </div>
         {/*new search bar code (end) */}
         <div class="conta">
-          <a href="" class="botao1">
+          <Link to="" class="botao1">
             Sair
-          </a>
+          </Link>
           <img src={Vector} width="32px"></img>
         </div>
       </div>
@@ -43,14 +44,14 @@ export default function Header() {
             </select>
           </div>
           <div>
-            <a class="botao1" href="/MeusAnuncios">
+            <Link class="botao1" to="/MeusAnuncios">
               Meus Anúncios
-            </a>
+            </Link>
           </div>
           <div>
-            <a class="botao1" href="/feed">
+            <Link class="botao1" to="/feed">
               Feed
-            </a>
+            </Link>
           </div>
         </div>
       </div>

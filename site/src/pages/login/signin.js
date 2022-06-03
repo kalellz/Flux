@@ -28,9 +28,9 @@ export default function Index() {
                   Para se reconectar conosco, por favor coloque suas informações
                   de login!
                 </p>
-                <a class="roxa-btn" href="/Login">
+                <Link class="roxa-btn" to="/Login">
                   entrar
-                </a>
+                </Link>
               </div>
             </div>
             <div class="branca">
@@ -82,7 +82,7 @@ export default function Index() {
                       placeholder="Senha"
                     ></input>
                   </div>
-                  <Link class="branca-btn" to={"/Login"}>
+                  <Link class="branca-btn" to="/Login">
                     cadastrar
                   </Link>
                 </div>

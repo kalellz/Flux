@@ -34,9 +34,9 @@ export default function Index() {
                 <p class="p-roxa">
                   Crie sua conta na flux agora, dura menos de 5 minutos!
                 </p>
-                <a class="roxa-btn" href="/Cadastro">
+                <Link class="roxa-btn" to="/Cadastro">
                   cadastrar-se
-                </a>
+                </Link>
               </div>
             </div>
             <div class="branca">
@@ -75,7 +75,7 @@ export default function Index() {
                       placeholder="Senha"
                     ></input>
                   </div>
-                  <Link class="branca-btn" to={"/Feed"}>
+                  <Link class="branca-btn" to="/Feed">
                     entrar
                   </Link>
                 </div>

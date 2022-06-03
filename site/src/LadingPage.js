@@ -10,9 +10,6 @@ import "./fonts/Inter/Inter-SemiBold.ttf";
 import "./fonts/Inter/Inter-Thin.ttf";
 import maonopc from "./images/maozinha no pc.png";
 import localizacao from "./images/localizacao.png";
-import insta from "./images/insta";
-import twitter from "./images/twitter";
-import facebook from "./images/facebook";
 import { Link } from "react-router-dom";
 function App() {
   return (
