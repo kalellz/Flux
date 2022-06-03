@@ -117,7 +117,8 @@ server.get('/produto/:id', async (req,resp) => {
 		const {id} = req.params;
 		const resposta = await consultarProdutosID(id);
 		if(!resposta) throw new Error('produto não encotrado')
-		resp.status(204).send();
+		else
+		resp.status(200).send(resposta);
 	} catch(err){
         resp.status(400).send({
             erro: err.message

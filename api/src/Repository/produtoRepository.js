@@ -50,6 +50,9 @@ export async function consultarProdutosID(id){
 	const comando = `
 	SELECT id_anuncio			  id,
 				nm_produto        nome,
+				id_usuario		  usuario
+				id_categoria 	  categoria,
+				img_produto		  imagem,
 				ds_produto   	  descricao,
 				dc_preco      	  preco,
 				ds_telefone   	  telefone,
