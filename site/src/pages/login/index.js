@@ -21,18 +21,21 @@ export default function Index() {
   const navigate = useNavigate()
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
-  const [erro, setErro] = useState();
+  const [erro, setErro] = useState('');
 
   async function entrarClick() {
-    const r = await axios.post('http://localhost:5000/usuario/login', {
-      email: email,
-      senha: senha
-    })
-    if (r.status === 401) {
-      setErro(r.data.erro);
-    } else {
-      navigate('/feed')
+    try{
+      const r = await axios.post('http://localhost:5000/usuario/login', {
+        email: email,
+        senha: senha
+      });
+        navigate('/feed')
+
+} catch(err){
+    if(err.response.status === 400){
+      setErro(err.response.data.erro)
     }
+}
   }
 
   return (
