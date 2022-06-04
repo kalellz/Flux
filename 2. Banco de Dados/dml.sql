@@ -87,7 +87,7 @@ SELECT id_anuncio			     id,
 
  ---------------------------------------------------------------------------------------------------
 
--- carga inicial para tb_anuncio
+-- carga teste para tb_anuncio
 INSERT INTO tb_anuncio (id_usuario,id_categoria, nm_produto, ds_produto, dc_preco, ds_telefone, ds_email, ds_cep)
        VALUES (1, 1, 'ps5', 'playstation 5 barato', 5200, '11 9293219','menezes.victorsantos@gmail.com', '77424-180');
 INSERT INTO tb_anuncio (id_usuario,id_categoria, nm_produto, ds_produto, dc_preco, ds_telefone, ds_email, ds_cep)
