@@ -18,8 +18,8 @@ import { useRef } from 'react'
 import LoadingBar from 'react-top-loading-bar'
 import { Login } from "../../api/usuarioApi";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+
 
 export default function Index() {
   const ref = useRef()

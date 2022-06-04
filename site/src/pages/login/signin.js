@@ -14,33 +14,45 @@ import linkedin from "../../images/linkedin.svg";
 import mail from "../../images/mail.svg";
 import lock from "../../images/lock.svg";
 import user from "../../images/user.svg";
-import axios from 'axios'
+import storage from 'local-storage'
+import { useRef } from 'react'
+import LoadingBar from 'react-top-loading-bar'
+import { cadastro } from "../../api/usuarioApi.js";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function Index() {
+  const ref = useRef()
   const navigate = useNavigate()
   const [nome, setNome] = useState();
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
   const [erro, setErro] = useState();
+  const [carregando, setCarregando] = useState(false)
 
+
+useEffect(() => {
+    if (storage('usuario-logado')) {
+      navigate('/feed')
+    }
+}, [])
   async function entrarClick() {
-    const r = await axios.post('http://localhost:5000/usuario/cadastro', {
-      nome: nome,
-      email: email,
-      senha: senha
-    })
+    ref.current.continuousStart()
+    setCarregando(true)
+    const r = await cadastro(nome,email,senha)
     if (r.status === 401) {
       setErro(r.data.erro);
     } else {
-      navigate('/Login')
+      setTimeout(() => {
+        navigate('/Login')
+      }, 3000)
     }
   }
 
   return (
     <main>
+      <LoadingBar color='#694df9' ref={ref} />
       <body>
         <main>
           <section className="login-container">
@@ -108,7 +120,7 @@ export default function Index() {
                       value={senha} onChange={e => setSenha(e.target.value)}
                     ></input>
                   </div>
-                  <button className="branca-btn" onClick={entrarClick}>
+                  <button className="branca-btn" onClick={entrarClick} disabled={carregando}>
                     cadastrar
                   </button>
                   <div className="errologin">
