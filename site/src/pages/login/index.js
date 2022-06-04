@@ -14,12 +14,15 @@ import linkedin from "../../images/linkedin.svg";
 import mail from "../../images/mail.svg";
 import lock from "../../images/lock.svg";
 import storage from 'local-storage'
+import { useRef } from 'react'
+import LoadingBar from 'react-top-loading-bar'
 import { Login } from "../../api/usuarioApi";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 
 export default function Index() {
+  const ref = useRef()
   const navigate = useNavigate()
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
@@ -33,11 +36,14 @@ export default function Index() {
   }, [])
 
   async function entrarClick() {
+    ref.current.continuousStart()
     setCarregando(true)
     try{
       const r = await Login(email,senha); 
       storage('usuario-logado', r)
+      setTimeout(()=>{
         navigate('/feed')
+      }, 3000)
 
 } catch(err){
     if(err.response.status === 401){
@@ -48,6 +54,7 @@ export default function Index() {
 
   return (
     <main>
+      <LoadingBar color='#694df9' ref={ref} />
       <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
