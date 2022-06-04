@@ -27,3 +27,14 @@ create table TB_anuncio(
 	foreign key (ID_categoria) references TB_anuncio_categoria (ID_categoria),
     foreign key (ID_usuario) references TB_usuario(ID_usuario)
 	);
+
+INSERT INTO TB_anuncio_categoria(NM_categoria)
+		VALUES ('Tecnologia');
+        INSERT INTO TB_anuncio_categoria(NM_categoria)
+		VALUES ('Casa e móveis');
+        INSERT INTO TB_anuncio_categoria(NM_categoria)
+		VALUES ('Brinquedos');
+        INSERT INTO TB_anuncio_categoria(NM_categoria)
+		VALUES ('Roupas');
+        INSERT INTO TB_anuncio_categoria(NM_categoria)
+		VALUES ('Saúde');

@@ -14,19 +14,6 @@ and ds_senha		     = '1234';
 INSERT INTO tb_anuncio (id_usuario,id_categoria, nm_produto, ds_produto, dc_preco, ds_telefone, ds_email, ds_cep)
        VALUES (1, 2, 'ps5', 'playstation 5 barato', 5200, '11 9293219','menezes.victorsantos@gmail.com', '77424-180')
 
--- carga inicial para tb_categoria
-INSERT INTO TB_anuncio_categoria(NM_categoria)
-		VALUES ('Tecnologia');
-        INSERT INTO TB_anuncio_categoria(NM_categoria)
-		VALUES ('Casa e móveis');
-        INSERT INTO TB_anuncio_categoria(NM_categoria)
-		VALUES ('Brinquedos');
-        INSERT INTO TB_anuncio_categoria(NM_categoria)
-		VALUES ('Roupas');
-        INSERT INTO TB_anuncio_categoria(NM_categoria)
-		VALUES ('Saúde');
-
-
 
 -- CSU02.1:: alterar a imagem
 UPDATE tb_anuncio 
