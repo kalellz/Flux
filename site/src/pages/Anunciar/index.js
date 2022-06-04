@@ -11,12 +11,13 @@ import "./style.scss";
 import Header from "../common/Header/header";
 export default function Index() {
   return (
-    <div>
+    <div className="DadosProduto">
       <Header />
       <section class="formulario">
+        <div>
         <h1 class="titulo">Dados do produto</h1>
         <div class="inputs">
-          <p>Título</p>
+          <p className="p-anunciar">Nome</p>
           <input
             type="text"
             class="form-input"
@@ -24,11 +25,11 @@ export default function Index() {
           ></input>
         </div>
         <div>
-          <p>Descrição</p>
+          <p className="p-anunciar">Descrição</p>
           <textarea class="messageinput2" rows={10} cols={70}></textarea>
         </div>
         <div class="inputs">
-          <p>Preço</p>
+          <p className="p-anunciar">Preço</p>
           <input
             type="text"
             class="form-input"
@@ -46,76 +47,47 @@ export default function Index() {
             <option value="">Roupas</option>
           </select>
         </div>
-        <h1 class="titulo">Contato</h1>
         <div class="inputs">
-          <p>Telefone</p>
-          <input
-            type="tel"
-            class="form-input"
-            placeholder="Coloque seu número de telefone."
-          ></input>
-        </div>
-        <div class="inputs">
-          <p>E-mail</p>
+          <p className="p-anunciar">Telefone</p>
           <input
             type="text"
             class="form-input"
-            placeholder="Coloque aqui o seu melhor e-mail."
+            placeholder="Digite o seu telefone."
           ></input>
         </div>
         <div class="inputs">
-          <p>Instagram</p>
+          <p className="p-anunciar">E-mail</p>
           <input
             type="text"
             class="form-input"
-            placeholder="Digite o seu perfil do instagram."
+            placeholder="Digite o seu Email de contato."
           ></input>
         </div>
-        <div class="inputs">
-          <p>Whatsapp</p>
-          <input
-            type="text"
-            class="form-input"
-            placeholder="Este número irá se transformar em um botão para seu número."
-          ></input>
-        </div>
-        <div class="inputs">
-          <p>Facebook</p>
-          <input
-            type="text"
-            class="form-input"
-            placeholder="Digite o seu perfil do Facebook."
-          ></input>
-        </div>
-        <div class="inputs">
-          <p>Twitter</p>
-          <input
-            type="text"
-            class="form-input"
-            placeholder="Digite o seu perfil do Twitter."
-          ></input>
-        </div>
+      </div>
+      <div>
         <h1 class="titulo">Localização</h1>
         <div class="inputs">
-          <p>CEP</p>
+          <p className="p-anunciar">CEP</p>
           <input
             type="text"
             class="form-input"
             placeholder="Coloque aqui o seu CEP."
           ></input>
         </div>
-        <h1 class="titulo">Fotos do produto</h1>
-        <p class="pp">
-          Máximo de 1 <span>foto</span>
-        </p>
+        </div>
+        <div>
+        <h1 class="titulo">Foto do produto</h1>
         <form>
           <div>
-            <label for="arquivo">Enviar arquivo</label>
+            <label for="arquivo">Enviar Arquivo</label>
             <input type="file" name="arquivo" id="arquivo"></input>
           </div>
         </form>
-        <button class="publi">Publicar anúncio</button>
+        </div>
       </section>
+      <div className="publicaranuncio">
+        <button class="publi">Publicar anúncio</button>
+        </div>
     </div>
   );
 }
