@@ -152,3 +152,11 @@ label:hover{
   color: #694df9;
   background: #fff;
 }
+.imagempreenchida{
+  filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.3));
+  margin-top: 2vh;
+  border: #694df9 1px solid;
+  border-radius: 3px;
+  height: 15vh;
+  width:  12.5vw;
+}

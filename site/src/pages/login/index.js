@@ -38,18 +38,18 @@ export default function Index() {
   async function entrarClick() {
     ref.current.continuousStart()
     setCarregando(true)
-    try{
-      const r = await Login(email,senha); 
+    try {
+      const r = await Login(email, senha);
       storage('usuario-logado', r)
-      setTimeout(()=>{
+      setTimeout(() => {
         navigate('/feed')
       }, 3000)
 
-} catch(err){
-    if(err.response.status === 401){
-      setErro(err.response.data.erro)
+    } catch (err) {
+      if (err.response.status === 401) {
+        setErro(err.response.data.erro)
+      }
     }
-}
   }
 
   return (

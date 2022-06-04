@@ -17,9 +17,9 @@ export async function cadastrarProduto(usuario, categoria, nome, descricao, prec
   return resposta.data
 }
 export async function enviarImagemProduto(id, imagem) {
-  const FormData = new FormData()
-  FormData.append('capa', imagem)
-  const resposta = await api.put(`/produto/${id}/capa`, FormData, {
+  const formData = new FormData()
+  formData.append('capa', imagem)
+  const resposta = await api.put(`/produto/${id}/capa`, formData, {
     headers:{
       "Content-Type": "multipart/form-data"
     },

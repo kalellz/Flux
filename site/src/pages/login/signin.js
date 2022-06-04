@@ -32,21 +32,21 @@ export default function Index() {
   const [carregando, setCarregando] = useState(false)
 
 
-useEffect(() => {
+  useEffect(() => {
     if (storage('usuario-logado')) {
       navigate('/feed')
     }
-}, [])
+  }, [])
   async function entrarClick() {
-    ref.current.continuousStart()
+    ref.current.complete()
     setCarregando(true)
-    const r = await cadastro(nome,email,senha)
+    const r = await cadastro(nome, email, senha)
     if (r.status === 401) {
       setErro(r.data.erro);
     } else {
       setTimeout(() => {
         navigate('/Login')
-      }, 3000)
+      }, 1000)
     }
   }
 

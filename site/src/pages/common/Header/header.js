@@ -20,7 +20,7 @@ export default function Header(props) {
   
   function verificarMenuSelecionado(menu){
     if(menu === menuSelecionado) return 'selecionado'
-   else return 'botao1'
+    else return 'botao1'
   }
 
   function sairClick() {

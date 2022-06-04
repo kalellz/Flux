@@ -36,11 +36,14 @@ server.post('/produto', async (req, resp) => {
 
 server.put('/produto/:id/capa', upload.single('capa'), async (req,resp) => {
     try{
+		if(!req.file) throw new Error('Escolha a capa do produto!')
         const { id } = req.params;
         const imagem = req.file.path;
+		
         const resposta = await alterarImagem(imagem, id)
-        if(resposta != 1) throw new Error('A imagem não pode ser salva.')
-		else
+        if(resposta != 1) 
+			throw new Error('A imagem não pode ser salva.')
+		
         resp.status(204).send();
     } catch(err){
         resp.status(400).send({
