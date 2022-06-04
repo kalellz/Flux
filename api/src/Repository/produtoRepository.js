@@ -75,3 +75,31 @@ export async function consultarProdutosNome(nome){
 	const [linhas] = await con.query(comando,[`%${nome}%`]);
 	return linhas
 }
+export async function exibirProdutosUsuario(id){
+	const comando = `
+	SELECT id_anuncio			   id,
+       id_usuario                  usuario,
+	   nm_produto                  nome,
+       ds_produto                  descricao,
+       dc_preco                    preco,
+       img_produto                 imagem
+  FROM tb_anuncio
+ WHERE id_usuario		= ?`
+	const [linhas] = await con.query(comando, id)
+	return linhas
+}
+
+export async function exibirProdutosCategoria(id){
+	const comando = `
+	SELECT id_anuncio			id,
+	id_usuario                  usuario,
+	id_categoria                categoria,
+    nm_produto                  nome,
+	ds_produto                  descricao,
+	dc_preco                    preco,
+	img_produto                 imagem
+FROM tb_anuncio
+WHERE id_categoria		= ?`
+	const [linhas] = await con.query(comando, id)
+	return linhas
+}

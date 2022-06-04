@@ -1,4 +1,4 @@
-import { alterarImagem, alterarProduto, consultarProdutos, consultarProdutosID, consultarProdutosNome, deletarProduto, inserirProduto } from '../repository/produtoRepository.js'
+import { alterarImagem, alterarProduto, consultarProdutos, consultarProdutosID, consultarProdutosNome, deletarProduto, exibirProdutosCategoria, exibirProdutosUsuario, inserirProduto } from '../repository/produtoRepository.js'
 import multer from 'multer';
 import { Router } from 'express'
 
@@ -125,5 +125,31 @@ server.get('/produto/:id', async (req,resp) => {
         })
 	}
 })
+server.get('/produto/usuario/:id', async (req,resp) => {
+	try{
+		const {id} = req.params;
+		const resposta = await exibirProdutosUsuario(id);
+		if(!resposta) throw new Error('produto não encotrado')
+		else
+		resp.status(200).send(resposta);
+	} catch(err){
+        resp.status(400).send({
+            erro: err.message
+        })
+	}
+})
+server.get('/produto/categoria/:id', async (req,resp) => {
+	try{
+		const {id} = req.params;
+		const resposta = await exibirProdutosCategoria(id);
+		if(!resposta) throw new Error('produto não encotrado')
+		else
+		resp.status(200).send(resposta);
+	} catch(err){
+        resp.status(400).send({
+            erro: err.message
+        })
+	}
+})
 
-export default server;
+export default server
