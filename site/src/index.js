@@ -8,11 +8,14 @@ import InfoAnuncio from "./pages/InfoAnuncio/index";
 import Login from "./pages/login/index";
 import Cadastro from "./pages/login/signin";
 import MeusAnuncios from "./pages/MeusAnuncios/anuncios";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<LadingPage />} />
         <Route path="/Anunciar" element={<Anunciar />} />
