@@ -82,15 +82,6 @@ SELECT id_anuncio			     id,
  WHERE id_categoria		= ?
 
 
- ---------------------------------------------------------------------------------------------------
-
--- carga inical para tb_anuncio_categoria
-
-insert into TB_anuncio_categoria(nm_categoria) values ('Tecnologia');
-insert into TB_anuncio_categoria(nm_categoria) values ('Casa Móveis');
-insert into TB_anuncio_categoria(nm_categoria) values ('Brinquedos');
-insert into TB_anuncio_categoria(nm_categoria) values ('Roupas');
-insert into TB_anuncio_categoria(nm_categoria) values ('Medicina');
 
 -- carga teste para tb_anuncio
 INSERT INTO tb_anuncio (id_usuario,id_categoria, nm_produto, ds_produto, dc_preco, ds_telefone, ds_email, ds_cep)

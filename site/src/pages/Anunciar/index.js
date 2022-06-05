@@ -10,9 +10,9 @@ import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
 import Header from "../common/Header/header.js";
 import { useState } from "react";
-import { cadastrarProduto, enviarImagemProduto } from '../../api/produtoApi.js'
 import storage from 'local-storage'
 import { toast } from 'react-toastify';
+import { cadastrarProduto, enviarImagemProduto, alterarProduto } from '../../api/produtoApi.js'
 
 
 
@@ -25,12 +25,22 @@ export default function Index() {
   const [email ,setEmail] = useState('')
   const [cep ,setCep] = useState('')
   const [imagem, setImagem] = useState()
+  const [id, setID] = useState(0);
 
   async function salvarClick() {
     try{
         const usuario = storage('usuario-logado').id
-        const novoProduto = await cadastrarProduto(usuario, categoria, nome, descricao, preco, telefone, email, cep)
-        await enviarImagemProduto(novoProduto.id, imagem)
+        
+        if(id === 0){
+          const novoProduto = await cadastrarProduto(usuario, categoria, nome, descricao, preco, telefone, email, cep)
+          await enviarImagemProduto(novoProduto[0].id, imagem)
+          
+          setID(novoProduto.id)
+        } 
+        else {
+            await alterarProduto(id, usuario, categoria, nome, descricao, preco, telefone, email, cep)
+            await enviarImagemProduto(id, imagem)
+        }
 
         toast.dark('🔥 filme cadastrado com sucesso!')
     } catch(err){

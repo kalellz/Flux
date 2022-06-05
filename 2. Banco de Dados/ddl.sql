@@ -6,7 +6,7 @@ create table TB_usuario(
     NM_usuario varchar(200),
     DS_email varchar(200),
     DS_senha varchar(200)
-);
+); 
 
 create table TB_anuncio_categoria(
 	ID_categoria int Primary key auto_increment,

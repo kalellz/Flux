@@ -43,9 +43,9 @@ server.put('/produto/:id/capa', upload.single('capa'), async (req,resp) => {
         const resposta = await alterarImagem(imagem, id)
         if(resposta != 1) 
 			throw new Error('A imagem não pode ser salva.')
-		
         resp.status(204).send();
     } catch(err){
+		console.log(err)
         resp.status(400).send({
             erro: err.message
         })
