@@ -8,6 +8,7 @@ import "../../fonts/Inter/Inter-Regular.ttf";
 import "../../fonts/Inter/Inter-SemiBold.ttf";
 import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
+import { useNavigate } from 'react-router-dom'
 import Header from "../common/Header/header.js";
 import { useState } from "react";
 import storage from 'local-storage'
@@ -17,6 +18,7 @@ import { cadastrarProduto, enviarImagemProduto, alterarProduto } from '../../api
 
 
 export default function Index() {
+  const navigate = useNavigate()
   const [nome ,setNome] = useState('')
   const [descricao ,setDescricao] = useState('')
   const [preco ,setPreco] = useState()
@@ -33,9 +35,10 @@ export default function Index() {
         
         if(id === 0){
           const novoProduto = await cadastrarProduto(usuario, categoria, nome, descricao, preco, telefone, email, cep)
-          await enviarImagemProduto(novoProduto[0].id, imagem)
+          await enviarImagemProduto(novoProduto.id, imagem)
           
           setID(novoProduto.id)
+          navigate('/MeusAnuncios')
         } 
         else {
             await alterarProduto(id, usuario, categoria, nome, descricao, preco, telefone, email, cep)
@@ -139,7 +142,7 @@ export default function Index() {
         </div>
       </section>
       <div className="publicaranuncio">
-        <button className="publi" onClick={salvarClick}>Publicar anúncio</button>
+        <button className="publi" onClick={salvarClick}>{id === 0? 'Publicar' : 'Alterar'}</button>
         </div>
     </div>
   );
