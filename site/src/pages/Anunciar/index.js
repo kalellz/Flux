@@ -38,14 +38,14 @@ export default function Index() {
           await enviarImagemProduto(novoProduto.id, imagem)
           
           setID(novoProduto.id)
-          navigate('/MeusAnuncios')
+          toast.dark('🔥 produto cadastrado com sucesso!')
+          setTimeout(() => {navigate('/MeusAnuncios')}, 3000)
         } 
         else {
             await alterarProduto(id, usuario, categoria, nome, descricao, preco, telefone, email, cep)
             await enviarImagemProduto(id, imagem)
+            toast.dark('🔥 produto alterado com sucesso!')
         }
-
-        toast.dark('🔥 filme cadastrado com sucesso!')
     } catch(err){
       if(err.response)
         toast.error(err.response.data.erro)
