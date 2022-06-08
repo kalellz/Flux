@@ -114,7 +114,7 @@ function App() {
             </div>
           </div>
           <div id="formulario-app">
-            <div class="ultimocontainer">
+            <div className="fomulariocontainer">
               <h1 class="ultimotitulo">Formulário para contato</h1>
               <p class="ultimostext">Nome</p>
               <input type="text" class="form-input-app"></input>
