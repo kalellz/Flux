@@ -9,7 +9,7 @@ const upload = multer({ dest : 'storage/capasProduto' })
 server.post('/produto', async (req, resp) => {
     try{
         const novoproduto = req.body
-        const produtoinserido = inserirProduto(novoproduto);
+        const produtoinserido = await inserirProduto(novoproduto);
 		if(!novoproduto.usuario)
 			throw new Error('Usuario é obrigatorio!')
 		if(!novoproduto.nome)

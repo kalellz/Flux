@@ -40,3 +40,11 @@ export async function alterarProduto(id, usuario, categoria, nome, descricao, pr
   })
   return resposta.data
 }
+export async function listarTodosProdutos(){
+   const resposta = await api.get('/produto')
+   return resposta.data
+}
+export async function listarPorNome(nome){
+	const resposta = await api.get(`/produto/busca?nome=${nome}`)
+	return resposta.data
+}

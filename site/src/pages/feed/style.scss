@@ -9,7 +9,7 @@
 .sec-cards {
   display: flex;
   width: 92vw;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 3em;
   height: 40vh;
   align-items: flex-start;
@@ -61,10 +61,34 @@
   border-radius: 999px;
 }
 .nav-btn {
-  margin-top: 1em;
   display: flex;
-  width: 98vw;
+  width: 90vw;
   height: 3em;
-  justify-content: flex-end;
-  margin-right: 5em;
+  justify-content: space-between;
+  margin: 1em 0em 0em 2em;
+}
+.input-search {
+  width: 25em;
+  height: 3em;
+  line-height: 1.75em;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 0.5em;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+  font-family: "inter-regular";
+}
+.input-search::placeholder {
+  color: #9e9ea7;
+}
+
+.input-search:focus,
+.input-search:hover {
+  outline: none;
+  border-color: transparent;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px #8871fa;
 }

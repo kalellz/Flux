@@ -1,20 +1,31 @@
 import "./card.scss";
-import Ps5 from "../../../images/ps5.jpg";
 import {Link} from 'react-router-dom'
+import { listarTodosProdutos, listarPorNome } from "../../../api/produtoApi.js";
+import { useState, useEffect } from "react";
 
 export default function Card() {
+  const [produtos, setProdutos] = useState([]);
+
+  async function carregarTodosProdutos() {
+    const resp = await listarTodosProdutos();
+    setProdutos(resp);
+  }
+
+  useEffect(() => {
+    carregarTodosProdutos()
+  }, [])
   return (
     <div>
-      <div class="card">
+      {produtos.map(item => <div class="card">
         <div class="card-img">
-          <img src={Ps5} class="product-img" />
+          <img src={item.imagem} class="product-img" />
         </div>
         <div class="card-info">
-          <p class="text-title">Playstation 5 </p>
-          <p class="text-body">Playstation 5 980gb semi-novo</p>
+          <p class="text-title">{item.nome}</p>
+          <p class="text-body">{item.descricao}</p>
         </div>
         <div class="card-footer">
-          <span class="text-title">$499.49</span>
+          <span class="text-title">{item.preco}</span>
           <div class="card-button">
             <Link to="/InfoAnuncio">
             <svg class="svg-icon" viewBox="0 0 20 20">
@@ -25,7 +36,7 @@ export default function Card() {
             </Link>
           </div>
         </div>
-      </div>
+      </div>)}
     </div>
   );
 }

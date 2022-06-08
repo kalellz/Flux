@@ -38,3 +38,13 @@ INSERT INTO TB_anuncio_categoria(NM_categoria)
 		VALUES ('Roupas');
         INSERT INTO TB_anuncio_categoria(NM_categoria)
 		VALUES ('Saúde');
+
+select * from TB_usuario;
+select * from TB_anuncio_categoria;
+select * from TB_anuncio;
+
+drop table TB_usuario;
+drop table TB_anuncio_categoria;
+drop table TB_anuncio;
+
+
