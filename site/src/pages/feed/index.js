@@ -36,7 +36,6 @@ export default function Index() {
   useEffect(() => {
     FiltrarCategoria();
   }, [categoria])
-
   useEffect(() => {
     carregarTodosProdutos()
   }, [])

@@ -65,7 +65,7 @@ export default function Index() {
         {produtos.map(item => <div className="anun-div-cards">
           <div className="anun-card-meusanuncios">
             <div className="anun-card-img-meusanuncios">
-              <img src={item.imagem} className="imagemsitee-meusanuncios" alt="" />
+              <img src={`http://localhost:5000/${item.imagem}`} className="imagemsitee-meusanuncios" alt="" />
             </div>
             <div className="anun-card-desc-meusanuncios">
               <p>{item.nome.substr(0,100)}</p>
