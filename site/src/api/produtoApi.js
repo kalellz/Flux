@@ -48,3 +48,11 @@ export async function listarPorNome(nome){
 	const resposta = await api.get(`/produto/busca?nome=${nome}`)
 	return resposta.data
 }
+export async function listarMeusProdutos(id){
+  const resposta = await api.get(`/produto/usuario/${id}`)
+  return resposta.data
+}
+export async function removerProduto(id){
+  const resposta = await api.delete(`/produto/${id}`)
+  return resposta.status
+}

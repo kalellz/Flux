@@ -8,53 +8,79 @@ import "../../fonts/Inter/Inter-Regular.ttf";
 import "../../fonts/Inter/Inter-SemiBold.ttf";
 import "../../fonts/Inter/Inter-Thin.ttf";
 import "./anuncios.scss";
-import sitee from "../../images/sitee.jfif";
 import trash from "../../images/Trash.svg";
 import Header from "../common/Header/header";
 import pencil from "../../images/Pencil.svg";
+import storage from 'local-storage'
 import { Link } from "react-router-dom";
+import { listarMeusProdutos , removerProduto } from "../../api/produtoApi.js";
+import { useState, useEffect } from "react";
+import { confirmAlert } from 'react-confirm-alert' 
+import { toast } from 'react-toastify'
 
-export default function anuncios() {
+export default function Index() {
+  
+  const idUsuario = storage('usuario-logado').id
+  const [produtos, setProdutos] = useState([])
+
+  async function deletarProduto(id, nome){
+    confirmAlert({
+      title: 'Remover Produto',
+      message: `Deseja remover o filme ${nome}`,
+      buttons:[
+        {
+          label: 'Sim',
+          onClick: async () => 
+          { const resposta = await removerProduto(id, nome)
+            listarProdutos()
+            toast.dark('🔥 Filme ' + nome + ' Removido!')
+          }
+        },
+
+        {
+          label: 'Não'
+        }
+      ]
+    })
+  }
+  async function listarProdutos(){
+    const resposta = await listarMeusProdutos(idUsuario)
+    setProdutos(resposta)
+  }
+  useEffect(() => {
+    listarProdutos()
+  }, [])
   return (
     <div className="body">
       <Header selecionado='meusanuncios' />
       <div className="main-content">
         <nav className="navbar">
-          <div className="anun-search">
-            <div class="group">
-              <input
-                placeholder="Pesquisar entre seus anúncios"
-                type="search"
-                class="input-header"
-              ></input>
-            </div>
             <div className="nav-btn">
-              <Link className="c-botao6" to="/Anunciar">
+              <Link className="c-botao6-my" to="/Anunciar">
               ANUNCIAR
             </Link>
             </div>
-          </div>
           
         </nav>
-        <div className="anun-div-cards">
-          <div className="anun-card">
-            <div className="anun-card-img">
-              <img src={sitee} className="imagemsitee" alt="" />
+        {produtos.map(item => <div className="anun-div-cards">
+          <div className="anun-card-meusanuncios">
+            <div className="anun-card-img-meusanuncios">
+              <img src={item.imagem} className="imagemsitee-meusanuncios" alt="" />
             </div>
-            <div className="anun-card-desc">
-              <p>#1234567891011</p>
-              <p>Kit de cozinha básicão para cozinhas cozinhadas</p>
+            <div className="anun-card-desc-meusanuncios">
+              <p>{item.nome.substr(0,100)}</p>
+              <p className="cinza">{item.descricao.substr(0,100)}</p>
             </div>
-            <div className="anun-card-info">
-              <p>R$300</p>
-              <p>8 mil visitas</p>
+            <div className="anun-card-info-meusanuncios">
+              <p>R$: {item.preco}</p>
+              <p>{item.id}</p>
             </div>
-            <div className="anun-card-icons">
-              <img src={trash} alt="" />
+            <div className="anun-card-icons-meusanuncios">
               <img src={pencil} />
+              <img src={trash} onClick={() => deletarProduto(item.id, item.nome)} />
             </div>
           </div>
-        </div>
+        </div>)}
       </div>
     </div>
   );

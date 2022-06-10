@@ -28,9 +28,11 @@ export default function Index() {
   const [cep ,setCep] = useState('')
   const [imagem, setImagem] = useState()
   const [id, setID] = useState(0);
+  const [carregando, setCarregando] = useState(false)
 
   async function salvarClick() {
     try{
+        setCarregando(true)
         const usuario = storage('usuario-logado').id
         
         if(id === 0){
@@ -142,7 +144,7 @@ export default function Index() {
         </div>
       </section>
       <div className="publicaranuncio">
-        <button className="publi" onClick={salvarClick}>{id === 0? 'Publicar' : 'Alterar'}</button>
+        <button className="publi" disabled={carregando} onClick={salvarClick}>{id === 0? 'Publicar' : 'Alterar'}</button>
         </div>
     </div>
   );

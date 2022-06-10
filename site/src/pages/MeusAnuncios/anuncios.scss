@@ -126,7 +126,7 @@
     text-decoration: underline;
   }
 }
-.c-botao6{
+.c-botao6-my{
     cursor: pointer;
     border: none;
     font-family: "inter-regular";
@@ -139,5 +139,80 @@
     height: max-content;
     padding: 15px 30px;
     border-radius: 999px;
-    
+    margin-left: 95%;
+}
+
+.anun-card-meusanuncios{
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 2em;
+  transition: 1.5s;
+  background-color: rgb(216, 216, 216);
+  padding: 0 5em;
+  height: 15vh;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  .anun-card-img {
+    display: flex;
+    height: 80%;
+    width: 12%;
+    transition: 1.5s;
+  }
+
+  p {
+    transition: 3s;
+    font-size: 1em;
+    font-family: "inter-regular";
+  }
+
+  .anun-card-info-meusanuncios {
+    display: flex;
+    font-size: 1.5em;
+    width: 100vw;
+    justify-content: space-around;
+    transition: 1s;
+  }
+}
+.anun-card-meusanuncios:hover span {
+  transition: 1.5s;
+  color: #d9dbdd;
+}
+.anun-card-meusanuncios:hover p {
+  color: white;
+  transition: 1s;
+}
+
+.anun-card-meusanuncios:hover {
+  background-color: #694df9;
+  transition: all 0.4s;
+}
+
+
+.anun-card-icons-meusanuncios {
+  display: flex;
+  width: 3.5em;
+  justify-content: space-between;
+
+  img {
+    cursor: pointer;
+  }
+  .svg {
+    transition: 0s;
+    filter: brightness(0) saturate(100%) invert(29%) sepia(89%)
+      saturate(2969%) hue-rotate(240deg) brightness(98%) contrast(100%);
+  }
+}
+.imagemsitee-meusanuncios{
+  width: 10em;
+  height: 6em;
+  border-radius: 10px;
+  margin-right: 1em;
+}
+.decorationtext-meusanuncios {
+text-decoration: underline;
+}
+.cinza{
+  color: #636363;
 }

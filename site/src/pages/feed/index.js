@@ -54,7 +54,7 @@ export default function Index() {
         </div>
         <div class="card-info">
           <p class="text-title">{item.nome}</p>
-          <p class="text-body">{item.descricao}</p>
+          <p class="text-body">{item.descricao.substr(0,30)}</p>
         </div>
         <div class="card-footer">
           <span class="text-title">R$: {item.preco}</span>
