@@ -57,7 +57,7 @@ export default function Index() {
           <p class="text-body">{item.descricao}</p>
         </div>
         <div class="card-footer">
-          <span class="text-title">{item.preco}</span>
+          <span class="text-title">R$: {item.preco}</span>
           <div class="card-button">
             <Link to="/InfoAnuncio">
             <svg class="svg-icon" viewBox="0 0 20 20">
