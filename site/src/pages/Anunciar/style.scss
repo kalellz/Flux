@@ -9,6 +9,8 @@
 }
 
 .formulario {
+  margin-left: 5em;
+  border:solid red 1px;
   display: flex;
   padding: 1em;
   flex-direction: row;
@@ -26,6 +28,7 @@
 }
 
 .form-input {
+  
   font-family: "inter-regular";
   border: 1px solid #e2dcff !important;
   border-radius: 6px !important;

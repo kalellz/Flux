@@ -56,3 +56,7 @@ export async function removerProduto(id){
   const resposta = await api.delete(`/produto/${id}`)
   return resposta.status
 }
+export async function listarCategoria(id){
+  const resposta = await api.get(`/produto/categoria/${id}`)
+  return resposta.data;
+}

@@ -85,16 +85,19 @@
 }
 
 .categorias {
-  border: none;
-  outline: none;
-  width: min-content;
   background-color: transparent;
   font-family: "inter-regular";
   font-size: 15px;
   width: auto;
-  color: white;
+  color: #694df9;
+  border-radius: .2em;
+  border: none;
+  margin-left: 2em;
 }
-
+.row{
+  display: flex;
+  align-items: center;
+}
 .botaofeed {
   border: none;
   outline: none;

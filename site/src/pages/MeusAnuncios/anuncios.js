@@ -26,14 +26,14 @@ export default function Index() {
   async function deletarProduto(id, nome){
     confirmAlert({
       title: 'Remover Produto',
-      message: `Deseja remover o filme ${nome}`,
+      message: `Deseja remover o produto ${nome}`,
       buttons:[
         {
           label: 'Sim',
           onClick: async () => 
           { const resposta = await removerProduto(id, nome)
             listarProdutos()
-            toast.dark('🔥 Filme ' + nome + ' Removido!')
+            toast.dark('🔥 Produto ' + nome + ' Removido!')
           }
         },
 

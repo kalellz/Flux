@@ -3,6 +3,7 @@ import "./header.scss";
 import storage from 'local-storage'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect,useState } from "react";
+import { listarCategoria } from "../../../api/produtoApi.js";
 
 export default function Header(props) {
   const [usuario, setUsuario] = useState('-')
@@ -27,6 +28,7 @@ export default function Header(props) {
     storage.remove('usuario-logado')
     navigate('/login')
   }
+ 
   return (
     <div className="header-feed">
       <div className="oláusuario">Olá {usuario}</div>
@@ -59,17 +61,7 @@ export default function Header(props) {
       </div>
       <div className="baixo">
         <div className="content">
-          <div className="text">
-            <select name="" id="" className="categorias">
-              <option value="" selected>
-                Categorias
-              </option>
-              <option value="">Tecnologia</option>
-              <option value="">Casa móveis</option>
-              <option value="">Brinquedos</option>
-              <option value="">Roupas</option>
-            </select>
-          </div>
+         
           <div>
             <Link className={verificarMenuSelecionado('meusanuncios')} to="/MeusAnuncios">
               Meus Anúncios

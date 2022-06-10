@@ -22,7 +22,7 @@ export default function Index() {
   const [nome ,setNome] = useState('')
   const [descricao ,setDescricao] = useState('')
   const [preco ,setPreco] = useState()
-  const [categoria ,setCategoria] = useState()
+  const [categoria ,setCategoria] = useState(0)
   const [telefone ,setTelefone] = useState('')
   const [email ,setEmail] = useState('')
   const [cep ,setCep] = useState('')
@@ -92,12 +92,13 @@ export default function Index() {
         </div>
         <div>
         <p className="p-anunciar">Categoria</p>
-          <input
-            type="text"
-            className="form-input"
-            placeholder="Coloque um preço no seu produto."
-            value={categoria} onChange={e => setCategoria(e.target.value)}
-          ></input>
+        <select value={categoria} onChange={e => setCategoria(e.target.value)}>
+          <option value={1}>Tecnologia</option>
+          <option value={2}>Casa e Móveis</option>
+          <option value={3}>Brinquedos</option>
+          <option value={4}>Roupas</option>
+          <option value={5}>Saúde</option>
+        </select>
         </div>
         <div className="inputs">
           <p className="p-anunciar">Telefone</p>
@@ -135,7 +136,7 @@ export default function Index() {
         <form>
           <div ocClick={escolherImagem}>
             <label for="arquivo">Enviar Arquivo</label>
-            <input type="file" name="arquivo" id="arquivo" onChange={e => setImagem(e.target.files[0])} />
+            <input type="file" name="arquivo" id="arquivo" className="arquivoclass" onChange={e => setImagem(e.target.files[0])} />
             {imagem && 
               <img className="imagempreenchida" src={mostrarImagem()} alt='' />
             }
