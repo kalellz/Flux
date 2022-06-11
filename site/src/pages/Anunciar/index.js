@@ -10,10 +10,11 @@ import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
 import { useNavigate } from 'react-router-dom'
 import Header from "../common/Header/header.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import storage from 'local-storage'
 import { toast } from 'react-toastify';
-import { cadastrarProduto, enviarImagemProduto, alterarProduto } from '../../api/produtoApi.js'
+import { useParams } from "react-router-dom";
+import { cadastrarProduto, enviarImagemProduto, alterarProduto, listarPorId, buscarImagem } from '../../api/produtoApi.js'
 
 
 
@@ -29,7 +30,13 @@ export default function Index() {
   const [imagem, setImagem] = useState()
   const [id, setID] = useState(0);
   const [carregando, setCarregando] = useState(false)
+  const {idParam} = useParams()
 
+  useEffect(() => {
+    if(idParam){
+      carregarProduto()
+    }
+  }, [])
   async function salvarClick() {
     try{
         setCarregando(true)
@@ -41,11 +48,13 @@ export default function Index() {
           
           setID(novoProduto.id)
           toast.dark('🔥 produto cadastrado com sucesso!')
-          setTimeout(() => {navigate('/MeusAnuncios')}, 3000)
+          navigate('/MeusAnuncios')
         } 
         else {
             await alterarProduto(id, usuario, categoria, nome, descricao, preco, telefone, email, cep)
-            await enviarImagemProduto(id, imagem)
+            if(typeof(imagem) == 'object'){
+              await enviarImagemProduto(id, imagem)
+            }
             toast.dark('🔥 produto alterado com sucesso!')
         }
     } catch(err){
@@ -59,7 +68,24 @@ export default function Index() {
     document.getElementById('imagemCapa').click()
   }
   function mostrarImagem() {
-    return URL.createObjectURL(imagem)
+    if(typeof(imagem) == 'object')
+      return URL.createObjectURL(imagem)
+    else 
+      return buscarImagem(imagem)
+  }
+  async function carregarProduto(){
+    const resposta = await listarPorId(idParam)
+    setNome(resposta.nome)
+    setDescricao(resposta.descricao)
+    setPreco(resposta.preco)
+    setCategoria(resposta.categoria)
+    setTelefone(resposta.telefone)
+    setEmail(resposta.email)
+    setCep(resposta.cep)
+
+    setImagem(resposta.imagem)
+    setID(resposta.id)
+
   }
 
   return (
@@ -84,7 +110,7 @@ export default function Index() {
         <div className="inputs">
           <p className="p-anunciar">Preço</p>
           <input
-            type="text"
+            type="number"
             className="form-input"
             placeholder="Coloque um preço no seu produto."
             value={preco} onChange={e => setPreco(e.target.value)}
@@ -92,7 +118,8 @@ export default function Index() {
         </div>
         <div>
         <p className="p-anunciar">Categoria</p>
-        <select value={categoria} onChange={e => setCategoria(e.target.value)}>
+        <select value={categoria} onChange={e => setCategoria(e.target.value)} className='Select-Anunciar'>
+        <option >Selecione</option>
           <option value={1}>Tecnologia</option>
           <option value={2}>Casa e Móveis</option>
           <option value={3}>Brinquedos</option>

@@ -19,14 +19,16 @@ export async function alterarImagem(imagem, id){
 export async function alterarProduto(id, produto){
 	const comando = `
 	UPDATE tb_anuncio 
-   SET nm_produto    = ?,
-       ds_produto    = ?,
-       dc_preco      = ?,
-       ds_telefone   = ?,
-       ds_email      = ?,
-       ds_cep        = ?
- WHERE id_anuncio = ?`
-	const [linhas] = await con.query(comando, [[produto.usuario, produto.nome, produto.categoria, produto.descricao, produto.imagem, produto.preco, produto.telefone, produto.email, produto.cep]])
+	SET nm_produto    = ?,
+		ds_produto    = ?,
+		dc_preco      = ?,
+		id_categoria  = ?,
+		ds_telefone   = ?,
+		ds_email      = ?,
+		ds_cep        = ?
+	WHERE id_anuncio = ?`
+	const [linhas] = await con.query(comando, [produto.nome, produto.descricao, produto.preco, produto.categoria, produto.telefone, produto.email, produto.cep, id])
+	return linhas.affectedRows
 }
 export async function consultarProdutos() {
 	const comando = `
@@ -61,7 +63,7 @@ export async function consultarProdutosID(id){
 	FROM tb_anuncio
 	WHERE id_anuncio			= ?`
 	const [linhas] = await con.query(comando, id);
-	return linhas
+	return linhas[0]
 }
 export async function consultarProdutosNome(nome){
 	const comando = `

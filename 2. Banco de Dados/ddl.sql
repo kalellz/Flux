@@ -17,7 +17,7 @@ create table TB_anuncio(
 	ID_anuncio int Primary key auto_increment,
     ID_usuario int,
     ID_categoria int,
-    IMG_produto blob,
+    IMG_produto varchar(300),
     DS_email varchar(300),
     NM_produto varchar(200),
     DS_produto varchar(200),

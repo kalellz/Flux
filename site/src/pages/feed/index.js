@@ -36,9 +36,11 @@ export default function Index() {
   useEffect(() => {
     FiltrarCategoria();
   }, [categoria])
+
   useEffect(() => {
     carregarTodosProdutos()
   }, [])
+
   return (
     <div>
       <Header selecionado="feed" />

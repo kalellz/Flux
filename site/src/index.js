@@ -21,6 +21,7 @@ root.render(
       <Routes>
         <Route path="/" element={<LadingPage />} />
         <Route path="/Anunciar" element={<Anunciar />} />
+        <Route path="/alterar/:idParam" element={<Anunciar />} />
         <Route path="/Feed" element={<Feed />} />
         <Route path="/InfoAnuncio" element={<InfoAnuncio />} />
         <Route path="/Login" element={<Login />} />

@@ -60,3 +60,10 @@ export async function listarCategoria(id){
   const resposta = await api.get(`/produto/categoria/${id}`)
   return resposta.data;
 }
+export async function listarPorId(id){
+  const resposta = await api.get(`/produto/${id}`)
+  return resposta.data
+}
+export function buscarImagem(imagem){
+  return `${api.getUri()}/${imagem}`
+}

@@ -12,7 +12,7 @@ import trash from "../../images/Trash.svg";
 import Header from "../common/Header/header";
 import pencil from "../../images/Pencil.svg";
 import storage from 'local-storage'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { listarMeusProdutos , removerProduto } from "../../api/produtoApi.js";
 import { useState, useEffect } from "react";
 import { confirmAlert } from 'react-confirm-alert' 
@@ -22,6 +22,7 @@ export default function Index() {
   
   const idUsuario = storage('usuario-logado').id
   const [produtos, setProdutos] = useState([])
+  const navigate = useNavigate()
 
   async function deletarProduto(id, nome){
     confirmAlert({
@@ -50,6 +51,9 @@ export default function Index() {
   useEffect(() => {
     listarProdutos()
   }, [])
+  function editarProduto(id){
+    navigate(`/alterar/${id}`)
+  }
   return (
     <div className="body">
       <Header selecionado='meusanuncios' />
@@ -76,8 +80,8 @@ export default function Index() {
               <p>{item.id}</p>
             </div>
             <div className="anun-card-icons-meusanuncios">
-              <img src={pencil} />
-              <img src={trash} onClick={() => deletarProduto(item.id, item.nome)} />
+              <img src={pencil} onClick={() =>editarProduto(item.id)} />
+              <img src={trash}  onClick={() => deletarProduto(item.id, item.nome)} />
             </div>
           </div>
         </div>)}

@@ -8,23 +8,23 @@ const upload = multer({ dest : 'storage/capasProduto' })
 
 server.post('/produto', async (req, resp) => {
     try{
-        const novoproduto = req.body
-        const produtoinserido = await inserirProduto(novoproduto);
-		if(!novoproduto.usuario)
+        const produto = req.body
+        const produtoinserido = await inserirProduto(produto);
+		if(!produto.usuario)
 			throw new Error('Usuario é obrigatorio!')
-		if(!novoproduto.nome)
+		if(!produto.nome)
 			throw new Error('Nome do produto é obrigatorio!')
-		if(!novoproduto.categoria)
+		if(!produto.categoria)
 			throw new Error('Categoria do produto é obrigatorio!')
-		if(!novoproduto.descricao)
+		if(!produto.descricao)
 			throw new Error('Descrição do produto é obrigatorio!')
-		if(!novoproduto.preco)
+		if(!produto.preco)
 			throw new Error('Preço do produto é obrigatorio!')
-		if(!novoproduto.telefone)
+		if(!produto.telefone)
 			throw new Error('Telefone é obrigatorio!')
-		if(!novoproduto.email)
+		if(!produto.email)
 			throw new Error('E-mail é obrigatorio!')
-		if(!novoproduto.cep)
+		if(!produto.cep)
 			throw new Error('Cep é obrigatorio!')
         resp.send(produtoinserido)
     } catch(err){
@@ -54,26 +54,28 @@ server.put('/produto/:id/capa', upload.single('capa'), async (req,resp) => {
 server.put('/produto/:id', async (req,resp) => {
 	try{
 		const { id } = req.params;
-		const filme = req.body
-		const resposta = await alterarProduto(id,filme);
-		if(!novoproduto.usuario)
+		const produto = req.body
+		const resposta = await alterarProduto(id,produto);
+		if(!produto.usuario)
 			throw new Error('Usuario é obrigatorio!')
-		if(!novoproduto.nome)
+		if(!produto.nome)
 			throw new Error('Nome do produto é obrigatorio!')
-		if(!novoproduto.categoria)
+		if(!produto.categoria)
 			throw new Error('Categoria do produto é obrigatorio!')
-		if(!novoproduto.descricao)
+		if(!produto.descricao)
 			throw new Error('Descrição do produto é obrigatorio!')
-		if(!novoproduto.preco)
+		if(!produto.preco)
 			throw new Error('Preço do produto é obrigatorio!')
-		if(!novoproduto.telefone)
+		if(!produto.telefone)
 			throw new Error('Telefone é obrigatorio!')
-		if(!novoproduto.email)
+		if(!produto.email)
 			throw new Error('E-mail é obrigatorio!')
-		if(!novoproduto.cep)
+		if(!produto.cep)
 			throw new Error('Cep é obrigatorio!')
-		if (resposta != 1) throw new Error('produto nao pode ser alterado') 
-		else resp.status(204).send()
+		if (resposta != 1) 
+			throw new Error('produto nao pode ser alterado') 
+		else 
+			resp.status(204).send()
 	} catch(err){
         resp.status(400).send({
             erro: err.message
