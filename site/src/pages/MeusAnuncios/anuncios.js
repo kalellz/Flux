@@ -26,7 +26,7 @@ export default function Index() {
 
   async function deletarProduto(id, nome){
     confirmAlert({
-      title: 'Remover Produto',
+      title: 'Remover produto',
       message: `Deseja remover o produto ${nome}`,
       buttons:[
         {
@@ -34,7 +34,7 @@ export default function Index() {
           onClick: async () => 
           { const resposta = await removerProduto(id, nome)
             listarProdutos()
-            toast.dark('🔥 Produto ' + nome + ' Removido!')
+            toast.dark('🔥 Produto ' + nome + ' removido!')
           }
         },
 

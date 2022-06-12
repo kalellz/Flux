@@ -34,7 +34,7 @@ function App() {
             <h1 class="titulo-1">Venda e compra de produtos com facilidade</h1>
             <p class="texto-1">
               Venda e compre móveis, periféricos, utensílios de cozinha e tudo o
-              que quiser, você acha com facilidade pessoas tanto vendendo quanto
+              que quiser. Você acha com facilidade pessoas vendendo ou
               comprando produtos do seu interesse.
             </p>
             <Link to="/login" className="c-botao3">
@@ -49,7 +49,7 @@ function App() {
         <section id="saibamais">
           <h1 class="titulosaibamais">Saiba mais</h1>
           <p class="textosaibamais">
-            Saiba um pouco mais do jeito que nós trabalhamos.
+            Saiba um pouco mais do jeito que trabalhamos.
           </p>
         </section>
 
@@ -57,8 +57,8 @@ function App() {
           <button class="quadrados">
             <h1 class="tituloquadrados">Anúncios</h1>
             <span class="textosquadrados">
-              Veja anúncios baseados em suas buscas, anúncios e também em sua
-              localização, assim você encontra tudo aquilo que procura o mais
+              Veja anúncios baseados em suas buscas e também em sua
+              localização, assim poderás encontrar tudo aquilo que procura o mais
               perto de você. Desta forma você evita passar muito tempo rolando o
               feed até achar algo que o interesse.
             </span>
@@ -66,17 +66,17 @@ function App() {
           <button class="quadrados">
             <h1 class="tituloquadrados">Segurança</h1>
             <span class="textosquadrados">
-              Cada vez que você avalia alguém ou deixa um comentário ruim o
-              nosso sistema tenta não exibir anúncios desta pessoa, assim você
-              tem menos chances de cair em um golpe ou coisa do tipo.
+              Cada vez que você avalia alguém ou deixa uma crítica construtiva, o
+              nosso sistema evita exibir anúncios desta pessoa, assim você
+              tem menos chances de ser prejudicado no nosso site.
             </span>
           </button>
           <button class="quadrados">
             <span class="tituloquadrados"> Vendas </span>
             <span class="textosquadrados">
-              Nós não interferirmos na sua venda, nós apenas somos a ponte entre
-              o anunciante e o comprador, não nos responsabilizamos por golpes
-              ou
+              Nós não interferimos na sua venda, somos apenas a ponte entre
+              o anunciante e o comprador. Não nos responsabilizamos por golpes
+              ou roubos.
             </span>
           </button>
         </section>
@@ -90,8 +90,8 @@ function App() {
               Compre de qualquer lugar do Brasil
             </h1>
             <p class="textolocalizacao">
-              Faça sua primeira compra independente do seu local, venha dar uma
-              olhada no que estão vendendo no momento!
+              Faça seu primeiro contato independente do seu local, venha dar uma
+              olhada no que estão anunciando no momento!
             </p>
             <Link class="c-botao3" to="/feed">
               ME LEVE AO FEED
@@ -103,9 +103,9 @@ function App() {
           <div class="parteroxa">
             <div>
               <h1 class="ultimos-titulos">LOCALIZAÇÃO</h1>
-              <p class="ultimos-textos">Rua Adele nº 95 apto: 234</p>
+              <p class="ultimos-textos">Rua Adelle nº 95 apto: 234</p>
               <h1 class="ultimos-titulos">TELEFONES</h1>
-              <p class="ultimos-textos">5666-5557 5777-6555</p>
+              <p class="ultimos-textos">5816-5224 5812-5294</p>
               <h1 class="ultimos-titulos">HORÁRIOS DE ATENDIMENTO</h1>
               <p class="ultimos-textos">
                 Segunda à sexta: 9h às 18h. Finais de semana e feriados: 9h às

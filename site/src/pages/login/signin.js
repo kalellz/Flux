@@ -60,7 +60,7 @@ export default function Index() {
               <div className="roxa-content">
                 <h1 className="h1-roxa">Seja bem vindo!</h1>
                 <p className="p-roxa">
-                  Para se reconectar conosco, por favor coloque suas informações
+                  Para se conectar, por favor coloque suas informações
                   de login!
                 </p>
                 <Link className="roxa-btn" to="/Login">
@@ -76,7 +76,7 @@ export default function Index() {
                   <img src={facebook} width="42px" alt="facebook" />
                   <img src={linkedin} width="42px" alt="linkedin" />
                 </div>
-                <p className="p-branca">Ou use seu e-mail para se cadastrar</p>
+                <p className="p-branca">Insira os dados para se cadastrar</p>
                 <div className="container-input">
                   <div className="email">
                     <img

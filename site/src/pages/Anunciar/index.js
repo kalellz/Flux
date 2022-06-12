@@ -47,7 +47,7 @@ export default function Index() {
           await enviarImagemProduto(novoProduto.id, imagem)
           
           setID(novoProduto.id)
-          toast.dark('🔥 produto cadastrado com sucesso!')
+          toast.dark('🔥 Anúncio cadastrado com sucesso!')
           navigate('/MeusAnuncios')
         } 
         else {
@@ -55,7 +55,7 @@ export default function Index() {
             if(typeof(imagem) == 'object'){
               await enviarImagemProduto(id, imagem)
             }
-            toast.dark('🔥 produto alterado com sucesso!')
+            toast.dark('🔥 Anúncio alterado com sucesso!')
         }
     } catch(err){
       if(err.response)
