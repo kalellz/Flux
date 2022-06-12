@@ -30,6 +30,7 @@
 }
 
 .conta {
+  
   display: flex;
   width: 5%;
   height: min-content;
@@ -72,7 +73,7 @@
   display: flex;
   height: 9vh;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 1em;
 }
 

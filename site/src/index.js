@@ -23,7 +23,7 @@ root.render(
         <Route path="/Anunciar" element={<Anunciar />} />
         <Route path="/alterar/:idParam" element={<Anunciar />} />
         <Route path="/Feed" element={<Feed />} />
-        <Route path="/InfoAnuncio" element={<InfoAnuncio />} />
+        <Route path="/InfoAnuncio/:idParam" element={<InfoAnuncio />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/MeusAnuncios" element={<MeusAnuncios />} />
         <Route path="/Cadastro" element={<Cadastro />} />

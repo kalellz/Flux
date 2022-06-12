@@ -8,8 +8,8 @@
   height: 82vh;
 }
 .page {
-  height: 70vh;
-  width: 32vw;
+  height: 30vh;
+  width: 20vw;
   margin: 5em 0px 0px 5em;
 }
 
@@ -25,11 +25,10 @@
 }
 .informa {
   margin-top: 10vh;
-  height: 70vh;
+  height: 30vh;
   padding: 4vh;
   display: flex;
   flex-direction: column;
-  width: 140px;
 }
 .aaaa {
   height: 70vh;
@@ -63,4 +62,13 @@
   width: auto;
   color: white;
   text-decoration: none;
+}
+.imagem-detalhe{
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.164));
+  margin-top: 2vh;
+  border: #694df9 1px solid;
+  border-radius: 3px;
+  height: 15vh;
+  width:  12.5vw;
+  margin: 1px 1px 1px 1px;
 }

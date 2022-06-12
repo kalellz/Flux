@@ -139,7 +139,7 @@ export default function Index() {
         <div className="inputs">
           <p className="p-anunciar">E-mail</p>
           <input
-            type="text"
+            type="email"
             className="form-input"
             placeholder="Digite o seu Email de contato."
             value={email} onChange={e => setEmail(e.target.value)}
