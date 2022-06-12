@@ -14,6 +14,7 @@
 }
 
 .tituloinfo {
+  user-select: none;
   font-family: "inter-bold";
   margin-bottom: 5px;
 }
@@ -34,6 +35,7 @@
   height: 70vh;
 }
 .minititulo {
+  user-select: none;
   margin-top: 10px;
   font-family: "inter-semibold";
 }

@@ -32,7 +32,7 @@ export default function Index(props) {
             <p class="nm">R$: {props.produto.preco}</p>
 
             <h4 class="minititulo">Categoria do produto</h4>
-            <p class="nm">{props.produto.categoria}</p>
+            <p class="nm">{(props.produto.categoria)}</p>
           </div>
         </div>
       </section>
