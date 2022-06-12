@@ -9,7 +9,6 @@
 }
 
 .formulario {
-  margin-left: 5em;
   display: flex;
   padding: 1em;
   flex-direction: row;
@@ -31,7 +30,7 @@
   font-family: "inter-regular";
   border: 1px solid #e2dcff !important;
   border-radius: 6px !important;
-  width: 40em;
+  width: 20em;
   padding: 0.8em;
   height: 2.5em;
 }
@@ -84,6 +83,7 @@ span {
 }
 
 .imgs {
+  
   margin: 10px 0px 0px 0px;
   cursor: pointer;
   border: 1px solid #b1a3f3;
@@ -168,4 +168,17 @@ label:hover{
    font-family: "inter-bold";
    color: #694df9;
    background-color: #fff;
+}
+form {
+  width: 10em;
+}
+.ultrapassado{
+  width: 5em;
+  height: 10em;
+  margin-right: 5em;
+}
+
+.titulo-ultra{
+  font-family: "inter-bold";
+  width: 8em;
 }

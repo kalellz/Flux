@@ -158,8 +158,8 @@ export default function Index() {
           ></input>
         </div>
         </div>
-        <div>
-        <h1 className="titulo">Foto do produto</h1>
+        <div className="ultrapassado">
+        <h1 className="titulo-ultra">Foto do produto</h1>
         <form>
           <div ocClick={escolherImagem}>
             <label for="arquivo">Enviar Arquivo</label>
