@@ -20,7 +20,7 @@ import { cadastrarProduto, enviarImagemProduto, alterarProduto, listarPorId, bus
 
 export default function Index() {
   const navigate = useNavigate()
-  const [nome ,setNome] = useState('')
+  const [nome,setNome] = useState('')
   const [descricao ,setDescricao] = useState('')
   const [preco ,setPreco] = useState()
   const [categoria ,setCategoria] = useState(0)
@@ -43,7 +43,7 @@ export default function Index() {
         const usuario = storage('usuario-logado').id
         
         if(id === 0){
-          const novoProduto = await cadastrarProduto(usuario, categoria, nome, descricao, preco, telefone, email, cep)
+          const novoProduto = await cadastrarProduto(usuario, categoria, nome.trim(), descricao.trim(), preco, telefone.trim(), email.trim(), cep.trim())
           await enviarImagemProduto(novoProduto.id, imagem)
           
           setID(novoProduto.id)
@@ -83,7 +83,6 @@ export default function Index() {
     setTelefone(resposta.telefone)
     setEmail(resposta.email)
     setCep(resposta.cep)
-
     setImagem(resposta.imagem)
     setID(resposta.id)
 
