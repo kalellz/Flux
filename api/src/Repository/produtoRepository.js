@@ -52,20 +52,25 @@ export async function consultarProdutosID(id){
 	const comando = `
 	SELECT id_anuncio			  id,
 				nm_produto        nome,
-				id_usuario		  usuario,
-				id_categoria 	  categoria,
+				nm_usuario		  usuario,
+				nm_categoria 	  categoria,
+				anuncio.id_categoria 	  idCategoria,
 				img_produto		  imagem,
 				ds_produto   	  descricao,
 				dc_preco      	  preco,
-				ds_telefone   	  telefone,
-				ds_email      	  email,
-				ds_cep        	  cep
-	FROM tb_anuncio
+				ds_telefone   	  		telefone,
+				anuncio.ds_email      	email,
+				ds_cep        	  		cep
+	FROM tb_anuncio			    anuncio
+	JOIN TB_anuncio_categoria   categoria
+	  ON anuncio.id_categoria = categoria.id_categoria
+	JOIN tb_usuario				usuario
+	  ON usuario.id_usuario = anuncio.id_usuario
 	WHERE id_anuncio			= ?`
 	const [linhas] = await con.query(comando, id);
 	return linhas[0]
 }
-export async function consultarProdutosNome(nome){
+export async function consultarProdutosNome(nome,categoria){
 	const comando = `
 	SELECT id_anuncio			id,
 		nm_produto            nome,
@@ -73,8 +78,16 @@ export async function consultarProdutosNome(nome){
 		dc_preco             preco,
 		img_produto          imagem
   	FROM tb_anuncio
- 	WHERE nm_produto		like ?`
-	const [linhas] = await con.query(comando,[`%${nome}%`]);
+ 	WHERE nm_produto		like ?
+	  AND (? = '0' OR id_categoria = ?)`
+
+	console.log(nome);
+	console.log(categoria);
+
+	const [linhas] = await con.query(comando,[`%${nome}%`, categoria, categoria]);
+
+	console.log(linhas);
+
 	return linhas
 }
 export async function exibirProdutosUsuario(id){

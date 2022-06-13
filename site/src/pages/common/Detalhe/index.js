@@ -5,11 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 export default function Index(props) {
   const Navigate = useNavigate()
-  const [usuario, setUsuario] = useState("-");
-  const usuarioLogado = storage("usuario-logado");
-  useEffect(() => {
-    setUsuario(usuarioLogado.nome);
-  }, []);
+  //const [usuario, setUsuario] = useState("-");
+  //const usuarioLogado = storage("usuario-logado");
+  
+  // useEffect(() => {
+  //   setUsuario(usuarioLogado.nome);
+  // }, []);
+
+
   return (
     <div class="pagetoda">
       <section class="page">
@@ -26,10 +29,10 @@ export default function Index(props) {
 
           <div class="div1">
             <h4 class="minititulo">Nome do vendedor:</h4>
-            <p class="nm">{usuario}</p>
+            <p class="nm">{props.produto.usuario}</p>
 
             <h4 class="minititulo">Preço:</h4>
-            <p class="nm">R$: {props.produto.preco}</p>
+            <p class="nm">R$ {props.produto.preco}</p>
 
             <h4 class="minititulo">Categoria do produto</h4>
             <p class="nm">{(props.produto.categoria)}</p>

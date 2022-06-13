@@ -76,7 +76,7 @@ export default function Index() {
               <p className="cinza">{item.descricao.substr(0,100)}</p>
             </div>
             <div className="anun-card-info-meusanuncios">
-              <p>R$: {item.preco}</p>
+              <p>R${item.preco}</p>
               <p>{item.id}</p>
             </div>
             <div className="anun-card-icons-meusanuncios">

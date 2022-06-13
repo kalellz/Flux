@@ -56,21 +56,21 @@ server.put('/produto/:id', async (req,resp) => {
 		const { id } = req.params;
 		const produto = req.body
 		const resposta = await alterarProduto(id,produto);
-		if(!produto.usuario)
+		if(!produto.usuario.trim())
 			throw new Error('Usuario é obrigatorio!')
-		if(!produto.nome)
+		if(!produto.nome.trim())
 			throw new Error('Nome do produto é obrigatorio!')
 		if(!produto.categoria)
 			throw new Error('Categoria do produto é obrigatorio!')
-		if(!produto.descricao)
+		if(!produto.descricao.trim() )
 			throw new Error('Descrição do produto é obrigatorio!')
-		if(!produto.preco)
+		if(!produto.preco )
 			throw new Error('Preço do produto é obrigatorio!')
-		if(!produto.telefone)
+		if(!produto.telefone.trim() )
 			throw new Error('Telefone é obrigatorio!')
-		if(!produto.email)
+		if(!produto.email.trim() )
 			throw new Error('E-mail é obrigatorio!')
-		if(!produto.cep)
+		if(!produto.cep.trim() )
 			throw new Error('Cep é obrigatorio!')
 		if (resposta != 1) 
 			throw new Error('produto nao pode ser alterado') 
@@ -80,7 +80,6 @@ server.put('/produto/:id', async (req,resp) => {
         resp.status(400).send({
             erro: err.message
         })}
-
 	})
 server.get('/produto', async (req,resp) => {
 	try{
@@ -107,11 +106,15 @@ server.delete('/produto/:id', async (req,resp) => {
 })
 server.get('/produto/busca', async (req,resp) => {
 	try{
-		const { nome } = req.query;
-		const resposta = await consultarProdutosNome(nome);
-		if(resposta.length == 0) throw new Error('produto não encontrado')
-		else
-		resp.send(resposta);
+		const { nome, categoria } = req.query;
+		
+		const resposta = await consultarProdutosNome(nome, categoria);
+
+		// if(resposta.length == 0) 
+		// 	throw new Error('produto não encontrado')
+		// else
+			resp.send(resposta);
+
 	} catch(err){
         resp.status(400).send({
             erro: err.message

@@ -19,26 +19,24 @@ export default function Index() {
   const Navigate = useNavigate()
   const [produtos, setProdutos] = useState([]);
   const [filtro, setFiltro] = useState('')
-  const [categoria, setCategoria] = useState()
+  const [categoria, setCategoria] = useState('0')
 
   async function carregarTodosProdutos() {
     const resp = await listarTodosProdutos();
     setProdutos(resp);
   }
   async function Filtrar() {
-    const resp = await listarPorNome(filtro);
+    const resp = await listarPorNome(filtro, categoria);
     setProdutos(resp)
   }
-  async function FiltrarCategoria() {
-    const resp = await listarCategoria(categoria);
-    setProdutos(resp)
-  }
+  
   function abrirDetalhes(id){
     Navigate(`/InfoAnuncio/${id}`)
   }
+  
   useEffect(() => {
-    FiltrarCategoria();
-  }, [categoria])
+    Filtrar();
+  }, [categoria, filtro])
 
   useEffect(() => {
     carregarTodosProdutos()
@@ -55,7 +53,7 @@ export default function Index() {
               type="search"
               class="input-search"
               Value={filtro}
-              onChange={e => Filtrar(setFiltro(e.target.value))}
+              onChange={e => setFiltro(e.target.value)}
             ></input>
             <div className="text">
               <select className="categorias" value={categoria} onChange={e => setCategoria(e.target.value)}>
@@ -73,7 +71,7 @@ export default function Index() {
             ANUNCIAR
           </Link>
         </div>
-        <table className="sec-cards">
+        <div className="sec-cards">
           {produtos.map(item => <div class="card">
             <div class="card-img">
               <img src={`http://localhost:5000/${item.imagem}`} class="product-img" />
@@ -83,7 +81,7 @@ export default function Index() {
               <p class="text-body">{item.descricao.substr(0, 20)}</p>
             </div>
             <div class="card-footer">
-              <span class="text-title">R$: {item.preco}</span>
+              <span class="text-title">R${item.preco}</span>
               <div class="card-button" onClick={() => abrirDetalhes(item.id)}>
                 <Link to="/InfoAnuncio">
                   <svg class="svg-icon" viewBox="0 0 20 20" >
@@ -95,19 +93,10 @@ export default function Index() {
               </div>
             </div>
           </div>)}
-        </table>
-        <section class="propraganda">
-          <h1 class="titulo">
-            Novos anúncios na categoria de <span class="roxo">limpeza</span>
-          </h1>
-          <div className="propaganda-imgs">
-            <img class="imagempropa" src={veja} alt="veja"></img>
-            <img class="imagempropa" src={veja} alt="veja"></img>
-            <img class="imagempropa" src={veja} alt="veja"></img>
-          </div>
-          <h1 class="titulo">Venha conferir!</h1>
-        </section>
+        </div>
+        
       </div>
     </div>
+
   );
 }

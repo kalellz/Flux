@@ -44,8 +44,8 @@ export async function listarTodosProdutos(){
    const resposta = await api.get('/produto')
    return resposta.data
 }
-export async function listarPorNome(nome){
-	const resposta = await api.get(`/produto/busca?nome=${nome}`)
+export async function listarPorNome(nome, categoria){
+	const resposta = await api.get(`/produto/busca?nome=${nome}&categoria=${categoria}`)
 	return resposta.data
 }
 export async function listarMeusProdutos(id){

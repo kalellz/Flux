@@ -58,6 +58,7 @@ export default function Index() {
             toast.dark('🔥 Anúncio alterado com sucesso!')
         }
     } catch(err){
+      setCarregando(false);
       if(err.response)
         toast.error(err.response.data.erro)
       else 
@@ -78,7 +79,7 @@ export default function Index() {
     setNome(resposta.nome)
     setDescricao(resposta.descricao)
     setPreco(resposta.preco)
-    setCategoria(resposta.categoria)
+    setCategoria(resposta.idCategoria)
     setTelefone(resposta.telefone)
     setEmail(resposta.email)
     setCep(resposta.cep)
