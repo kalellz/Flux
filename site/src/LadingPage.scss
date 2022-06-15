@@ -362,9 +362,13 @@ html {
   height: 80vh;
   display: flex;
   flex-direction: column;
-  margin-left: 2em;
 }
-
+.fomulariocontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5em;
+}
 .form-input-app {
   font-family: "inter-regular";
   border: 1px solid #e2dcff !important;
@@ -444,6 +448,7 @@ html {
   height: fit-content;
   padding: 0.9em 2.2em;
   border-radius: 30px;
+  margin-left: 15em;
 }
 .direitosautorais {
   display: flex;

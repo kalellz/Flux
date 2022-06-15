@@ -122,9 +122,9 @@ function App() {
               <input type="text" class="form-input-app"></input>
               <p class="ultimostext">Mensagem</p>
               <textarea class="messageinput" rows={10} cols={70}></textarea>
-            </div>
-            <div className="btn-form-div">
+              <div className="btn-form-div">
               <button className="c-botao3-form">ENVIAR</button>
+            </div>
             </div>
           </div>
         </section>
