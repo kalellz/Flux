@@ -20,3 +20,14 @@ export async function login(email,senha) {
     const [linhas] = await con.query(comando, [email,senha]) 
     return linhas[0];
 }
+export async function buscarUsuarioEmail(email){
+    const comando = `
+    select 
+        ds_email		    email
+from tb_usuario
+where ds_email 		= ?`
+    const [linhas] = await con.query(comando, [email])
+    console.log(linhas)
+    return linhas
+    
+}

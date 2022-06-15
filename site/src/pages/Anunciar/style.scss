@@ -147,8 +147,9 @@ label {
 	cursor: pointer;
 	transition: 0.5s;
 	font-family: "inter-medium";
-	border-radius: 999px;
+	border-radius: .2em;
 	border: 1px solid #694df9;
+	margin-top: 2em;
 }
 
 label:hover {

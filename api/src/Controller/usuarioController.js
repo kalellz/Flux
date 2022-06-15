@@ -8,6 +8,10 @@ server.post("/usuario/cadastro", async (req, resp) => {
 		const resposta = await cadastro(nome, email, senha);
 		if(!resposta) throw new Error('não foi possivel se cadastrar')
 		resp.send('cadastrado com sucesso');
+		const usu = await buscarUsuarioEmail(email)
+		if(usu){
+			throw new Error('email ja utilizado')
+		}
 	} catch (err) {
 		resp.status(400).send({
 			erro: err.message,

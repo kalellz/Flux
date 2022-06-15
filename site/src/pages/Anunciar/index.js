@@ -43,9 +43,12 @@ export default function Index() {
         const usuario = storage('usuario-logado').id
         
         if(id === 0){
-          const novoProduto = await cadastrarProduto(usuario, categoria, nome.trim(), descricao.trim(), preco, telefone.trim(), email.trim(), cep.trim())
+          
+          const novoProduto = await cadastrarProduto(usuario, categoria, nome, descricao, preco, telefone, email, cep)
           await enviarImagemProduto(novoProduto.id, imagem)
           
+          // ### DESUMILDEEEEE !!!!!!!!!!!!!!!!!!
+
           setID(novoProduto.id)
           toast('🔥 Anúncio cadastrado com sucesso!')
           navigate('/MeusAnuncios')

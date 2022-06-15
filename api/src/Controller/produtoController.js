@@ -9,24 +9,27 @@ const upload = multer({ dest : 'storage/capasProduto' })
 server.post('/produto', async (req, resp) => {
     try{
         const produto = req.body
-        const produtoinserido = await inserirProduto(produto);
+        
 		if(!produto.usuario)
 			throw new Error('Usuario é obrigatorio!')
-		if(!produto.nome)
+		if(!produto.nome.trim())
 			throw new Error('Nome do produto é obrigatorio!')
 		if(!produto.categoria)
 			throw new Error('Categoria do produto é obrigatorio!')
-		if(!produto.descricao)
+		if(!produto.descricao.trim())
 			throw new Error('Descrição do produto é obrigatorio!')
-		if(!produto.preco)
+		if(!produto.preco.trim())
 			throw new Error('Preço do produto é obrigatorio!')
-		if(!produto.telefone)
+		if(!produto.telefone.trim())
 			throw new Error('Telefone é obrigatorio!')
-		if(!produto.email)
+		if(!produto.email.trim())
 			throw new Error('E-mail é obrigatorio!')
-		if(!produto.cep)
+		if(!produto.cep.trim())
 			throw new Error('Cep é obrigatorio!')
+
+		const produtoinserido = await inserirProduto(produto);
         resp.send(produtoinserido)
+
     } catch(err){
         resp.status(400).send({
             erro:err.message
