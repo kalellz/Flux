@@ -47,7 +47,7 @@ export default function Index() {
           await enviarImagemProduto(novoProduto.id, imagem)
           
           setID(novoProduto.id)
-          toast.dark('🔥 Anúncio cadastrado com sucesso!')
+          toast('🔥 Anúncio cadastrado com sucesso!')
           navigate('/MeusAnuncios')
         } 
         else {
@@ -55,7 +55,7 @@ export default function Index() {
             if(typeof(imagem) == 'object'){
               await enviarImagemProduto(id, imagem)
             }
-            toast.dark('🔥 Anúncio alterado com sucesso!')
+            toast('🔥 Anúncio alterado com sucesso!')
         }
     } catch(err){
       setCarregando(false);
@@ -162,7 +162,7 @@ export default function Index() {
         <h1 className="titulo-ultra">Foto do produto</h1>
         <form>
           <div ocClick={escolherImagem}>
-            <label for="arquivo">Enviar Arquivo</label>
+            <label className="btn-archive" for="arquivo">Enviar Arquivo</label>
             <input type="file" name="arquivo" id="arquivo" className="arquivoclass" onChange={e => setImagem(e.target.files[0])} />
             {imagem && 
               <img className="imagempreenchida" src={mostrarImagem()} alt='' />

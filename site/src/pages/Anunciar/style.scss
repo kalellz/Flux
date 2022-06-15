@@ -148,8 +148,11 @@ label{
   text-align: center;
   cursor: pointer;
   transition: .5s;
+  font-family: 'inter-medium';
+  border-radius: 999px;
   border: 1px solid #694df9;
 }
+
 label:hover{
   color: #694df9;
   background: #fff;
