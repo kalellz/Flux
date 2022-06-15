@@ -59,7 +59,7 @@ main {
 }
 
 .roxa-btn {
-	padding: 15px 70px;
+	padding: 1em 4.375em;
 	background-color: #694df9;
 	width: max-content;
 	border: 1px solid white;
@@ -67,6 +67,7 @@ main {
 	cursor: pointer;
 	text-transform: uppercase;
 	border-radius: 24px;
+  text-decoration: none;
 	font-family: "inter-regular";
 	transform: scale(1);
 	transition: all 0.4s;
@@ -224,21 +225,6 @@ main {
 		margin-bottom: 20px;
 	}
 
-	.roxa-btn {
-		padding: 15px 70px;
-		background-color: #694df9;
-		width: max-content;
-		border: 1px solid white;
-		color: white;
-		cursor: pointer;
-		text-transform: uppercase;
-		border-radius: 24px;
-		font-family: "inter-regular";
-		transform: scale(1);
-    text-decoration: none;
-		transition: all 0.4s;
-	}
-
 	.branca-btn {
 		padding: 15px 55px 14px 55px;
 		background-color: #694df9;
@@ -256,11 +242,6 @@ main {
 	}
 
 	.branca-btn:hover {
-		transform: scale(1.05);
-		transition: all 0.4s;
-	}
-
-	.roxa-btn:hover {
 		transform: scale(1.05);
 		transition: all 0.4s;
 	}
