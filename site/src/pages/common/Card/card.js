@@ -16,7 +16,8 @@ export default function Card() {
   }, [])
   return (
     <div>
-      {produtos.map(item => <div class="card">
+      {produtos.map(item => 
+      <div class="card">
         <div class="card-img">
           <img src={item.imagem} class="product-img" />
         </div>
