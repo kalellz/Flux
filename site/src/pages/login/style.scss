@@ -58,11 +58,10 @@ main {
   margin-bottom: 20px;
 }
 
-.roxa-btn {
-  padding: 15px 45px;
-  background-color: #694df9;
-  width: max-content;
+.roxa-btn-1 {
+  padding: 1em 2.8125em;
   border: 1px solid white;
+  background-color: #694df9;
   color: white;
   cursor: pointer;
   text-transform: uppercase;
@@ -167,5 +166,7 @@ main {
 }
 
 @media(max-width: 1280px) {
-  
+  .roxa-btn{
+
+  }
 }

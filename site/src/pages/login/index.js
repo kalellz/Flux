@@ -72,7 +72,7 @@ export default function Index() {
                 <p className="p-roxa">
                   Crie sua conta na flux agora, leva menos de 5 minutos!
                 </p>
-                <Link className="roxa-btn" to="/Cadastro">
+                <Link className="roxa-btn-1" to="/Cadastro">
                   cadastrar-se
                 </Link>
               </div>
