@@ -81,8 +81,6 @@ export async function consultarProdutosNome(nome,categoria){
  	WHERE nm_produto		like ?
 	  AND (? = '0' OR id_categoria = ?)`
 
-	console.log(nome);
-	console.log(categoria);
 
 	const [linhas] = await con.query(comando,[`%${nome}%`, categoria, categoria]);
 

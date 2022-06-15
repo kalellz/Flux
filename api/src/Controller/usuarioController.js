@@ -13,20 +13,20 @@ server.post("/usuario/cadastro", async (req, resp) => {
 			throw new Error('Insira um email')
 		if(!senha)
 			throw new Error('Insira uma senha')
-		if(!resposta) 
-			throw new Error('não foi possivel se cadastrar')
+		
 			const usu = await buscarUsuarioEmail(email)
-			if(usu){
-				throw new Error('email ja utilizado')
-			} 
-			else{
-			const resposta = await cadastro(nome, email, senha);
-			resp.send('cadastrado com sucesso');
+			if(!usu){
+				const resposta = await cadastro(nome, email, senha); 
+				resp.send('cadastrado com sucesso');
+				
 			}
+			else
+				throw new Error('email ja utilizado')
+			
 		
 
 	} catch (err) {
-		resp.status(400).send({
+		resp.status(401).send({
 			erro: err.message,
 		});
 	}

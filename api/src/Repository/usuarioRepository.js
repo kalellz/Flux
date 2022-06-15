@@ -27,6 +27,6 @@ export async function buscarUsuarioEmail(email){
     from tb_usuario
     where ds_email 		= ?`
     const [linhas] = await con.query(comando, [email])
-    return linhas
+    return linhas[0]
     
 }

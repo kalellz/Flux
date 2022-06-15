@@ -36,11 +36,11 @@ export default function Index() {
   }, [])
 
   async function entrarClick() {
-    ref.current.continuousStart()
     setCarregando(true)
     try {
       const r = await Login(email, senha);
       storage('usuario-logado', r)
+      ref.current.continuousStart()
       setTimeout(() => {
         navigate('/feed')
       }, 3000)
