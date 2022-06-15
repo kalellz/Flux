@@ -45,7 +45,6 @@ export default function Index() {
         setTimeout(() => {
           navigate('/Login')
         }, 1000)
-      
     } catch(err){
         if (err.response.status === 401) {
           setErro(err.response.data.erro)
