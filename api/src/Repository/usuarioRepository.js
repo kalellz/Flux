@@ -22,12 +22,11 @@ export async function login(email,senha) {
 }
 export async function buscarUsuarioEmail(email){
     const comando = `
-    select 
-        ds_email		    email
-from tb_usuario
-where ds_email 		= ?`
+    select ds_email		    email
+
+    from tb_usuario
+    where ds_email 		= ?`
     const [linhas] = await con.query(comando, [email])
-    console.log(linhas)
     return linhas
     
 }

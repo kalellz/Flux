@@ -86,8 +86,6 @@ export async function consultarProdutosNome(nome,categoria){
 
 	const [linhas] = await con.query(comando,[`%${nome}%`, categoria, categoria]);
 
-	console.log(linhas);
-
 	return linhas
 }
 export async function exibirProdutosUsuario(id){

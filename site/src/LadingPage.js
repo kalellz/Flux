@@ -13,6 +13,7 @@ import localizacao from "./images/localizacao.png";
 import { Link } from "react-router-dom";
 function App() {
   return (
+    
     <div>
       <header class="landing-header">
         <section className="btn-content">

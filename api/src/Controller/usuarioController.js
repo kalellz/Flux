@@ -1,17 +1,30 @@
-import { cadastro, login } from "../Repository/usuarioRepository.js";
+import { cadastro, login, buscarUsuarioEmail } from "../Repository/usuarioRepository.js";
 import { Router } from "express";
 const server = Router();
 
 server.post("/usuario/cadastro", async (req, resp) => {
 	try {
+
 		const { nome, email, senha } = req.body;
-		const resposta = await cadastro(nome, email, senha);
-		if(!resposta) throw new Error('não foi possivel se cadastrar')
-		resp.send('cadastrado com sucesso');
-		const usu = await buscarUsuarioEmail(email)
-		if(usu){
-			throw new Error('email ja utilizado')
-		}
+
+		if(!nome)
+			throw new Error('Insira um nome')
+		if(!email)
+			throw new Error('Insira um email')
+		if(!senha)
+			throw new Error('Insira uma senha')
+		if(!resposta) 
+			throw new Error('não foi possivel se cadastrar')
+			const usu = await buscarUsuarioEmail(email)
+			if(usu){
+				throw new Error('email ja utilizado')
+			} 
+			else{
+			const resposta = await cadastro(nome, email, senha);
+			resp.send('cadastrado com sucesso');
+			}
+		
+
 	} catch (err) {
 		resp.status(400).send({
 			erro: err.message,
