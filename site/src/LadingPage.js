@@ -10,11 +10,58 @@ import "./fonts/Inter/Inter-SemiBold.ttf";
 import "./fonts/Inter/Inter-Thin.ttf";
 import maonopc from "./images/maozinha no pc.png";
 import localizacao from "./images/localizacao.png";
+import { toast, ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
+import { enviarEmail } from "./api/usuarioApi.js";
+import { useState } from "react";
 function App() {
+  const [Erro, setErro] = useState();
+  const [carregando, setCarregando] = useState(false);
+  const [nome, setNome] = useState();
+  const [Email, setEmail] = useState();
+  const [Assunto, setAssunto] = useState();
+  const [Texto, setTexto] = useState();
+
+  async function emailLancado() {
+    setCarregando(true);
+    try {
+      const resp = await enviarEmail(nome, Email, Assunto, Texto);
+      toast.success("Email enviado com sucesso!", 
+      {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      setNome("");
+      setEmail("");
+      setAssunto("");
+      setTexto("");
+
+    } catch (err) {
+      setCarregando(false);
+      if (err.response.status === 401)
+        setErro(err.response.data.erro)
+    }
+  }
+  
+
   return (
-    
     <div>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <header class="landing-header">
         <section className="btn-content">
           <p className="title">FLUX</p>
@@ -35,8 +82,8 @@ function App() {
             <h1 class="titulo-1">Venda e compra de produtos com facilidade</h1>
             <p class="texto-1">
               Venda e compre móveis, periféricos, utensílios de cozinha e tudo o
-              que quiser. Você acha com facilidade pessoas vendendo ou
-              comprando produtos do seu interesse.
+              que quiser. Você acha com facilidade pessoas vendendo ou comprando
+              produtos do seu interesse.
             </p>
             <Link to="/login" className="c-botao3">
               COMEÇAR AGORA
@@ -58,26 +105,26 @@ function App() {
           <button class="quadrados">
             <h1 class="tituloquadrados">Anúncios</h1>
             <span class="textosquadrados">
-              Veja anúncios baseados em suas buscas e também em sua
-              localização, assim poderás encontrar tudo aquilo que procura o mais
-              perto de você. Desta forma você evita passar muito tempo rolando o
-              feed até achar algo que o interesse.
+              Veja anúncios baseados em suas buscas e também em sua localização,
+              assim poderás encontrar tudo aquilo que procura o mais perto de
+              você. Desta forma você evita passar muito tempo rolando o feed até
+              achar algo que o interesse.
             </span>
           </button>
           <button class="quadrados">
             <h1 class="tituloquadrados">Segurança</h1>
             <span class="textosquadrados">
-              Cada vez que você avalia alguém ou deixa uma crítica construtiva, o
-              nosso sistema evita exibir anúncios desta pessoa, assim você
-              tem menos chances de ser prejudicado no nosso site.
+              Cada vez que você avalia alguém ou deixa uma crítica construtiva,
+              o nosso sistema evita exibir anúncios desta pessoa, assim você tem
+              menos chances de ser prejudicado no nosso site.
             </span>
           </button>
           <button class="quadrados">
             <span class="tituloquadrados"> Vendas </span>
             <span class="textosquadrados">
-              Nós não interferimos na sua venda, somos apenas a ponte entre
-              o anunciante e o comprador. Não nos responsabilizamos por golpes
-              ou roubos.
+              Nós não interferimos na sua venda, somos apenas a ponte entre o
+              anunciante e o comprador. Não nos responsabilizamos por golpes ou
+              roubos.
             </span>
           </button>
         </section>
@@ -118,14 +165,49 @@ function App() {
             <div className="fomulariocontainer">
               <h1 class="ultimotitulo">Formulário para contato</h1>
               <p class="ultimostext">Nome</p>
-              <input type="text" class="form-input-app"></input>
+              <input
+                type="text"
+                class="form-input-app "
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                placeholder="Insira um nome (não obrigatório)"
+              ></input>
               <p class="ultimostext">E-mail</p>
-              <input type="text" class="form-input-app"></input>
+              <input
+                type="email"
+                class="form-input-app"
+                value={Email}
+                onChange={(e) => setEmail(e.target.value)
+                }
+                placeholder="Insira seu Email"
+              ></input>
+              <p class="ultimostext">Assunto</p>
+              <input
+                type="text"
+                class="form-input-app"
+                value={Assunto}
+                onChange={(e) => setAssunto(e.target.value)}
+                placeholder="Informe o Assunto do formulário"
+              ></input>
               <p class="ultimostext">Mensagem</p>
-              <textarea class="messageinput" rows={10} cols={70}></textarea>
+              <textarea
+                class="messageinput"
+                rows={10}
+                cols={70}
+                value={Texto}
+                onChange={(e) => setTexto(e.target.value)}
+                placeholder="Insira as informações do seu formulário"
+              ></textarea>
               <div className="btn-form-div">
-              <button className="c-botao3-form">ENVIAR</button>
-            </div>
+                <button
+                  className="c-botao3-form"
+                  onClick={emailLancado}
+                  disabled={carregando}
+                >
+                  ENVIAR
+                </button>
+              </div>
+              <div className="erroladingpage">{Erro}</div>
             </div>
           </div>
         </section>

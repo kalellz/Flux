@@ -18,3 +18,13 @@ export async function cadastro(nome, email,senha){
     });
     return r.data
 }
+export async function enviarEmail(nome, de, assunto, texto){
+  const r = await api.post('/send-email', {
+    nome: nome,
+    from: de,
+	  subject: assunto,
+	  text: texto,
+    to: 'golda.davis30@ethereal.email'
+  })
+  return r.data
+}

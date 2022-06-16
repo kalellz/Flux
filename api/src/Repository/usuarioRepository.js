@@ -1,4 +1,5 @@
 import { con } from "./connection.js";
+import nodemailer from 'nodemailer'
 
 export async function cadastro(nome, email, senha) {
 	const comando = `
@@ -27,6 +28,5 @@ export async function buscarUsuarioEmail(email){
     from tb_usuario
     where ds_email 		= ?`
     const [linhas] = await con.query(comando, [email])
-    return linhas[0]
-    
+    return linhas[0]   
 }

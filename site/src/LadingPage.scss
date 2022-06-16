@@ -382,7 +382,16 @@ html {
   border: 1px solid #b1a3f3 !important;
   outline: none;
 }
-
+.erroladingpage{
+  font-family: "inter-regular";
+  color: red;
+  display: flex;
+  justify-content: center;
+  width: 30vw;
+  font-size: 1em;
+  margin-top: 1em;
+  font-weight: 800;
+}
 .ultimostext {
   color: #202020;
   font-size: 14px;

@@ -1,5 +1,6 @@
 import { cadastro, login, buscarUsuarioEmail } from "../Repository/usuarioRepository.js";
 import { Router } from "express";
+import nodemailer from 'nodemailer'
 const server = Router();
 
 server.post("/usuario/cadastro", async (req, resp) => {
@@ -46,5 +47,40 @@ server.post("/usuario/login", async (req,resp) => {
 		});
 	}
 })
+server.post('/send-email', (req,resp) =>{
 
+	try{
+		const {nome, from, to, subject, text} = req.body
+		const transport = nodemailer.createTransport({
+			host: "smtp.ethereal.email",
+			port: 587,
+			secure: false,
+			auth:{
+				user:'golda.davis30@ethereal.email',
+				pass:'JQj723MvUkffyGn9rs'
+		},
+		tls:{
+		rejectUnauthorized: false
+		}
+		})
+
+		transport.sendMail({
+			from: `${nome} <${from}>`,
+			to: to,
+			subject: subject,
+			text: text	
+		})
+		if(!from) throw new Error('Email é obrigatorio!')
+		if(!to) throw new Error('erro no recipiente do email')
+		if(!subject) throw new Error("Assunto é obrigatório!")
+		if(!text) throw new Error("Texto é obrigatório!")
+		else resp.status(204).send()
+			
+	} catch(err){
+		resp.status(401).send({
+			erro: err.message
+		});
+	}
+	
+})
 export default server;
