@@ -42,18 +42,6 @@
     width: 80%;
     flex-direction: column;
 
-    .anun-card-desc {
-      display: flex;
-      flex-direction: column;
-      width: 13em;
-      height: 60%;
-      justify-content: space-between;
-      margin-left: 4em;
-
-      span {
-        color: rgba(255, 255, 255, 0.616);
-      }
-    }
     .anun-card {
       display: flex;
       width: 100%;
@@ -62,7 +50,7 @@
       transition: 1.5s;
       background-color: #fff;
       padding: 0 5em;
-      height: 22%;
+      height: 30%;
       align-items: center;
       border-radius: 16px;
       box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
@@ -143,14 +131,14 @@
 }
 
 .anun-card-meusanuncios{
+  border: solid #6a4df93a 1px;
   display: flex;
   width: 100%;
   cursor: pointer;
-  margin-bottom: 2em;
   transition: 1.5s;
   background-color: rgb(252, 252, 252);
   padding: 0 5em;
-  height: 15vh;
+  height: 17vh;
   align-items: center;
   border-radius: 16px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.349);

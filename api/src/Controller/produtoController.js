@@ -9,16 +9,13 @@ const upload = multer({ dest : 'storage/capasProduto' })
 server.post('/produto', async (req, resp) => {
     try{
         const produto = req.body
-        
-		if(!produto.usuario)
-			throw new Error('Usuario é obrigatorio!')
 		if(!produto.nome.trim())
 			throw new Error('Nome do produto é obrigatorio!')
 		if(!produto.categoria)
 			throw new Error('Categoria do produto é obrigatorio!')
 		if(!produto.descricao.trim())
 			throw new Error('Descrição do produto é obrigatorio!')
-		if(!produto.preco.trim())
+		if(!produto.preco)
 			throw new Error('Preço do produto é obrigatorio!')
 		if(!produto.telefone.trim())
 			throw new Error('Telefone é obrigatorio!')

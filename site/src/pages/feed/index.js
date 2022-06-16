@@ -77,8 +77,8 @@ export default function Index() {
               <img src={`http://localhost:5000/${item.imagem}`} class="product-img" />
             </div>
             <div class="card-info">
-              <p class="text-title">{item.nome}</p>
-              <p class="text-body">{item.descricao.substr(0, 20)}</p>
+              <p class="text-title">{item.nome.substr(0,18)}</p>
+              <p class="text-body">{item.descricao.substr(0,21)}</p>
             </div>
             <div class="card-footer">
               <span class="text-title">R${item.preco}</span>

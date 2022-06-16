@@ -72,8 +72,8 @@ export default function Index() {
               <img src={`http://localhost:5000/${item.imagem}`} className="imagemsitee-meusanuncios" alt="" />
             </div>
             <div className="anun-card-desc-meusanuncios">
-              <p>{item.nome.substr(0,100)}</p>
-              <p className="cinza">{item.descricao.substr(0,100)}</p>
+              <p>{item.nome.substr(0,30)}</p>
+              <p className="cinza">{item.descricao.substr(0,30)}</p>
             </div>
             <div className="anun-card-info-meusanuncios">
               <p>R${item.preco}</p>

@@ -19,7 +19,7 @@ create table TB_anuncio(
     ID_categoria int,
     IMG_produto varchar(300),
     DS_email varchar(300),
-    NM_produto varchar(200),
+    NM_produto varchar(80),
     DS_produto varchar(200),
     DC_preco decimal(15,2),
 	DS_telefone varchar(200),
