@@ -31,11 +31,14 @@ export default function Header(props) {
  
   return (
     <div className="header-feed">
-      <div className="oláusuario">Olá {usuario}</div>
+      
       <div className="cima">
+        
         <div className="logo">
           <h3 className="logo-flux">FLUX</h3>
+          
         </div>
+        <div className="oláusuario"><p>Olá {usuario.toUpperCase()}! Seja bem-vindo</p></div>
         <div className="conta">
           <button onClick={sairClick} className="botao1">
             Sair
