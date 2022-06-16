@@ -56,8 +56,8 @@ server.post('/send-email', (req,resp) =>{
 			port: 587,
 			secure: false,
 			auth:{
-				user:'golda.davis30@ethereal.email',
-				pass:'JQj723MvUkffyGn9rs'
+				user:'olga.champlin31@ethereal.email',
+				pass:'cpqu3t3a8fNEtfe4wy'
 		},
 		tls:{
 		rejectUnauthorized: false
@@ -70,7 +70,7 @@ server.post('/send-email', (req,resp) =>{
 			subject: subject,
 			text: text	
 		})
-		if(!from) throw new Error('Email é obrigatorio!')
+		if(!from) throw new Error('Email é obrigatório!')
 		if(!to) throw new Error('erro no recipiente do email')
 		if(!subject) throw new Error("Assunto é obrigatório!")
 		if(!text) throw new Error("Texto é obrigatório!")

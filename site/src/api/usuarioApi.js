@@ -24,7 +24,7 @@ export async function enviarEmail(nome, de, assunto, texto){
     from: de,
 	  subject: assunto,
 	  text: texto,
-    to: 'golda.davis30@ethereal.email'
+    to: 'olga.champlin31@ethereal.email'
   })
   return r.data
 }
