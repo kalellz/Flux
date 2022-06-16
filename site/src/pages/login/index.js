@@ -46,6 +46,7 @@ export default function Index() {
       }, 3000)
 
     } catch (err) {
+      setCarregando(false)
       if (err.response.status === 401) {
         setErro(err.response.data.erro)
       }
