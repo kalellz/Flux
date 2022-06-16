@@ -67,7 +67,7 @@ export default function Index() {
             </div>
           </div>
 
-          <Link className="c-botao5" to="/Anunciar">
+          <Link className="botao-anunciar" to="/Anunciar">
             ANUNCIAR
           </Link>
         </div>

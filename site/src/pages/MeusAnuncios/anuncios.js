@@ -59,8 +59,8 @@ export default function Index() {
       <Header selecionado='meusanuncios' />
       <div className="main-content">
         <nav className="navbar">
-            <div className="nav-btn">
-              <Link className="c-botao6-my" to="/Anunciar">
+            <div className="botao-meusanuncios">
+              <Link className="botao-anunciar" to="/Anunciar">
               ANUNCIAR
             </Link>
             </div>

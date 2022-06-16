@@ -8,6 +8,51 @@
 .sec-cards > div {
   margin: 3em 2em;
 }
+.botao-anunciar{
+  --color: #694df9;
+ display: inline-block;
+ width: 8em;
+ height: 2.6em;
+ line-height: 2.5em;
+ margin: 20px;
+ position: relative;
+ overflow: hidden;
+ border: 2px solid var(--color);
+ transition: color .5s;
+ font-size: 15px;
+ border-radius: 6px;
+ color: var(--color);
+ text-decoration: none;
+ font-family: "inter-bold";
+ text-align: center;
+}
+.botao-anunciar:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+ }
+ .botao-anunciar:hover{
+    color: #fff;
+ }
+ .botao-anunciar:before {
+  top: 100%;
+  left: 100%;
+  transition: all .7s;
+ }
+ 
+ .botao-anunciar:hover:before {
+  top: -30px;
+  left: -30px;
+ }
+ 
+ .botao-anunciar:active:before {
+  background: #694df9;
+  transition: background 0s;
+ }
 
 .sec-cards {
   flex-wrap: wrap ;

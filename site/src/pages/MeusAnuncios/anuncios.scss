@@ -16,7 +16,9 @@
     margin-bottom: 1.5em;
     margin-top: 1em;
   }
-
+  .botao-meusanuncios{
+    margin-left: 95%;
+  }
   .anun-search {
     display: flex;
     width: 100%;
@@ -114,6 +116,7 @@
     text-decoration: underline;
   }
 }
+
 .c-botao6-my{
     cursor: pointer;
     border: none;
@@ -134,7 +137,6 @@
   border: solid #6a4df93a 1px;
   display: flex;
   width: 100%;
-  cursor: pointer;
   transition: 1.5s;
   background-color: rgb(252, 252, 252);
   padding: 0 5em;
@@ -153,6 +155,7 @@
     transition: 3s;
     font-size: 1em;
     font-family: "inter-regular";
+    user-select: none;
   }
 
   .anun-card-info-meusanuncios {
