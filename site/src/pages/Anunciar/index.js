@@ -193,13 +193,12 @@ export default function Index() {
           </div>
         </div>
         <div className="ultrapassado">
-          <h1 className="titulo-ultra">Foto do produto</h1>
+          <h1 className="titulo-ultra">Fotos do produto</h1>
           <form>
             <div className="div-escolherimagem" ocClick={escolherImagem}>
               <label className="main_div"  for="arquivo">
                 Enviar
               </label>
-              
               <input
                 type="file"
                 name="arquivo"
@@ -207,9 +206,6 @@ export default function Index() {
                 className="arquivoclass"
                 onChange={(e) => setImagem(e.target.files[0])}
               />
-
-
-                
               {imagem && (
                 <img
                   className="imagempreenchida"
