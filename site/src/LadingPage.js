@@ -12,6 +12,7 @@ import maonopc from "./images/maozinha no pc.png";
 import localizacao from "./images/localizacao.png";
 import { toast, ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
+import {animateScroll as scroll} from 'react-scroll'
 import { enviarEmail } from "./api/usuarioApi.js";
 import { useState } from "react";
 function App() {
@@ -65,10 +66,10 @@ function App() {
       <header class="landing-header">
         <section className="btn-content">
           <p className="title">FLUX</p>
-          <a href="#saibamais" class="c-botao2">
+          <a href="#saibamais" class="c-botao2" onClick={() => scroll.scrollTo(850)}>
             Saiba mais
           </a>
-          <a href="#formulario-app" class="c-botao2">
+          <a href="#formulario-app" class="c-botao2" onClick={() => scroll.scrollTo(2450)}>
             Contato
           </a>
           <Link to="/login" className="c-botao3">
