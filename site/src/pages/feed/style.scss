@@ -1,128 +1,130 @@
 .feed-content {
-  display: flex;
-  width: 100%;
-  height: auto;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	width: 100%;
+	height: auto;
+	flex-direction: column;
+	align-items: center;
 }
 .sec-cards > div {
-  margin: 3em 2em;
+	margin: 3em 2em;
 }
-.botao-anunciar{
-  --color: #694df9;
- display: inline-block;
- width: 8em;
- height: 2.6em;
- line-height: 2.5em;
- margin: 20px;
- position: relative;
- overflow: hidden;
- border: 2px solid var(--color);
- transition: color .5s;
- font-size: 15px;
- border-radius: 6px;
- color: var(--color);
- text-decoration: none;
- font-family: "inter-bold";
- text-align: center;
+.botao-anunciar {
+	--color: #694df9;
+	display: inline-block;
+	width: 8em;
+	height: 2.6em;
+	line-height: 2.5em;
+	margin: 20px;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid var(--color);
+	transition: color 0.5s;
+	font-size: 15px;
+	border-radius: 6px;
+	color: var(--color);
+	text-decoration: none;
+	font-family: "inter-bold";
+	text-align: center;
 }
 .botao-anunciar:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--color);
-  height: 150px;
-  width: 200px;
-  border-radius: 50%;
- }
- .botao-anunciar:hover{
-    color: #fff;
- }
- .botao-anunciar:before {
-  top: 100%;
-  left: 100%;
-  transition: all .7s;
- }
- 
- .botao-anunciar:hover:before {
-  top: -30px;
-  left: -30px;
- }
- 
- .botao-anunciar:active:before {
-  background: #694df9;
-  transition: background 0s;
- }
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background: var(--color);
+	height: 150px;
+	width: 200px;
+	border-radius: 50%;
+}
+.botao-anunciar:hover {
+	color: #fff;
+}
+.botao-anunciar:before {
+	top: 100%;
+	left: 100%;
+	transition: all 0.7s;
+}
+
+.botao-anunciar:hover:before {
+	top: -30px;
+	left: -30px;
+}
+
+.botao-anunciar:active:before {
+	background: #694df9;
+	transition: background 0s;
+}
 
 .sec-cards {
-  flex-wrap: wrap ;
-  display: flex;
-  width: 90vw;
-  justify-content: center;
-  margin-top: 5em;
-  height: 40vh;
-  align-items: flex-start;
+	flex-wrap: wrap;
+	display: flex;
+	width: 90vw;
+	justify-content: center;
+	margin-top: 5em;
+	height: 40vh;
+	align-items: flex-start;
 }
 .titulo {
-  margin-left: 10vw;
-  width: 20vw;
-  line-height: 5vh;
-  color: #000;
-  font-family: "inter-bold";
+	margin-left: 10vw;
+	width: 20vw;
+	line-height: 5vh;
+	color: #000;
+	font-family: "inter-bold";
 }
 .imagempropa {
-  width: 10vh;
+	width: 10vh;
 }
-.card-button{
-  height: 2em;
-}
-.c-botao5{
-  cursor: pointer;
-  border: none;
-  font-family: "inter-regular";
-  font-weight: 600px;
-  text-decoration: none;
-  font-size: 0.7em;
-  color: #fff;
-  background-color: #694df9;
-  width: max-content;
-  height: max-content;
-  padding: 15px 30px;
-  border-radius: 999px;
+.card-button {
+	height: 2em;
 }
 .nav-btn {
-  display: flex;
-  width: 90vw;
-  height: 3em;
-  justify-content: space-between;
-  margin: 1em 0em 0em 2em;
-}
-.input-search {
-  width: 25em;
-  height: 3em;
-  line-height: 1.75em;
-  padding: 0 1rem;
-  padding-left: 2.5rem;
-  border: 2px solid transparent;
-  border-radius: 0.5em;
-  outline: none;
-  background-color: #f3f3f4;
-  color: #0d0c22;
-  transition: 0.3s ease;
-  font-family: "inter-regular";
-}
-.input-search::placeholder {
-  color: #9e9ea7;
+	display: flex;
+	width: 90vw;
+	height: 5em;
+	justify-content: space-between;
 }
 
-.input-search:focus,
-.input-search:hover {
-  outline: none;
-  border-color: transparent;
-  background-color: #fff;
-  box-shadow: 0 0 0 4px #8871fa;
+.group {
+	display: flex;
+	line-height: 1.75em;
+	align-items: center;
+	position: relative;
+	transform: scale(1.02);
+}
+.row {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.input {
+	width: 100%;
+	height: 3em;
+	line-height: 1.75em;
+	padding: 0 1rem;
+	padding-left: 2.5rem;
+	border: 2px solid transparent;
+	border-radius: 0.5em;
+	outline: none;
+  font-family: 'inter-regular';
+	background-color: #f3f3f4;
+	color: #0d0c22;
+	transition: 0.3s ease;
 }
 
-@media(max-width: 1280px) {
+.input::placeholder {
+	color: #9e9ea7;
+}
 
+.input:focus,
+.input:hover {
+	outline: none;
+	box-shadow: 0 0 0 4px rgba(105, 76, 234, 0.507);
+	background-color: #fff;
+}
+
+.icon {
+	position: absolute;
+	left: 1rem;
+	fill: #9e9ea7;
+	width: 1rem;
+	height: 1rem;
 }

@@ -14,6 +14,8 @@
 	flex-direction: row;
 	justify-content: space-around;
 }
+
+
 .DadosProduto {
 	display: flex;
 	flex-direction: column;
@@ -32,11 +34,18 @@
 	width: 20em;
 	padding: 0.8em;
 	height: 2.5em;
+	transition: all .3s ease;
 }
 
 .form-input:focus {
 	border: 1px solid #b1a3f3 !important;
 	outline: none;
+	
+}
+
+.form-input:hover{
+	transition: all .3s ease;
+	box-shadow: 0 0 0 2px rgba(105, 76, 234, 0.507);
 }
 
 textarea {
@@ -45,10 +54,16 @@ textarea {
 	outline: none;
 	border: 1px solid #e2dcff !important;
 	border-radius: 6px !important;
+	transition: all .3s ease;
 }
 
 textarea:focus {
 	border: 1px solid #b1a3f3 !important;
+}
+
+textarea:hover{
+	transition: all .3s ease;
+	box-shadow: 0 0 0 2px rgba(105, 76, 234, 0.507);
 }
 
 .field {
@@ -96,7 +111,6 @@ span {
 .publicaranuncio {
 	display: flex;
 	justify-content: center;
-	/* From uiverse.io by @adamgiebl */
 button {
 	cursor: pointer;
 	font-family: inherit;
@@ -262,5 +276,66 @@ form {
 	width: 8em;
 }
 
-@media (max-width: 1280px) {
-}
+.download-button {
+	position: relative;
+	border-width: 0;
+	cursor: pointer;
+	border: 1px solid red;
+	transform: scale(1.5);
+	color: white;
+	font-family: 'inter-regular';
+	font-size: 1em;
+	border-radius: 4px;
+	z-index: 1;
+   }
+   
+   .download-button .docs {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: .625em;
+	min-height: 2.5em;
+	padding: 0 .925em;
+	border-radius: 4px;
+	z-index: 1;
+	background-color: #694df9;
+	transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 70%;
+	max-height: 90%;
+	margin: 0 auto;
+	z-index: -1;
+	border-radius: 4px;
+	transform: translateY(5%);
+	background-color: #212121;
+	transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover .download {
+	transform: translateY(100%)
+   }
+   
+   .download svg polyline,.download svg line {
+	animation: docs 1s infinite;
+   }
+   
+   @keyframes docs {
+	0% {
+	 transform: translateY(0%);
+	}
+   
+	50% {
+	 transform: translateY(-15%);
+	}
+   
+	100% {
+	 transform: translateY(0%);
+	}
+   }
