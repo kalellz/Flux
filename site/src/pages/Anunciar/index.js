@@ -154,7 +154,6 @@ export default function Index() {
 							</svg>
 						</div>
           </div>
-          
 					<span>{id === 0 ? "Publicar" : "Alterar"}</span>
         </button>
         

@@ -49,15 +49,6 @@ main {
 	font-size: 36px;
 }
 
-.p-roxa {
-	font-family: "inter-light";
-	font-size: 2vh;
-	height: 5em;
-	width: 17em;
-	color: white;
-	margin-bottom: 20px;
-}
-
 .roxa-btn {
 	padding: 1em 4.375em;
 	background-color: #694df9;
@@ -173,8 +164,8 @@ main {
 	.login-container {
 		display: flex;
 		height: 70%;
-		width: 55%;
 		border-radius: 1em;
+		width: 60%;
 	}
 
 	.input-img {
@@ -306,5 +297,10 @@ main {
 		margin-left: 15px;
 		color: #9a9a9a;
 		margin-right: 0.2em;
+	}
+}
+@media (max-width: 1125px) {
+	.login-container{
+		width: 80%;
 	}
 }
