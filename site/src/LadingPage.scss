@@ -416,7 +416,9 @@ html {
 .messageinput {
   height: 10vh;
   max-width: 35em;
-  max-height: 25em;
+  max-height: 15em;
+  min-width: 25em;
+  min-height: 3em;
 }
 
 .btn-form-div {
