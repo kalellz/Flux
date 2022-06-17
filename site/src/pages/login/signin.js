@@ -39,17 +39,25 @@ export default function Index() {
   }, [])
   async function entrarClick() {
     setCarregando(true)
+    ref.current.continuousStart();
     try{
       const r = await cadastro(nome, email, senha)
       ref.current.continuousStart()
+      setTimeout(() => {
+        ref.current.complete();
+      }, 2400)
         setTimeout(() => {
           navigate('/Login')
-        }, 1000)
-    } catch(err){
+        }, 3000)
+    } catch (err) {
+      ref.current.complete();
         setCarregando(false)
         if (err.response.status === 401) {
           setErro(err.response.data.erro)
-        }
+      }
+      setTimeout(() => {
+        setErro('');
+     }, 3000)
     }
   }
 

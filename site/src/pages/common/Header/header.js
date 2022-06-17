@@ -26,7 +26,9 @@ export default function Header(props) {
 
   function sairClick() {
     storage.remove('usuario-logado')
-    navigate('/login')
+    setTimeout(() => {
+      navigate('/login')
+    }, 2000)
   }
  
   return (
@@ -38,7 +40,7 @@ export default function Header(props) {
           <h3 className="logo-flux">FLUX</h3>
           
         </div>
-        <div className="oláusuario"><p>Olá {usuario[0].toUpperCase() + usuario.slice(1)}! Seja bem-vindo</p></div>
+        <div className="oláusuario"><p>Olá {usuario[0].toUpperCase() + usuario.slice(1)}, Seja bem-vindo</p></div>
         <div className="conta">
           <button onClick={sairClick} className="botao1">
             Sair
