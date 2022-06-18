@@ -10,19 +10,19 @@ server.post('/produto', async (req, resp) => {
     try{
         const produto = req.body
 		if(!produto.nome.trim())
-			throw new Error('Nome do produto é obrigatorio!')
+			throw new Error('Nome do produto é obrigatório!')
 		if(!produto.categoria)
-			throw new Error('Categoria do produto é obrigatorio!')
+			throw new Error('Categoria do produto é obrigatório!')
 		if(!produto.descricao.trim())
-			throw new Error('Descrição do produto é obrigatorio!')
+			throw new Error('Descrição do produto é obrigatório!')
 		if(!produto.preco)
-			throw new Error('Preço do produto é obrigatorio!')
+			throw new Error('Preço do produto é obrigatório!')
 		if(!produto.telefone.trim())
-			throw new Error('Telefone é obrigatorio!')
+			throw new Error('Telefone é obrigatório!')
 		if(!produto.email.trim())
-			throw new Error('E-mail é obrigatorio!')
+			throw new Error('E-mail é obrigatório!')
 		if(!produto.cep.trim())
-			throw new Error('Cep é obrigatorio!')
+			throw new Error('Cep é obrigatório!')
 
 		const produtoinserido = await inserirProduto(produto);
         resp.send(produtoinserido)
@@ -42,7 +42,7 @@ server.put('/produto/:id/capa', upload.single('capa'), async (req,resp) => {
 		
         const resposta = await alterarImagem(imagem, id)
         if(resposta != 1) 
-			throw new Error('A imagem não pode ser salva.')
+			throw new Error('A imagem não pôde ser salva.')
         resp.status(204).send();
     } catch(err){
 		console.log(err)
@@ -57,21 +57,21 @@ server.put('/produto/:id', async (req,resp) => {
 		const produto = req.body
 		const resposta = await alterarProduto(id,produto);
 		if(!produto.nome.trim())
-			throw new Error('Nome do produto é obrigatorio!')
+			throw new Error('Nome do produto é obrigatório!')
 		if(!produto.categoria)
-			throw new Error('Categoria do produto é obrigatorio!')
+			throw new Error('Categoria do produto é obrigatório!')
 		if(!produto.descricao.trim())
-			throw new Error('Descrição do produto é obrigatorio!')
+			throw new Error('Descrição do produto é obrigatório!')
 		if(!produto.preco)
-			throw new Error('Preço do produto é obrigatorio!')
+			throw new Error('Preço do produto é obrigatório!')
 		if(!produto.telefone.trim())
-			throw new Error('Telefone é obrigatorio!')
+			throw new Error('Telefone é obrigatório!')
 		if(!produto.email.trim())
-			throw new Error('E-mail é obrigatorio!')
+			throw new Error('E-mail é obrigatório!')
 		if(!produto.cep.trim() )
-			throw new Error('Cep é obrigatorio!')
+			throw new Error('Cep é obrigatório!')
 		if (resposta != 1) 
-			throw new Error('produto nao pode ser alterado') 
+			throw new Error('Produto nao pode ser alterado') 
 		else 
 			resp.status(204).send()
 	} catch(err){
@@ -93,7 +93,7 @@ server.delete('/produto/:id', async (req,resp) => {
 	try{
 		const { id } = req.params;
 		const deletar = await deletarProduto(id)
-		if(deletar != 1) throw new Error('produto não pode ser removido')
+		if(deletar != 1) throw new Error('Produto não pode ser removido')
 		else
 		resp.status(204).send()
 	} catch(err){
@@ -123,7 +123,7 @@ server.get('/produto/:id', async (req,resp) => {
 	try{
 		const {id} = req.params;
 		const resposta = await consultarProdutosID(id);
-		if(!resposta) throw new Error('produto não encotrado')
+		if(!resposta) throw new Error('Produto não encotrado')
 		else
 		resp.status(200).send(resposta);
 	} catch(err){
@@ -136,7 +136,7 @@ server.get('/produto/usuario/:id', async (req,resp) => {
 	try{
 		const {id} = req.params;
 		const resposta = await exibirProdutosUsuario(id);
-		if(!resposta) throw new Error('produto não encotrado')
+		if(!resposta) throw new Error('Produto não encotrado')
 		else
 		resp.status(200).send(resposta);
 	} catch(err){
@@ -149,7 +149,7 @@ server.get('/produto/categoria/:id', async (req,resp) => {
 	try{
 		const {id} = req.params;
 		const resposta = await exibirProdutosCategoria(id);
-		if(!resposta) throw new Error('produto não encotrado')
+		if(!resposta) throw new Error('Produto não encotrado')
 		else
 		resp.status(200).send(resposta);
 	} catch(err){

@@ -18,11 +18,11 @@ server.post("/usuario/cadastro", async (req, resp) => {
 			const usu = await buscarUsuarioEmail(email)
 			if(!usu){
 				const resposta = await cadastro(nome, email, senha); 
-				resp.send('cadastrado com sucesso');
+				resp.send('Cadastrado com sucesso');
 				
 			}
 			else
-				throw new Error('email ja utilizado')
+				throw new Error('Email ja utilizado')
 			
 		
 
@@ -36,9 +36,9 @@ server.post("/usuario/login", async (req,resp) => {
 	try{
 		const {email,senha} = req.body;
 		const resposta = await login(email,senha);
-		if(!email) throw new Error('email é obrigatorio')
-		if(!senha) throw new Error('senha é obrigatorio!')
-		if(!resposta || resposta == null) throw new Error("usuario não encontrado")
+		if(!email) throw new Error('Email é obrigatorio')
+		if(!senha) throw new Error('Senha é obrigatorio!')
+		if(!resposta || resposta == null) throw new Error("Usuário não encontrado")
 		else
 			resp.send(resposta);
 	} catch (err) {
@@ -71,7 +71,7 @@ server.post('/send-email', (req,resp) =>{
 			text: text	
 		})
 		if(!from) throw new Error('Email é obrigatório!')
-		if(!to) throw new Error('erro no recipiente do email')
+		if(!to) throw new Error('Erro no recipiente do email')
 		if(!subject) throw new Error("Assunto é obrigatório!")
 		if(!text) throw new Error("Texto é obrigatório!")
 		else resp.status(204).send()
