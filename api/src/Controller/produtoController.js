@@ -56,8 +56,6 @@ server.put('/produto/:id', async (req,resp) => {
 		const { id } = req.params;
 		const produto = req.body
 		const resposta = await alterarProduto(id,produto);
-		if(!produto.usuario.trim())
-			throw new Error('Usuario é obrigatorio!')
 		if(!produto.nome.trim())
 			throw new Error('Nome do produto é obrigatorio!')
 		if(!produto.categoria)

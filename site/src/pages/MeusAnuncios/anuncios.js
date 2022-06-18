@@ -39,7 +39,7 @@ export default function Index() {
           onClick: async () => {
             const resposta = await removerProduto(id, nome);
             listarProdutos();
-            toast.dark("🔥 Produto " + nome + " removido!");
+            toast.success("🔥 Produto " + nome + " removido!");
           },
         },
 

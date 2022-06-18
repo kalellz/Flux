@@ -47,14 +47,14 @@ export default function Index() {
 				// ### DESUMILDEEEEE !!!!!!!!!!!!!!!!!!
 
 				setID(novoProduto.id);
-				toast("🔥 Anúncio cadastrado com sucesso!");
+				toast.success("🔥 Anúncio cadastrado com sucesso!");
 				navigate("/MeusAnuncios");
 			} else {
 				await alterarProduto(id, usuario, categoria, nome, descricao, preco, telefone, email, cep);
 				if (typeof imagem == "object") {
 					await enviarImagemProduto(id, imagem);
 				}
-				toast("🔥 Anúncio alterado com sucesso!");
+				toast.success("🔥 Anúncio alterado com sucesso!");
 			}
 		} catch (err) {
 			setCarregando(false);
