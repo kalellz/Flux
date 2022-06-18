@@ -6,11 +6,11 @@ export default function Index(props) {
   return (
     <div class="details">
       <div className="div-img">
+        <p className="p-category">{props.produto.categoria}</p>
       <img src={buscarImagem(props.produto.imagem)} className='product-img' />
       </div>
       <div className="div-infos">
         <div className="name-info">
-          <p className="p-category">{props.produto.categoria}</p>
           <h1 class="tituloinfo">{props.produto.nome}</h1>
           <p className="user-info"> Produto postado por: <span>{props.produto.usuario}</span></p> 
         </div>
@@ -26,7 +26,7 @@ export default function Index(props) {
             <h1>Email</h1>
             <p>{props.produto.email}</p>
             <h1>Telefone</h1>
-            <p>{ props.produto.telefone }</p>
+            <p>{props.produto.telefone}</p>
           </div>
         </div>
       </div>

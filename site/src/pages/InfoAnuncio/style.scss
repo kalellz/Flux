@@ -6,23 +6,42 @@
 	padding: 0 2em;
 	align-items: center;
 	.div-img {
+    flex-direction: column;
 		display: flex;
-		height: 90%;
+		height: 80%;
 		width: 40%;
 		max-width: 40%;
 		max-height: 90%;
-		align-items: center;
-		justify-content: center;
+    justify-content: center;
+    align-items: center;
 		border-radius: 1em;
-
-		.product-img {
-			width: 40em;
-			height: 32em;
-			border-radius: 1em;
-			box-shadow: 4px 6px 23px -4px rgba(71, 69, 71, 1);
-		}
+    margin-bottom: 3em;
+      .product-img {
+        width: 40em;
+        height: 32em;
+        border-radius: 1em;
+        box-shadow: 4px 6px 23px -4px rgba(71, 69, 71, 1);
+      }
 	}
-
+  .desc{
+    font-family: "inter-semibold";
+    letter-spacing: 1px;
+  }
+  .price{
+    font-family: "inter-bold";
+  }
+  .p-category {
+    display: flex;
+    background-color: #d8d8d8;
+    color: #6041fc;
+    font-family: "inter-semibold";
+    font-size: 1.3em;
+    width: max-content;
+    padding: 0.3em 0.5em;
+    border-radius: 0.4em;
+    margin-right: 65%;
+    margin-bottom: .2em;
+  }
 	.div-infos {
 		display: flex;
 		width: 60%;
@@ -49,16 +68,6 @@
 					color: #7559fd;
 				}
 			}
-
-			.p-category {
-				background-color: #eeeeee;
-				color: #6041fc;
-				font-family: "inter-semibold";
-				font-size: 1.3em;
-				width: max-content;
-				padding: 0.3em 0.5em;
-				border-radius: 0.4em;
-			}
 		}
 		.div-product-details {
 			display: flex;
@@ -66,7 +75,7 @@
 			h1 {
 				padding: 0.3em;
 				border-radius: 0.3em;
-				background-color: #eeeeee;
+				background-color: #d8d8d8;
 				color: #6041fc;
 
 				span {
@@ -94,6 +103,7 @@
 			width: max-content;
 			flex-direction: column;
 			.contact-title {
+        font-family: "inter-bold";
 				font-size: 1.9em;
 				span {
 					text-transform: uppercase;
@@ -108,7 +118,7 @@
 					font-family: "inter-regular";
 					font-size: 1.2em;
 					margin-bottom: 2em;
-					background-color: #eeeeee;
+					background-color: #d8d8d8;
 					width: max-content;
 					border-radius: 0 0.3em 0.3em 0.3em;
 					padding: 0.3em 0.5em;
