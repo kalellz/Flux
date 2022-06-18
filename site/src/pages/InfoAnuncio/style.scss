@@ -1,80 +1,144 @@
-:root {
-  --primaria: #694df9;
-}
-.pagetoda {
+.details{
   display: flex;
-  flex-direction: row;
-  background-color: #ffffff;
+  width: 100vw;
   height: 82vh;
-}
-.page {
-  height: 30vh;
-  width: 20vw;
-  margin: 5em 0px 0px 5em;
-}
+  border-collapse: collapse;
+  padding: 0 2em;
+  align-items: center;
+  .div-img{
+    display: flex;
+    height: 90%;
+    width: 40%;
+    max-width: 40%;
+    max-height: 90%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
 
-.tituloinfo {
-  user-select: none;
-  font-family: "inter-bold";
-  margin-bottom: 5px;
-}
-.desc {
-  width: 400px;
-}
-.descprod {
-  font-family: "inter-regular";
-}
-.informa {
-  margin-top: 10vh;
-  height: 30vh;
-  padding: 4vh;
-  display: flex;
-  flex-direction: column;
-}
-.aaaa {
-  height: 70vh;
-}
-.minititulo {
-  user-select: none;
-  margin-top: 10px;
-  font-family: "inter-semibold";
-}
-.nm {
-  font-family: "inter-regular";
-}
-.div1 {
-  width: 300px;
-}
-.page2 {
-  margin-top: 10vh;
-  height: 70vh;
-  padding: 4vh;
-  display: flex;
-  flex-direction: column;
-  margin-left: 70px;
-}
+    .product-img{
+      width: 40em;
+      height: 32em;
+      border-radius: 1em;
+      box-shadow: 4px 6px 23px -4px rgba(71,69,71,1);
+    }
+  }
 
-.botao1 {
-  border: none;
-  outline: none;
-  width: min-content;
-  background-color: transparent;
-  font-family: "inter-regular";
-  font-size: 15px;
-  width: auto;
-  color: white;
-  text-decoration: none;
-}
-.imagem-detalhe{
-  box-shadow: (5px 2px 8px 5px #00000059);
-  margin-top: 2vh;
-  border: #694df9 1px solid;
-  border-radius: 3px;
-  height: 15vh;
-  width:  12.5vw;
-  margin: 1px 1px 3px 1px;
+  .div-infos{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    height: 65%;
+
+    .name-info{
+      display: flex;
+      height: max-content;
+      flex-direction: column;
+
+      h1{
+        color: #212121;
+        font-family: 'inter-bold';
+        font-size: 3em;
+      }
+
+      .user-info{
+        color: #5c5c5c;
+        font-size: 1.1em;
+        font-family: 'inter-semibold';
+        margin: .5em 0;
+        span{
+          color: #7559fd;
+        }
+        
+      }
+
+      .p-category{
+        background-color: #eeeeee;
+        color: #6041fc;
+        font-family: 'inter-semibold';
+        font-size: 1.3em;
+        width: max-content;
+        padding: .3em .5em;
+        border-radius: .4em;
+      }
+    }
+    .div-product-details{
+      display: flex;
+      width: max-content;
+      h1{
+        padding: .3em;
+        border-radius: .3em;
+        background-color: #eeeeee;
+        color: #6041fc;
+        
+        span{
+          font-size: .8em;
+          color: #6041fc;
+        }
+      }
+    }
+    .product-description{
+      display: flex;
+
+      margin-top: .8em;
+      margin-bottom: 2em;
+      font-family: 'inter-regular';
+      color: #5c5c5c;
+      font-size: 1.1em;
+      max-width: 600px;
+      flex-wrap: wrap;
+      width: max-content;
+      height: max-content;
+    }
+
+    .contact{
+      display: flex;
+      width: max-content;
+      flex-direction: column;
+      .contact-title{
+        font-size: 1.9em;
+        span{
+          text-transform: uppercase;
+        }
+      }
+      .means{
+        display: flex;
+        margin-top: .6em;
+        flex-direction: column;
+        
+        p{
+          font-family: 'inter-regular';
+          font-size: 1.2em;
+          margin-bottom: 2em;
+          background-color: #eeeeee;
+          width: max-content;
+          border-radius: 0 .3em .3em .3em;
+          padding: .3em .5em;
+        }
+        h1{
+          background-color: #eeeeee;
+        color: #6041fc;
+        font-family: 'inter-semibold';
+        font-size: 1.3em;
+        width: max-content;
+        padding: .3em .5em;
+        border-radius: .4em .4em 0 0;
+        
+        }
+      }
+    }
+  }
 }
 
 @media(max-width: 1280px) {
-
+  .details{
+    .div-img{
+  
+      .product-img{
+        width: 25em;
+        height: 33em;
+        border-radius: 1em;
+        box-shadow: 4px 6px 23px -4px rgba(71,69,71,1);
+      }
+    }
+  }
 }

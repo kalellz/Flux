@@ -8,7 +8,6 @@ import "../../fonts/Inter/Inter-Regular.ttf";
 import "../../fonts/Inter/Inter-SemiBold.ttf";
 import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
-import img1 from "../../images/img1.svg";
 import Header from "../common/Header/header";
 import Detalhe from "../common/Detalhe/index.js"
 import { Navigate, useParams } from "react-router-dom";
