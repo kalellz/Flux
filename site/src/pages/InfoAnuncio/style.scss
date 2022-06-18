@@ -43,6 +43,7 @@
     border-radius: 0.4em;
     margin-right: 65%;
     margin-bottom: .2em;
+    user-select: none;
   }
 	.div-infos {
 		display: flex;
@@ -67,8 +68,10 @@
 				font-size: 1.1em;
 				font-family: "inter-semibold";
 				margin: 0.5em 0;
+        user-select: none;
 				span {
 					color: #7559fd;
+          user-select: text;
 				}
 			}
 		}
@@ -82,6 +85,7 @@
 				color: #6041fc;
 
 				span {
+          user-select: none;
 					font-size: 0.8em;
 					color: #6041fc;
 				}
@@ -108,8 +112,10 @@
 			.contact-title {
         font-family: "inter-bold";
 				font-size: 1.9em;
+        user-select: none;
 				span {
 					text-transform: uppercase;
+          user-select: text;
 				}
 			}
 			.means {
@@ -127,6 +133,7 @@
 					padding: 0.3em 0.5em;
 				}
 				h1 {
+          user-select: none;
 					background-color: #eeeeee;
 					color: #6041fc;
 					font-family: "inter-semibold";
@@ -139,7 +146,6 @@
 		}
 	}
 }
-
 @media (max-width: 1280px) {
 	.details {
 		.div-img {
