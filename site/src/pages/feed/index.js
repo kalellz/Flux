@@ -39,7 +39,9 @@ export default function Index() {
 	}, [categoria, filtro]);
 
 	useEffect(() => {
-		carregarTodosProdutos();
+		setTimeout(() => {
+			carregarTodosProdutos();
+		}, 5000)
 	}, []);
 
 	return (

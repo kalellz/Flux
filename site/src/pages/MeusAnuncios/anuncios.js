@@ -8,9 +8,9 @@ import "../../fonts/Inter/Inter-Regular.ttf";
 import "../../fonts/Inter/Inter-SemiBold.ttf";
 import "../../fonts/Inter/Inter-Thin.ttf";
 import "./anuncios.scss";
-import trash from "../../images/Trash.svg";
+import trash from "../../images/delete.png";
 import Header from "../common/Header/header";
-import pencil from "../../images/Pencil.svg";
+import pencil from "../../images/Pencil.png";
 import storage from "local-storage";
 import { Link, useNavigate } from "react-router-dom";
 import { listarMeusProdutos, listarPorNome, removerProduto } from "../../api/produtoApi.js";
@@ -101,8 +101,8 @@ export default function Index() {
 								<p>{item.id}</p>
 							</div>
 							<div className="anun-card-icons-meusanuncios">
-								<img src={pencil} onClick={() => editarProduto(item.id)} />
-								<img src={trash} onClick={() => deletarProduto(item.id, item.nome)} />
+								<img src={pencil} onClick={() => editarProduto(item.id)} className="anun-card-img-icon" /> &nbsp;&nbsp;&nbsp;&nbsp;
+								<img src={trash} onClick={() => deletarProduto(item.id, item.nome)} className="anun-card-img-icon"/>
 							</div>
 						</div>
 					</div>

@@ -39,7 +39,7 @@
 			width: 100%;
 			cursor: pointer;
 			margin-bottom: 4em;
-			transition: 1.5s;
+			transition: .5s;
 			background-color: #fff;
 			padding: 0 5em;
 			height: 30%;
@@ -50,11 +50,11 @@
 				display: flex;
 				height: 80%;
 				width: 12%;
-				transition: 1.5s;
+				transition: .5s;
 			}
 
 			p {
-				transition: 3s;
+				transition: .5s;
 				font-size: 1em;
 				font-family: "inter-regular";
 			}
@@ -64,21 +64,21 @@
 				font-size: 1.5em;
 				width: 70%;
 				justify-content: space-around;
-				transition: 1s;
+				transition: .5s;
 			}
 		}
 		.anun-card:hover span {
-			transition: 1.5s;
+			transition: .5s;
 			color: #d9dbdd;
 		}
 
 		.anun-card:hover p {
 			color: white;
-			transition: 1s;
+			transition: .5s;
 		}
 		.anun-card:hover {
 			background-color: #694df9;
-			transition: all 0.4s;
+			transition: all 0.5s;
 		}
 
 		.anun-card-icons {
@@ -125,7 +125,7 @@
 	border: solid #6a4df93a 1px;
 	display: flex;
 	width: 100%;
-	transition: 1.5s;
+	transition: .5s;
 	background-color: rgb(252, 252, 252);
 	padding: 0 5em;
 	height: 17vh;
@@ -136,11 +136,11 @@
 		display: flex;
 		height: 80%;
 		width: 12%;
-		transition: 1.5s;
+		transition: .5s;
 	}
 
 	p {
-		transition: 3s;
+		transition: .5s;
 		font-size: 1em;
 		font-family: "inter-regular";
 		user-select: none;
@@ -151,21 +151,21 @@
 		font-size: 1.5em;
 		width: 100vw;
 		justify-content: space-around;
-		transition: 1s;
+		transition: .5s;
 	}
 }
 .anun-card-meusanuncios:hover span {
-	transition: 1.5s;
+	transition: .5s;
 	color: #d9dbdd;
 }
 .anun-card-meusanuncios:hover p {
 	color: white;
-	transition: 1s;
+	transition: .5s;
 }
 
 .anun-card-meusanuncios:hover {
 	background-color: #694df9;
-	transition: all 0.4s;
+	transition: all .5s;
 }
 
 .anun-card-icons-meusanuncios {
@@ -175,11 +175,23 @@
 
 	img {
 		cursor: pointer;
+		filter:  invert(1);
 	}
-	.svg {
+	svg {
 		transition: 0s;
-		filter: brightness(0) saturate(100%) invert(29%) sepia(89%) saturate(2969%) hue-rotate(240deg) brightness(98%) contrast(100%);
+		filter:  invert(1);
 	}
+
+	.anun-card-img-icon{
+		visibility: hidden;
+	}
+
+
+}
+
+.anun-card-meusanuncios:hover .anun-card-img-icon{
+	visibility: visible;
+	transition: all .5s;
 }
 .imagemsitee-meusanuncios {
 	width: 10em;
@@ -192,7 +204,4 @@
 }
 .cinza {
 	color: #636363;
-}
-
-@media (max-width: 1280px) {
 }

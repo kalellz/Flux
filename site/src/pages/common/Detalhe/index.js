@@ -5,9 +5,13 @@ export default function Index(props) {
   const navigate = useNavigate();
   return (
     <div class="details">
+      <div className="main-content">
       <div className="div-img">
-        <p className="p-category">{props.produto.categoria}</p>
-      <img src={buscarImagem(props.produto.imagem)} className='product-img' />
+        <div className="div-img-content">
+          <p className="p-category">{props.produto.categoria}</p>
+          <img src={buscarImagem(props.produto.imagem)} className='product-img' />
+        </div>
+      
       </div>
       <div className="div-infos">
         <div className="name-info">
@@ -29,6 +33,7 @@ export default function Index(props) {
             <p>{props.produto.telefone}</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
