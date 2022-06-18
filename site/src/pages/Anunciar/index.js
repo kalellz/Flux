@@ -137,11 +137,10 @@ export default function Index() {
 							<input type="file" name="arquivo" id="arquivo" className="arquivoclass" onChange={(e) => setImagem(e.target.files[0])} />
 							{imagem && <img className="imagempreenchida" src={mostrarImagem()} alt="" />}
 						</div>
-						
 					</form>
 				</div>
 			</section>
-      
+
 			<div className="publicaranuncio">
 				<button disabled={carregando} onClick={salvarClick}>
 					<div class="svg-wrapper-1">
@@ -153,12 +152,10 @@ export default function Index() {
 									d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
 							</svg>
 						</div>
-          </div>
+					</div>
 					<span>{id === 0 ? "Publicar" : "Alterar"}</span>
-        </button>
-        
-      </div>
-      
+				</button>
+			</div>
 		</div>
 	);
 }

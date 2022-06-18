@@ -58,7 +58,7 @@ main {
 	cursor: pointer;
 	text-transform: uppercase;
 	border-radius: 9em;
-  text-decoration: none;
+	text-decoration: none;
 	font-family: "inter-regular";
 	transform: scale(1);
 	transition: all 0.4s;
@@ -300,7 +300,7 @@ main {
 	}
 }
 @media (max-width: 1125px) {
-	.login-container{
+	.login-container {
 		width: 80%;
 	}
 }

@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import storage from "local-storage";
 import { buscarImagem } from "../../../api/produtoApi.js";
 import { useNavigate } from "react-router-dom";
 

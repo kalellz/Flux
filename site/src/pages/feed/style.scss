@@ -30,7 +30,7 @@
 	content: "";
 	position: absolute;
 	z-index: -1;
-	background: var(--color);
+	background-image: linear-gradient(150deg, #694df9, #b187ff);
 	height: 150px;
 	width: 200px;
 	border-radius: 50%;
@@ -104,7 +104,7 @@
 	border: 2px solid transparent;
 	border-radius: 0.5em;
 	outline: none;
-  font-family: 'inter-regular';
+	font-family: "inter-regular";
 	background-color: #f3f3f4;
 	color: #0d0c22;
 	transition: 0.3s ease;

@@ -9,31 +9,29 @@ import "../../fonts/Inter/Inter-SemiBold.ttf";
 import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
 import Header from "../common/Header/header";
-import Detalhe from "../common/Detalhe/index.js"
+import Detalhe from "../common/Detalhe/index.js";
 import { Navigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { listarPorId } from "../../api/produtoApi.js";
 export default function Index() {
+	const [produto, setProduto] = useState({});
+	const { idParam } = useParams();
 
-  const [produto , setProduto] = useState({})
-  const {idParam} = useParams() 
+	useEffect(() => {
+		carregarProduto();
+	}, []);
 
-  useEffect(() => {
-    carregarProduto()
-  }, [])
-  
-  async function carregarProduto(){
-    const resposta = await listarPorId(idParam)
-    setProduto(resposta)
-  }
-  
+	async function carregarProduto() {
+		const resposta = await listarPorId(idParam);
+		setProduto(resposta);
+	}
 
-  return (
-    <div class="bodyinfoanuncio">
-      <body class="bodyinfoanuncio">
-        <Header />
-        <Detalhe produto={produto} />
-      </body>
-    </div>
-  );
+	return (
+		<div class="bodyinfoanuncio">
+			<body class="bodyinfoanuncio">
+				<Header />
+				<Detalhe produto={produto} />
+			</body>
+		</div>
+	);
 }

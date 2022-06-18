@@ -1,89 +1,89 @@
 .card {
-  width: 11.875em;
-  height: 15.875em;
-  cursor: pointer;
-  transform: scale(1.15);
-  padding: 0.8em;
-  background: #ffffff;
-  border-radius: 6px;
-  position: relative;
-  user-select: none;
-  overflow: visible;
-  transition: all 0.7s;
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.24);
+	width: 11.875em;
+	height: 15.875em;
+	cursor: pointer;
+	transform: scale(1.15);
+	padding: 0.8em;
+	background: #ffffff;
+	border-radius: 6px;
+	position: relative;
+	user-select: none;
+	overflow: visible;
+	transition: all 0.7s;
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.24);
 }
 
 .card-img {
-  display: flex;
-  background-color: #765eeb9c;
-  height: 40%;
-  width: 100%;
-  justify-content: center;
-  border-radius: 0.5rem;
-  transition: 0.3s ease;
+	display: flex;
+	background-color: #765eeb9c;
+	height: 40%;
+	width: 100%;
+	justify-content: center;
+	border-radius: 0.5rem;
+	transition: 0.3s ease;
 }
 
 .product-img {
-  height: 100%;
-  width: 100%;
-  border-radius: 6px;
+	height: 100%;
+	width: 100%;
+	border-radius: 6px;
 }
 
 .card-info {
-  padding-top: 10%;
+	padding-top: 10%;
 }
 
 svg {
-  width: 20px;
-  height: 20px;
+	width: 20px;
+	height: 20px;
 }
 
 .card-footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  border-top: 1px solid #ddd;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+	border-top: 1px solid #ddd;
 }
 
 /*Text*/
 .text-title {
-  font-size: 1em;
-  line-height: 1.5;
-  color: #252525;
-  font-family: "inter-bold";
+	font-size: 1em;
+	line-height: 1.5;
+	color: #252525;
+	font-family: "inter-bold";
 }
 
 .text-body {
-  font-size: 0.9em;
-  padding-bottom: 10px;
-  font-family: "inter-Light";
+	font-size: 0.9em;
+	padding-bottom: 10px;
+	font-family: "inter-Light";
 }
 
 /*Button*/
 .card-button {
-  border: 1px solid #252525;
-  display: flex;
-  padding: 0.3em;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: 0.3s ease-in-out;
+	border: 1px solid #252525;
+	display: flex;
+	padding: 0.3em;
+	cursor: pointer;
+	border-radius: 50px;
+	transition: 0.3s ease-in-out;
 }
 
 .card-lnk {
-  height: 20px;
-  width: 20px;
+	height: 20px;
+	width: 20px;
 }
 
 /*Hover*/
 .card:hover {
-  transform: translateY(-10%) scale(1.15);
-  transition: all 0.7s;
-  box-shadow: #6a4df9da 0px 13px 47px -5px, #765eebd2 0px 8px 16px -8px;
+	transform: translateY(-10%) scale(1.15);
+	transition: all 0.7s;
+	box-shadow: #6a4df9da 0px 13px 47px -5px, #765eebd2 0px 8px 16px -8px;
 }
 
 .card-button:hover {
-  border: 1px solid #bcb0f5;
-  background-color: #bcb0f5;
+	border: 1px solid #bcb0f5;
+	background-color: #bcb0f5;
 }
