@@ -20,7 +20,7 @@ server.post('/produto', async (req, resp) => {
 		if(!produto.telefone.trim())
 			throw new Error('Telefone é obrigatório!')
 		if(!produto.email.trim())
-			throw new Error('E-mail é obrigatório!')
+			throw new Error('Email é obrigatório!')
 		if(!produto.cep.trim())
 			throw new Error('Cep é obrigatório!')
 
@@ -67,11 +67,11 @@ server.put('/produto/:id', async (req,resp) => {
 		if(!produto.telefone.trim())
 			throw new Error('Telefone é obrigatório!')
 		if(!produto.email.trim())
-			throw new Error('E-mail é obrigatório!')
+			throw new Error('Email é obrigatório!')
 		if(!produto.cep.trim() )
 			throw new Error('Cep é obrigatório!')
 		if (resposta != 1) 
-			throw new Error('Produto nao pode ser alterado') 
+			throw new Error('Produto nao pôde ser alterado') 
 		else 
 			resp.status(204).send()
 	} catch(err){
@@ -93,7 +93,7 @@ server.delete('/produto/:id', async (req,resp) => {
 	try{
 		const { id } = req.params;
 		const deletar = await deletarProduto(id)
-		if(deletar != 1) throw new Error('Produto não pode ser removido')
+		if(deletar != 1) throw new Error('Produto não pôde ser removido')
 		else
 		resp.status(204).send()
 	} catch(err){

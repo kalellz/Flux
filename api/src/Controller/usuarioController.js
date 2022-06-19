@@ -22,7 +22,7 @@ server.post("/usuario/cadastro", async (req, resp) => {
 				
 			}
 			else
-				throw new Error('Email ja utilizado')
+				throw new Error('Email já utilizado')
 			
 		
 
