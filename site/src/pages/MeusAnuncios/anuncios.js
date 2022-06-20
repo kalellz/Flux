@@ -27,7 +27,7 @@ export default function Index() {
 	async function deletarProduto(id, nome) {
 		confirmAlert({
 			title: "Remover produto",
-			message: `Deseja remover o produto ${nome}`,
+			message: `Deseja remover o produto "${nome}"`,
 			buttons: [
 				{
 					label: "Sim",
@@ -92,7 +92,7 @@ export default function Index() {
 								<img src={`http://localhost:5000/${item.imagem}`} className="imagemsitee-meusanuncios" alt="" />
 							</div>
 							<div className="anun-card-desc-meusanuncios">
-								<p>{item.nome.substr(0, 30)}</p>
+								<p className="p-name-product">{item.nome.substr(0, 30)}</p> &nbsp;
 								<p className="cinza">{item.descricao.substr(0, 30)}</p>
 							</div>
 							<div className="anun-card-info-meusanuncios">
@@ -100,7 +100,7 @@ export default function Index() {
 								<p>{item.id}</p>
 							</div>
 							<div className="anun-card-icons-meusanuncios">
-								<img src={pencil} onClick={() => editarProduto(item.id)} className="anun-card-img-icon" /> &nbsp;&nbsp;&nbsp;&nbsp;
+								<img src={pencil} onClick={() => editarProduto(item.id)} className="anun-card-img-icon" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<img src={trash} onClick={() => deletarProduto(item.id, item.nome)} className="anun-card-img-icon"/>
 							</div>
 						</div>
