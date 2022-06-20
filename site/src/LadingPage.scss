@@ -631,5 +631,30 @@ html {
 	}
 }
 
-@media (max-width: 1280px) {
+@media only screen and (max-width: 414px) {
+	.titulo-1{
+		font-size: 1.5em;
+		
+		height: max-content;
+	}
+	.texto-1{
+		margin-top: 2.2em;
+		
+	}
+	.c-botao3{
+		
+		
+	}
+	.quadradaos{
+		display: flex;
+		height: 60vh;
+	}
+
+	.textosquadrados{
+		font-size: .5em;
+	}
+	.saibamais{
+	
+		border: 1px solid red;
+	}
 }

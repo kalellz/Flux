@@ -70,7 +70,7 @@ function App() {
 						<p class="texto-1">
 							Venda e compre móveis, periféricos, utensílios de cozinha e tudo o que quiser. Você acha com facilidade pessoas vendendo ou comprando produtos do seu interesse.
 						</p>
-						<Link to="/login" className="c-botao3">
+						<Link to="/Cadastro" className="botao-anunciar">
 							COMEÇAR AGORA
 						</Link>
 					</div>
@@ -112,8 +112,8 @@ function App() {
 					<div class="localizacaocontainer">
 						<h1 class="titulolocalizacao">Compre de qualquer lugar do Brasil</h1>
 						<p class="textolocalizacao">Faça seu primeiro contato independente do seu local, venha dar uma olhada no que estão anunciando no momento!</p>
-						<Link class="c-botao3" to="/feed">
-							ME LEVE AO FEED
+						<Link class="botao-anunciar" to="/feed">
+							FEED
 						</Link>
 					</div>
 				</section>
