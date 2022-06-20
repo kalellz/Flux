@@ -13,7 +13,7 @@ import Header from "../common/Header/header";
 import pencil from "../../images/Pencil.png";
 import storage from "local-storage";
 import { Link, useNavigate } from "react-router-dom";
-import { listarMeusProdutos, listarPorNome, removerProduto } from "../../api/produtoApi.js";
+import { listarMeusPorNome, listarMeusProdutos, listarPorNome, removerProduto } from "../../api/produtoApi.js";
 import { useState, useEffect } from "react";
 import { confirmAlert } from "react-confirm-alert";
 import { toast } from "react-toastify";
@@ -21,8 +21,7 @@ import { toast } from "react-toastify";
 export default function Index() {
 	const idUsuario = storage("usuario-logado").id;
 	const [produtos, setProdutos] = useState([]);
-	const [filtro, setFiltro] = useState();
-	const [categoria, setCategoria] = useState("0");
+	const [filtro, setFiltro] = useState('');
 	const navigate = useNavigate();
 
 	async function deletarProduto(id, nome) {
@@ -50,12 +49,9 @@ export default function Index() {
 		setProdutos(resposta);
 	}
 	async function Filtrar() {
-		const resp = await listarPorNome(filtro, categoria);
+		const resp = await listarMeusPorNome(idUsuario ,filtro);
 		setProdutos(resp);
 	}
-	useEffect(() => {
-		Filtrar();
-	}, [categoria, filtro]);
 
 	useEffect(() => {
 		listarProdutos();
@@ -64,6 +60,9 @@ export default function Index() {
 	function editarProduto(id) {
 		navigate(`/alterar/${id}`);
 	}
+	useEffect(() => {
+		Filtrar();
+	}, [filtro]);
 	return (
 		<div className="body">
 			<Header selecionado="meusanuncios" />

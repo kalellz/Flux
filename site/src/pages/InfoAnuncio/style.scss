@@ -7,6 +7,11 @@
 	padding: 0 2em;
 	align-items: center;
 
+	.div-img-content{
+		img{
+			margin-right: 15em;
+		}
+	}
 	.main-content{
 		display: flex;
 		flex-direction: row;
@@ -43,7 +48,7 @@
 		}
 		.p-category {
 			display: flex;
-			background-color: #d8d8d8;
+			background-color: #ebebeb;
 			color: #6041fc;
 			font-family: "inter-semibold";
 			font-size: 1.3em;
@@ -90,7 +95,7 @@
 				h1 {
 					padding: 0.3em;
 					border-radius: 0.3em;
-					background-color: #d8d8d8;
+					background-color: #ebebeb;
 					color: #6041fc;
 	
 					span {
@@ -136,14 +141,13 @@
 						font-family: "inter-regular";
 						font-size: 1.2em;
 						margin-bottom: 2em;
-						background-color: #d8d8d8;
+						background-color: #ebebeb;
 						width: max-content;
 						border-radius: 0 0.3em 0.3em 0.3em;
 						padding: 0.3em 0.5em;
 					}
 					h1 {
 						user-select: none;
-						background-color: #eeeeee;
 						color: #6041fc;
 						font-family: "inter-semibold";
 						font-size: 1.3em;

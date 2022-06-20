@@ -1,4 +1,4 @@
-import { alterarImagem, alterarProduto, consultarProdutos, consultarProdutosID, consultarProdutosNome, deletarProduto, exibirProdutosCategoria, exibirProdutosUsuario, inserirProduto } from '../repository/produtoRepository.js'
+import { alterarImagem, alterarProduto, consultarMeusAnunciosNome, consultarProdutos, consultarProdutosID, consultarProdutosNome, deletarProduto, exibirProdutosCategoria, exibirProdutosUsuario, inserirProduto } from '../repository/produtoRepository.js'
 import multer from 'multer';
 import { Router } from 'express'
 
@@ -132,6 +132,17 @@ server.get('/produto/:id', async (req,resp) => {
         })
 	}
 })
+server.get('/produto/usuario/:id/:nome', async (req,resp) => {
+	try{
+		const { id, nome } = req.params;
+		const resposta = await consultarMeusAnunciosNome(id, nome);
+			resp.send(resposta);
+	} catch(err){
+        resp.status(400).send({
+            erro: err.message
+        })
+	}
+})
 server.get('/produto/usuario/:id', async (req,resp) => {
 	try{
 		const {id} = req.params;
@@ -158,5 +169,6 @@ server.get('/produto/categoria/:id', async (req,resp) => {
         })
 	}
 })
+
 
 export default server

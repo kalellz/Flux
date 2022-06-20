@@ -67,3 +67,7 @@ export async function listarPorId(id) {
 export function buscarImagem(imagem) {
 	return `${api.getUri()}/${imagem}`;
 }
+export async function listarMeusPorNome(id, nome) {
+	const resposta = await api.get(`/produto/usuario/${id}/${nome}`);
+	return resposta.data;
+}
