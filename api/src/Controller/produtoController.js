@@ -9,6 +9,8 @@ const upload = multer({ dest : 'storage/capasProduto' })
 server.post('/produto', async (req, resp) => {
     try{
         const produto = req.body
+
+		// verificações necessarias
 		if(!produto.nome.trim())
 			throw new Error('Nome do produto é obrigatório!')
 		if(!produto.categoria)
@@ -24,6 +26,28 @@ server.post('/produto', async (req, resp) => {
 		if(!produto.cep.trim())
 			throw new Error('Cep é obrigatório!')
 
+		if(produto.preco < 0) 
+			throw new Error('Digite um preço válido')
+		if(produto.telefone.length < 11) 
+			throw new Error('Digite um telefone válido')
+		if(produto.cep.length < 8) 
+			throw new Error('Digite um cep válido')
+		if(produto.email.length < 13) 
+			throw new Error('Digite um email válido')
+
+		if(produto.nome.length > 80)
+			throw new Error('Nome excede o tamanho permitido')
+		if(produto.descricao.length > 200)
+			throw new Error('Descrição excede o tamanho permitido')
+		if(produto.email.length > 300)
+			throw new Error('Email excede o tamanho permitido')
+		if(produto.preco.length > 15)
+			throw new Error('Preço excede o tamanho permitido')
+		if(produto.telefone.length > 200)
+			throw new Error('Telefone excede o tamanho permitido')
+		if(produto.cep.length > 200)
+			throw new Error('Cep excede o tamanho permitido')
+			
 		const produtoinserido = await inserirProduto(produto);
         resp.send(produtoinserido)
 
