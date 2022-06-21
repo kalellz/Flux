@@ -90,7 +90,7 @@ export default function Index() {
 								<div className="container-input">
 									<div className="email">
 										<img src={mail} width="24px" className="input-img" alt="mail"></img>
-										<input type="text" className="input-login" placeholder="Login" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+										<input type="text" className="input-login" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
 									</div>
 									<div className="email">
 										<img src={lock} width="24px" className="input-img" alt="lock"></img>
