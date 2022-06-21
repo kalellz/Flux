@@ -632,9 +632,13 @@ html {
 }
 
 @media only screen and (max-width: 414px) {
+
+	.c1-textos{
+		margin-right: 1.3em;
+	}
+
 	.titulo-1{
 		font-size: 1.5em;
-		
 		height: max-content;
 	}
 	.texto-1{
@@ -642,9 +646,9 @@ html {
 		
 	}
 	.c-botao3{
-		
-		
+		width: 80vw;
 	}
+
 	.quadradaos{
 		display: flex;
 		height: 60vh;
@@ -653,8 +657,92 @@ html {
 	.textosquadrados{
 		font-size: .5em;
 	}
-	.saibamais{
+
+	.primeiro-container{
+		height: 52vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.titulosaibamais{
+		font-size: 1.5em;
+	}
+
+	.textosaibamais{
+		margin-bottom: 10em;
+		font-size: .8em;
+	}
+
+	.quadradaos{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		height: 100vh;
+	}
+
+	.quadrados{
+		width: 40vw;
+		height: 20vh;
+		margin-bottom: 2em;
+	}
+
+	.tituloquadrados{
+		font-size: 1.5em;
+	}
 	
-		border: 1px solid red;
+	.textosquadrados{
+		font-size: .7em;
+		font-weight: 400;
+	}
+
+	.localizacao{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: max-content;
+		height: 70vh;
+		width: 100vw;
+		
+	}
+
+	.imagemlocalizacao{
+		margin-right: 10em;
+	}
+
+	.localizacaocontainer{
+		margin-right: 5em;
+	}
+
+
+	.fomulariocontainer{
+		//border: 1px solid red;
+		width: 98vw;
+		margin-right: 4em;		
+	}
+
+	#formulario-app{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
+		//border: 1px solid red;
+		width: max-content;
+		width: 100vw;
+	}
+
+	.form-input-app{
+		width: 85vw;
+	}
+
+	.btn-form-div{
+		//border: 1px solid red;
+		
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
 	}
 }
