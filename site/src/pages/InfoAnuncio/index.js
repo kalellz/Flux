@@ -10,7 +10,7 @@ import "../../fonts/Inter/Inter-Thin.ttf";
 import "./style.scss";
 import Header from "../common/Header/header";
 import Detalhe from "../common/Detalhe/index.js";
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { listarPorId } from "../../api/produtoApi.js";
 export default function Index() {

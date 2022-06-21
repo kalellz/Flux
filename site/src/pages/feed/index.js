@@ -74,7 +74,7 @@ export default function Index() {
 					{produtos.map((item) => (
 						<div class="card" onClick={() => abrirDetalhes(item.id)}>
 							<div class="card-img">
-								<img src={`http://localhost:5000/${item.imagem}`} class="product-img" />
+								<img src={`http://localhost:5000/${item.imagem}`} className="product-img" />
 							</div>
 							<div class="card-info">
 								<p class="text-title">{item.nome.substr(0, 18)}</p>

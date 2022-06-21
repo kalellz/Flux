@@ -34,6 +34,7 @@
 		height: 90%;
 		width: 80%;
 		flex-direction: column;
+		margin-top: 1em;
 
 		.anun-card {
 			display: flex;
@@ -148,7 +149,6 @@
 
 	.p-name-product{
 		font-family: 'inter-bold';
-		border: 1px solid red;
 		width: 9em;
 	}
 
